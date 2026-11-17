@@ -1,0 +1,54 @@
+{
+ "all_as_required": true,
+ "controls": [
+  {
+   "control": "beyond the monotonicity range: [7, 8] (m' changes sign near 7.649)",
+   "certified": false,
+   "outcome": "fails as required",
+   "failure_box": {
+    "lo": "8410179488211/1099511627776",
+    "hi": "2102544872053/274877906944",
+    "depth": 40,
+    "enclosure": "[+/- 1.54e-13]"
+   }
+  },
+  {
+   "control": "entirely beyond: [8, 9] (m' < 0)",
+   "certified": false,
+   "outcome": "fails as required",
+   "failure_box": {
+    "lo": "8",
+    "hi": "8796093022209/1099511627776",
+    "depth": 40,
+    "enclosure": "[-0.1069984524 +/- 4.26e-11]"
+   }
+  },
+  {
+   "control": "negated function: -m' > 0 on [0, 16/5]",
+   "certified": false,
+   "outcome": "fails as required",
+   "failure_box": {
+    "lo": "0",
+    "hi": "1/343597383680",
+    "depth": 40,
+    "enclosure": "[-0.6169708662 +/- 2.81e-11]"
+   }
+  },
+  {
+   "control": "bound above the infimum: m' > 31/50 on [0, 1/10] (m'(0) = 0.61697...)",
+   "certified": false,
+   "outcome": "fails as required",
+   "failure_box": {
+    "lo": "0",
+    "hi": "1/10995116277760",
+    "depth": 40,
+    "enclosure": "[0.6169708662 +/- 2.66e-11]"
+   }
+  },
+  {
+   "control": "positive control: m' > 0 on [1, 2]",
+   "certified": true,
+   "outcome": "certified as required"
+  }
+ ]
+}

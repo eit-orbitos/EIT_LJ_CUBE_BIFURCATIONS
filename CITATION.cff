@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "EIT-LJ Cube Bifurcations (Paper 3): code, certificates and audit records"
+version: "1.0.0"
+abstract: >-
+  Code, rigorous computer-assisted certificates, certificate checkers, tests, negative controls, proof dependency
+  graphs, independent audit records and manuscript sources for Paper 3, "Symmetry-Breaking Bifurcations from the Cubic
+  Equilibrium in Two-Term Inverse-Power Clusters": the local branches born at the A2u and T2g transition curves of the
+  cubic equilibrium of eight particles with V(r) = A r^-p - B r^-q (A2u pitchfork; D3d transcritical branches; D2h
+  pitchfork; centre-manifold and full-slice inertia of the D2h branch). Release candidate V1.0.0-rc2 of this package
+  passed an independent final blind release audit (a computational release verification, not journal peer review).
+  Software: PolyForm Noncommercial License 1.0.0. Manuscript, documentation, figures, generated results and package-authored metadata: CC BY-NC-SA 4.0. Commercial use only by separate written agreement. Copyright © 2026 EITNetworks LLC and the authors.
+authors:
+  - family-names: Mladenovski
+    given-names: Toni
+    affiliation: "EITNetworks LLC, Tobyhanna, Pennsylvania, USA"
+    orcid: "https://orcid.org/0009-0009-8343-662X"
+    email: info@eitnetworks.org
+  - family-names: Mladenski
+    given-names: Mihail
+    affiliation: "EITNetworks LLC, Tobyhanna, Pennsylvania, USA"
+    email: mmladenski077@gmail.com
+keywords:
+  - Lennard-Jones clusters
+  - two-term inverse-power potential
+  - equivariant bifurcation
+  - Lyapunov-Schmidt reduction
+  - octahedral symmetry
+  - Morse index
+  - computer-assisted proof
+  - ball arithmetic
+license: PolyForm-Noncommercial-1.0.0
+# repository-code: "[PAPER 3 GITHUB RELEASE — TO BE ASSIGNED AT PUBLIC RELEASE]"
+# doi: "[PAPER 3 ZENODO DOI — TO BE ASSIGNED AT PUBLIC RELEASE]"
+references:
+  - type: software
+    title: "EIT-LJ Full-Vector Equilibria and Stability (Paper 2): code, certificates and audit records"
+    authors:
+      - family-names: Mladenovski
+        given-names: Toni
+    year: 2026
+    version: "1.0.0"
+    doi: 10.5281/zenodo.24187155
+    repository-code: "https://github.com/eit-orbitos/EIT_LJ_FULL_VECTOR_STABILITY"
+    notes: "Paper 2 (frozen input). Concept DOI 10.5281/zenodo.24187154."
+  - type: generic
+    title: "Geometry-Dependent Equilibria in Generalized Lennard-Jones-Type Power-Law Systems"
+    authors:
+      - family-names: Mladenovski
+        given-names: Toni
+    year: 2026
+    doi: 10.5281/zenodo.24149914
+    notes: "Paper 1 (Zenodo preprint, version 0.1.2)."

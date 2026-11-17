@@ -1,0 +1,13 @@
+Manuscript, documentation, notes, figures, generated results and package-authored metadata in this repository
+(paper/, docs/, submission/, README.md, NOTES.md, RESEARCH_LOG.md, CHANGELOG.md, RELEASE_NOTES_RC1.md,
+RELEASE_NOTES_RC2.md, RELEASE_NOTES_V1.0.0.md, AUTHOR_DECISION_V1.0.0.md, FINAL_AUDIT_INSTRUCTIONS.md,
+FINAL_V1_DELTA_AUDIT_INSTRUCTIONS.md, CITATION.cff, .zenodo.json, data/)
+Copyright © 2026 EITNetworks LLC and the authors.
+Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+Commercial use only by separate written agreement — info@eitnetworks.org
+
+Not covered: the independent audit reports in audits/ are third-party records reproduced verbatim; they are not
+relicensed by this file. Paper 2 material is referenced, not redistributed.
+
+Licences and copyright (author-approved): Software: PolyForm Noncommercial License 1.0.0. Manuscript, documentation, figures, generated results and package-authored metadata: CC BY-NC-SA 4.0. Commercial use only by separate written agreement. Copyright © 2026 EITNetworks LLC and the authors.

@@ -1,0 +1,301 @@
+{
+ "all_as_required": true,
+ "forbidden_modifications_rejected": 41,
+ "forbidden_modifications": 41,
+ "controls": [
+  {
+   "control": "unmodified V0.4-dev.4 tree",
+   "required": "PASS",
+   "result": "PASS",
+   "as_required": true,
+   "failures": []
+  },
+  {
+   "control": "Track A source: lemma_m.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/lemma_m.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "Track A certificate: A2_lemma_M_certificate.json changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/A2_lemma_M_certificate.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "Track A: theorem_a.py dependency graph changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/theorem_a.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B0: t2g.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/t2g.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B1 formula: g_uuv denominator 54 -> 52 in b1_cert._funcs (outside the Taylor routine)",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_cert.py: unit _funcs changed"
+  },
+  {
+   "control": "B1 generator: N_TAYLOR 16 -> 12",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_cert.py: unit list or order differs outside the allowed units: ['<stmt:N_TAYLOR = 12>', '<stmt:N_TAYLOR = 16>']"
+  },
+  {
+   "control": "B1 generator: comment added inside newton()",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_cert.py: unit newton changed"
+  },
+  {
+   "control": "B1 checker: Newton inclusion relaxed (outside Model.taylor)",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_check.py: unit newton_inclusion changed"
+  },
+  {
+   "control": "B1 checker: N_CHECK 20 -> 18",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_check.py: unit list or order differs outside the allowed units: ['<stmt:N_CHECK = 18>', '<stmt:N_CHECK = 20>']"
+  },
+  {
+   "control": "B1 checker: Model.dd changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_check.py: unit Model.dd changed"
+  },
+  {
+   "control": "B1 exact layer: b1_cubic.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b1_cubic.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "historical B1 certificate: one byte changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_kappa_certificate.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "historical B1 certificate replaced by the corrected rebuild",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_kappa_certificate.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "B1 semantic hash file changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_CERTIFICATE_SEMANTIC.sha256: changed (must be byte-identical)"
+  },
+  {
+   "control": "B1 records: B1_negative_controls.json changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_negative_controls.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "scripts/run_B1.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "scripts/run_B1.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.0: b2_symmetry.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b2_symmetry.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.1: b2_quartic.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b2_quartic.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.2: b2_carrier.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b2_carrier.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.2: B2_carrier.json changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B2_carrier.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.3: b2_cert.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b2_cert.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.3: b2_check.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/b2_check.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.3: certificate changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B2_c4hat_certificate.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.3: historical series-cap diagnostic changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B2_3_B1_series_cap_diagnostic.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "B2.3: diagnose_B1_series_cap.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "scripts/diagnose_B1_series_cap.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "earlier control record negative_controls.json changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/negative_controls.json: changed (must be byte-identical)"
+  },
+  {
+   "control": "earlier control script negative_controls.py changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "scripts/negative_controls.py: changed (must be byte-identical)"
+  },
+  {
+   "control": "historical B1 audit report changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "audits/CUBE_BIFURCATIONS_V03_REVIEWER_REPORT.md: changed (must be byte-identical)"
+  },
+  {
+   "control": "Track A audit report changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "audits/CUBE_BIFURCATIONS_REVIEWER_REPORT.md: changed (must be byte-identical)"
+  },
+  {
+   "control": "Paper 2 input record changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "reference/PAPER2_INPUTS.md: changed (must be byte-identical)"
+  },
+  {
+   "control": "earlier identity report changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "docs/V0.4-dev.3_IDENTITY_CHECK.md: changed (must be byte-identical)"
+  },
+  {
+   "control": "file deleted: data/B1_scan.csv",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_scan.csv: deleted"
+  },
+  {
+   "control": "unexpected file added: src/cube_bif/extra.py",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/extra.py: unexpected added file"
+  },
+  {
+   "control": "unexpected file added: data/B1_kappa_certificate_v2.json",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "data/B1_kappa_certificate_v2.json: unexpected added file"
+  },
+  {
+   "control": "NOTES \u00a75.7 body changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "NOTES.md: NOTES.md: \u00a70\u2013\u00a79 not byte-identical"
+  },
+  {
+   "control": "CHANGELOG earlier entry changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "CHANGELOG.md: CHANGELOG.md: earlier entries not verbatim"
+  },
+  {
+   "control": "RESEARCH_LOG earlier entry changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "RESEARCH_LOG.md: RESEARCH_LOG.md is not append-only"
+  },
+  {
+   "control": "test_B1_certificate.py: another test changed",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "tests/test_B1_certificate.py: unit test_every_lower_bound_is_strictly_positive_and_min_matches changed"
+  },
+  {
+   "control": "test_docs.py: change beyond the status pins",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "tests/test_docs.py: test_docs.py differs beyond the status pins"
+  },
+  {
+   "control": "__init__.py: code added beyond version/status",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "src/cube_bif/__init__.py: statement count changed"
+  },
+  {
+   "control": "stale SHA256SUMS (file changed, manifest not regenerated)",
+   "required": "FAIL",
+   "result": "FAIL",
+   "as_required": true,
+   "first_failure": "SHA256SUMS stale for ['src/cube_bif/lemma_m.py']"
+  }
+ ]
+}

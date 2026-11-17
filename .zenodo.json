@@ -1,0 +1,45 @@
+{
+  "upload_type": "software",
+  "title": "EIT-LJ Cube Bifurcations (Paper 3): code, certificates and audit records",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Mladenovski, Toni",
+      "affiliation": "EITNetworks LLC, Tobyhanna, Pennsylvania, USA",
+      "orcid": "0009-0009-8343-662X"
+    },
+    {
+      "name": "Mladenski, Mihail",
+      "affiliation": "EITNetworks LLC, Tobyhanna, Pennsylvania, USA"
+    }
+  ],
+  "description": "<p>Code, rigorous computer-assisted certificates, certificate checkers, tests, negative controls, proof dependency graphs, independent audit records and manuscript sources for the paper <em>Symmetry-Breaking Bifurcations from the Cubic Equilibrium in Two-Term Inverse-Power Clusters</em> (Toni Mladenovski, Mihail Mladenski; EITNetworks LLC, Tobyhanna, Pennsylvania, USA).</p><p>For eight identical particles with V(r) = A r<sup>-p</sup> - B r<sup>-q</sup> (A, B &gt; 0, p &gt; q &gt; 0) the paper classifies the local branches born from the cubic equilibrium at the transition curves of Paper 2: a Z<sub>2</sub> pitchfork of T<sub>d</sub> configurations at the A<sub>2u</sub> curve (supercritical in the reduced-energy convention); transcritical D<sub>3d</sub> branches and a Z<sub>2</sub> pitchfork of D<sub>2h</sub> branches at the T<sub>2g</sub> curve; and the inertia of the D<sub>2h</sub> branch points: centre (1, 0, 2), slice (4, 0, 14), R<sup>24</sup> (4, 6, 14) (negative/zero/positive; the six raw zeros are rigid motions). No stability is claimed.</p><p>Computer-assisted results use Arb ball arithmetic with independent checkers; each phase has an independent blind computational audit by a separate AI system (not journal peer review). The use of AI tools is documented in docs/AI_USE_LOG.md.</p><p>Licences and copyright: Software: PolyForm Noncommercial License 1.0.0. Manuscript, documentation, figures, generated results and package-authored metadata: CC BY-NC-SA 4.0. Commercial use only by separate written agreement. Copyright &copy; 2026 EITNetworks LLC and the authors. Contact for commercial licensing: info@eitnetworks.org.</p><p>Version 1.0.0. Release candidate V1.0.0-rc2 of this package passed an independent final blind release audit (a computational release verification, not journal peer review). The mathematics is that of the audited development version V0.4-dev.6.</p>",
+  "keywords": [
+    "Lennard-Jones clusters",
+    "two-term inverse-power potential",
+    "equivariant bifurcation",
+    "Lyapunov-Schmidt reduction",
+    "octahedral symmetry",
+    "Morse index",
+    "computer-assisted proof",
+    "ball arithmetic"
+  ],
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24187155",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24149914",
+      "relation": "references",
+      "resource_type": "publication-preprint",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Software license: PolyForm Noncommercial 1.0.0. Documentation, manuscript and figures: CC BY-NC-SA 4.0. Copyright © 2026 EITNetworks LLC and the authors. Mathematical baseline: V0.4-dev.6 (archive SHA-256 c473af60f8b54c0beecd252d9e8409eef734ba475c0d693b300946f57941b691). Funding: this research received no external funding. Contact for Mihail Mladenski is recorded in submission metadata only (Zenodo creators carry no e-mail field); Mihail Mladenski has no ORCID."
+}
