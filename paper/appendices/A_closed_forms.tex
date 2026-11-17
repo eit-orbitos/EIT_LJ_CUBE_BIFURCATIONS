@@ -1,0 +1,81 @@
+\section{Closed forms}\label{app:closed}
+
+All formulas in this appendix are exact and are verified symbolically by the repository's tests; the script
+\code{paper/tools/check_appendix_closed_forms.py} re-types them independently from this appendix and compares them
+with the expressions used in the code. Throughout, $\phi(r)=\psi(r^2)$, $\psi_k(\sigma)=\psi^{(k)}(\sigma)$ at
+$\sigma\in\{1,2,3\}$, $X=2^{-r/2}$, $Y=3^{-r/2}$, $W=W_r=1+X+Y/3$, and unit directions are used
+($\eA=E_A/\sqrt{24}$, $\ebr=E_{\mathrm{br}}/\sqrt{24}$; the $\Ttwog$ basis \eqref{eq:t2gbasis}).
+
+\paragraph{Difference forms.} If $L$ is a linear form in the $\psi_k(\sigma)$, put $g_L(r)=L[\sigma^{-r/2}]/(rW_r)$.
+At the unit-edge equilibrium of $V_p$ (\cref{sec:model}) one has exactly $L=qW_q\,[g_L(p)-g_L(q)]$. None of the
+functions $g$ below divides by $r$; with $\hat g(p,q)=(g(p)-g(q))/(p-q)$, $\hat g(q,q)=g'(q)$, every coefficient
+therefore carries the factor $qW_q(p-q)$ times an analytic divided difference.
+
+\subsection{The $\Atwou$ direction (Track A)}
+For every pair potential,
+\begin{align*}
+V_{aa}&=8\psi_1(1)+8\psi_1(2)+32\psi_2(2),\\
+V_{bb}&=4\psi_1(1)+8\psi_1(2)+4\psi_1(3)+8\psi_2(1)+32\psi_2(2)+24\psi_2(3),\\
+V_{aab}&=\tfrac{8\sqrt6}{3}\psi_2(1)+16\sqrt6\,\psi_2(2)+\tfrac{64\sqrt6}{3}\psi_3(2),\\
+V_{aaaa}&=16\psi_2(1)+16\psi_2(2)+128\psi_3(2)+\tfrac{256}{3}\psi_4(2).
+\end{align*}
+On the two-term family,
+\begin{align*}
+h_A&=\frac{2(r+1)X-4}{W}, & g_B&=2(r+1),\\
+g_3&=\frac{\sqrt6\,(r+2)\bigl(2-(r+1)X\bigr)}{3W}, & g_4&=\frac{(r+2)\bigl((r+1)(r+3)X+12\bigr)}{3W},
+\end{align*}
+so $V_{aa}=qW_q[h_A(p)-h_A(q)]$, $V_{bb}=2qW_q(p-q)$, and on the curve $h_A(p)=h_A(q)$
+\[
+c_4=qW_q\Bigl\{[g_4(p)-g_4(q)]-\frac{3\,[g_3(p)-g_3(q)]^2}{2(p-q)}\Bigr\}.
+\]
+
+\subsection{The cubic coefficient (B1)}
+With the $2\times2$ block $M(r)$ of \eqref{eq:M} and the coefficients \eqref{eq:tcoeffs},
+\begin{align*}
+g_{uuu}&=\frac{(r+2)\bigl(-\frac34X+\frac{(4r+7)Y}{27}\bigr)}{W}, &
+g_{uuv}&=\frac{\sqrt2\,(r+2)(4r+1)Y}{54W},\\
+g_{uvv}&=\frac{(r+2)\bigl(-2+\frac{2(r+1)Y}{27}\bigr)}{W}, &
+g_{vvv}&=\frac{\sqrt2\,(r+2)(r+4)Y}{27W}.
+\end{align*}
+
+\subsection{The quartic coefficient on the $\Dtwoh$ axis (B2.1)}
+For every pair potential, with $\psi'_\sigma=\psi_1(\sigma)$, $\psi''_\sigma=\psi_2(\sigma)$, $\psi'''_\sigma=\psi_3(\sigma)$,
+\begin{align*}
+h_A&=4\psi'_1+8\psi'_2+4\psi'_3+8\psi''_1+32\psi''_2+24\psi''_3, &
+h_E&=4\psi'_1+8\psi'_2+4\psi'_3+8\psi''_1+8\psi''_2,
+\end{align*}
+and $b=D^3V[e_1,e_1,\cdot\,]=b_A\Ahat+b_E\Ehat$ with $b_X=n_u^2b_{X,uu}+2n_un_vb_{X,uv}+n_v^2b_{X,vv}$, where
+\begin{center}\small
+\begin{tabular}{lll}
+\toprule
+channel & $b_{A}$ ($\Aonegg$) & $b_{E}$ ($\Eg$)\\
+\midrule
+$uu$ & $\frac{\sqrt6}{3}(4\psi''_1+32\psi''_2+28\psi''_3+32\psi'''_2+48\psi'''_3)$ & $-\frac{\sqrt3}{3}(4\psi''_1+20\psi''_2+16\psi''_3+32\psi'''_2)$\\
+$uv$ & $\frac{16\sqrt3}{3}(\psi''_3+3\psi'''_3)$ & $\frac{4\sqrt6}{3}\psi''_3$\\
+$vv$ & $\frac{\sqrt6}{3}(20\psi''_1+20\psi''_3+8\psi'''_1+24\psi'''_3)$ & $\frac{16\sqrt3}{3}(\psi''_1+\psi''_3+\psi'''_1)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The $\psi'$ part of $h_A$ and $h_E$ vanishes at the equilibrium. On the two-term family the thirteen forms have
+\begin{align*}
+g_{Q,uuuu}&=\frac{(r+2)(162r^2X+648rX+729X+32r^2Y+32rY-168Y+972)}{648W},\\
+g_{Q,uuuv}&=\frac{\sqrt2(r+2)(r+4)(2r+3)Y}{81W},\\
+g_{Q,uuvv}&=\frac{(r+2)\bigl(81+(2r^2+11r+21)Y\bigr)}{81W},\\
+g_{Q,uvvv}&=\frac{\sqrt2(r-3)(r+2)(r+4)Y}{81W},\\
+g_{Q,vvvv}&=\frac{(r+2)\bigl(81r^2+324r+729+(r^2-8r-21)Y\bigr)}{81W},\\
+g_{b_A,uu}&=-\frac{\sqrt6(r+2)(9rX+(4r+2)Y-18)}{54W},\\
+g_{b_E,uu}&=\frac{\sqrt3(r+2)\bigl((18r+27)X-16Y-36\bigr)}{108W},\\
+g_{b_A,uv}&=-\frac{2\sqrt3(r+2)^2Y}{27W},\\
+g_{b_E,uv}&=\frac{\sqrt6(r+2)Y}{27W},\\
+g_{b_A,vv}&=-\frac{\sqrt6(r-1)(r+2)(Y+9)}{27W},\\
+g_{b_E,vv}&=-\frac{2\sqrt3(r+2)(9r+18-2Y)}{27W},\\
+g_{h_A}&=2(r+1),\\
+g_{h_E}&=\frac{2(r+1)+\frac{(r-2)X}{2}-\frac{2Y}{3}}{W}.
+\end{align*}
+With $Q(n)=\sum_{j=0}^4\binom4j n_u^{4-j}n_v^{j}Q_j$ and the divided differences of these functions,
+\[
+\cfhat=\widehat Q-\frac{3\,\widehat b_A^{\,2}}{\widehat h_A}-\frac{3\,\widehat b_E^{\,2}}{\widehat h_E},\qquad \widehat h_A=2,
+\]
+and in the chart $n\propto(1,\rho)$ of \eqref{eq:kappafact},
+$\cfhat=\bigl[\widehat Q(1,\rho)-\tfrac32\widehat b_A(1,\rho)^2-3\widehat b_E(1,\rho)^2/\widehat h_E\bigr]/(1+\rho^2)^2$.
+Unlike $\kappa$, $c_4$ does not depend on the gauge $n\mapsto-n$.

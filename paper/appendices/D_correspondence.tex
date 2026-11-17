@@ -1,0 +1,29 @@
+\section{Correspondence with the repository and with Paper 2}\label{app:correspondence}
+
+\begin{table}[h]
+\centering\small
+\caption{Results of this paper and their records in the repository \repo.}\label{tab:correspondence}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}X}
+\toprule
+this paper & repository phase (\code{NOTES.md}) & main records and tests\\
+\midrule
+\lemM, \corM, \thmA & A0--A2 (\S\S2--3) & \code{data/A0_representation.json}, \code{data/A1_quartic.json}, \code{data/A2_lemma_M_certificate.json}, \code{data/A2_theorem_A_dependencies.json}; \code{tests/test_A*.py}\\
+$\Ttwog$ basis, B0 facts & B0 (\S4) & \code{data/B0_t2g.json}; \code{tests/test_B0_t2g.py}\\
+\lemK, \propBone & B1 (\S5) & \code{data/B1_cubic.json}, \code{data/B1_kappa_certificate.json}; \code{tests/test_B1_*.py}\\
+Erratum E-B1 & \S\S9.8, 10, 11 & \code{data/B1_ERRATUM_*.json}; \code{tests/test_B1_erratum.py}\\
+\cref{lem:fix}, \eqref{eq:c4D2h} & B2.0, B2.1 (\S6) & \code{data/B2_symmetry.json}, \code{data/B2_quartic.json}; \code{tests/test_B2_symmetry.py}, \code{tests/test_B2_quartic.py}\\
+(reconnaissance) & B2.2 (\S7) & \code{data/B2_carrier.json}, \code{data/B2_scan.csv} (numerical, not a proof input)\\
+\lemQ & B2.3 (\S9) & \code{data/B2_c4hat_certificate.json}, \code{data/B2_3_check_report.json}; \code{tests/test_B2_certificate.py}\\
+\propBtwo & B2.4 (\S12) & \code{data/B2_4_branch.json}, \code{data/B2_4_dependency_graph.json}; \code{tests/test_B2_branch.py}\\
+\propBthree, \corBthree & B2.5 (\S13) & \code{data/B2_5_index.json}, \code{data/B2_5_dependency_graph.json}; \code{tests/test_B2_index.py}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Paper 2 labels.} Results of Paper~2 \citep{Paper2} are cited by their labels in the Paper~2 manuscript:
+Proposition~2.1 (scale elimination), Lemmas~S, E, A, T0--T4 and Theorem~2 (Morse index of the cube). The Paper~2
+repository uses some different internal names; its manuscript appendix ``Correspondence'' lists them (for example the
+index theorem is recorded there as Theorem~4$'$ of its development notes). The constants $\rstar$, $P_A(0^+)$,
+$P_T(0^+)$ and $\qc$ and the matrix $M(r)$ are taken from the authenticated Paper~2 archive
+(\code{EIT_LJ_FULL_VECTOR_STABILITY_V1.0.zip}, SHA-256
+\hash{bb70721df7f0aa17edca30d84d1b4aaf980c0a76693be14fa780e4ab8f64762d}), which this work uses read-only.

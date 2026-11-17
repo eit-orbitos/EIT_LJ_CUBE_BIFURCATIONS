@@ -1,0 +1,284 @@
+{
+  "baseline_pass": true,
+  "baseline_failures": [],
+  "n_controls": 55,
+  "n_rejected": 55,
+  "all_rejected": true,
+  "controls": [
+    {
+      "control": "modify key artefact: Track A certificate (Lemma M)",
+      "rejected": true,
+      "first_failure": "data/A2_lemma_M_certificate.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: Track A semantic hash",
+      "rejected": true,
+      "first_failure": "data/A2_CERTIFICATE_SEMANTIC.sha256: protected file changed"
+    },
+    {
+      "control": "modify key artefact: Theorem A dependency graph",
+      "rejected": true,
+      "first_failure": "data/A2_theorem_A_dependencies.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: historical B1 certificate (Lemma K)",
+      "rejected": true,
+      "first_failure": "data/B1_kappa_certificate.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: historical B1 semantic hash",
+      "rejected": true,
+      "first_failure": "data/B1_CERTIFICATE_SEMANTIC.sha256: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B1 erratum: corrected rebuild",
+      "rejected": true,
+      "first_failure": "data/B1_ERRATUM_corrected_rebuild_certificate.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B1 erratum: corrected rebuild semantic hash",
+      "rejected": true,
+      "first_failure": "data/B1_ERRATUM_CORRECTED_REBUILD_SEMANTIC.sha256: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B1 erratum: report",
+      "rejected": true,
+      "first_failure": "data/B1_ERRATUM_report.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B1 erratum: pre-patch reproduction",
+      "rejected": true,
+      "first_failure": "data/B1_ERRATUM_pre_patch_reproduction.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.3 certificate (Lemma Q)",
+      "rejected": true,
+      "first_failure": "data/B2_c4hat_certificate.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.3 semantic hash",
+      "rejected": true,
+      "first_failure": "data/B2_CERTIFICATE_SEMANTIC.sha256: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.3 checker report",
+      "rejected": true,
+      "first_failure": "data/B2_3_check_report.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.4 branch record",
+      "rejected": true,
+      "first_failure": "data/B2_4_branch.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.4 dependency graph",
+      "rejected": true,
+      "first_failure": "data/B2_4_dependency_graph.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.5 index record",
+      "rejected": true,
+      "first_failure": "data/B2_5_index.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B2.5 dependency graph",
+      "rejected": true,
+      "first_failure": "data/B2_5_dependency_graph.json: protected file changed"
+    },
+    {
+      "control": "modify key artefact: Track A audit report",
+      "rejected": true,
+      "first_failure": "audits/CUBE_BIFURCATIONS_REVIEWER_REPORT.md: protected file changed"
+    },
+    {
+      "control": "modify key artefact: B1 audit report",
+      "rejected": true,
+      "first_failure": "audits/CUBE_BIFURCATIONS_V03_REVIEWER_REPORT.md: protected file changed"
+    },
+    {
+      "control": "modify key artefact: erratum E-B1 re-audit report",
+      "rejected": true,
+      "first_failure": "audits/CUBE_BIFURCATIONS_V04_DEV4_B1_ERRATUM_REAUDIT.md: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b1_cert.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b1_cert.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b1_check.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b1_check.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/lemma_m.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/lemma_m.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/certcheck.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/certcheck.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_cert.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_cert.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_check.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_check.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_branch.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_branch.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_index.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_index.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_quartic.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_quartic.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/b2_symmetry.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_symmetry.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/theorem_a.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/theorem_a.py: protected file changed"
+    },
+    {
+      "control": "modify mathematical source: src/cube_bif/pairsum.py",
+      "rejected": true,
+      "first_failure": "src/cube_bif/pairsum.py: protected file changed"
+    },
+    {
+      "control": "relabel STATUS_PROVED in b2_index.py (audited source)",
+      "rejected": true,
+      "first_failure": "src/cube_bif/b2_index.py: protected file changed"
+    },
+    {
+      "control": "modify B2.3 negative-control record",
+      "rejected": true,
+      "first_failure": "data/B2_3_negative_controls.json: protected file changed"
+    },
+    {
+      "control": "modify A1 sign table",
+      "rejected": true,
+      "first_failure": "data/A1_sign_table.csv: protected file changed"
+    },
+    {
+      "control": "modify an earlier script (run_B1.py)",
+      "rejected": true,
+      "first_failure": "scripts/run_B1.py: protected file changed"
+    },
+    {
+      "control": "modify an earlier identity-check document",
+      "rejected": true,
+      "first_failure": "docs/V0.4-dev.6_IDENTITY_CHECK.md: protected file changed"
+    },
+    {
+      "control": "modify the external-brainstorm contradictions document",
+      "rejected": true,
+      "first_failure": "docs/CONTRADICTIONS_EXTERNAL_BRAINSTORM.md: protected file changed"
+    },
+    {
+      "control": "modify a mathematical test (test_B2_index.py)",
+      "rejected": true,
+      "first_failure": "tests/test_B2_index.py: protected file changed"
+    },
+    {
+      "control": "modify reference/PAPER2_INPUTS.md",
+      "rejected": true,
+      "first_failure": "reference/PAPER2_INPUTS.md: protected file changed"
+    },
+    {
+      "control": "delete a V0.4-dev.6 file (data/B2_scan.csv)",
+      "rejected": true,
+      "first_failure": "removed: data/B2_scan.csv"
+    },
+    {
+      "control": "add a file under src/",
+      "rejected": true,
+      "first_failure": "added in forbidden location: src/cube_bif/extra.py"
+    },
+    {
+      "control": "add a file under data/",
+      "rejected": true,
+      "first_failure": "added in forbidden location: data/extra.json"
+    },
+    {
+      "control": "add an unexpected file at the root",
+      "rejected": true,
+      "first_failure": "added in forbidden location: EXTRA.md"
+    },
+    {
+      "control": "add an unexpected script",
+      "rejected": true,
+      "first_failure": "added in forbidden location: scripts/extra.py"
+    },
+    {
+      "control": "alter a new audit report (B2.5)",
+      "rejected": true,
+      "first_failure": "audit report altered: audits/CUBE_BIFURCATIONS_V04_DEV6_BLIND_B25_REVIEWER_REPORT.md"
+    },
+    {
+      "control": "alter a new audit report (B2.3)",
+      "rejected": true,
+      "first_failure": "audit report altered: audits/CUBE_BIFURCATIONS_V05_BLIND_B23_LEMMA_Q_REVIEWER_REPORT.md"
+    },
+    {
+      "control": "__init__.py: code change beyond version/status",
+      "rejected": true,
+      "first_failure": "src/cube_bif/__init__.py: code beyond version/status changed"
+    },
+    {
+      "control": "NOTES: delete a formula line (Lemma M bound)",
+      "rejected": true,
+      "first_failure": "NOTES.md: 1 non-status line(s) removed or edited, first: '> **Lemma M.** m′(r) > 0 for every r ∈ [0, 16/5]. More precisely, m′(r) ≥ L_min = 161457/262144 = 0.61590957…'"
+    },
+    {
+      "control": "NOTES: edit the Proposition B3 Hessian line",
+      "rejected": true,
+      "first_failure": "NOTES.md: 1 non-status line(s) removed or edited, first: '>     d = −4βs² + O(s⁴),   e = κs + O(s³),   det[[d, e], [e, d]] = −κ²s² + O(s⁴),'"
+    },
+    {
+      "control": "CHANGELOG: edit an earlier entry",
+      "rejected": true,
+      "first_failure": "CHANGELOG.md: V0.4-dev.6 text not recovered by removing one inserted block"
+    },
+    {
+      "control": "RESEARCH_LOG: edit an earlier line",
+      "rejected": true,
+      "first_failure": "RESEARCH_LOG.md: not append-only"
+    },
+    {
+      "control": "audits/README.md: delete an earlier line",
+      "rejected": true,
+      "first_failure": "audits/README.md: a V0.4-dev.6 line was removed or edited"
+    },
+    {
+      "control": "README: remove the paper title",
+      "rejected": true,
+      "first_failure": "README.md: paper title missing"
+    },
+    {
+      "control": "LaTeX build debris in paper/",
+      "rejected": true,
+      "first_failure": "added in forbidden location: paper/manuscript.aux"
+    },
+    {
+      "control": "stale manifest (documentation edited, SHA256SUMS not regenerated)",
+      "rejected": true,
+      "first_failure": "SHA256SUMS: stale manifest: missing [], extra [], wrong ['docs/AI_USE_LOG.md']"
+    }
+  ]
+}

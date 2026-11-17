@@ -1,0 +1,37 @@
+\section{Proof dependency graphs}\label{app:graphs}
+
+The repository records the proof structure of the main results as machine-readable directed acyclic graphs
+(\code{data/A2_theorem_A_dependencies.json}, \code{data/B2_4_dependency_graph.json},
+\code{data/B2_5_dependency_graph.json}; the structure of \lemK\ and \propBone\ is recorded in the B1 records and
+notes). Every leaf carries one of the statuses \textsc{verified-exact}, \textsc{certified}, \textsc{frozen input} or
+\textsc{standard}. Numerical results appear only in separate ``corroboration'' lists and never as nodes reachable from a
+result. Tests reject graphs with cycles, dangling edges, a numerical node as a dependency, a missing required input,
+or an input outside the allowed list. The status strings stored inside these generated records are those of the time
+of generation; the current audit status is given in \cref{tab:summary} and in the repository's status matrix.
+
+\paragraph{\thmA.} Leaves: real analyticity and $\Oh$/$E(3)$ invariance (exact, standard); the $\Atwou$ character and
+$D(-I)\eA=-\eA$ (exact); $b=V_{aab}\ebr$ and the closed forms (exact); the scale-eliminated identity \eqref{eq:c4m}
+(exact); \lemM\ and $P_A<16/5$ (certified); Paper~2's Lemma~A and the one-dimensional kernel (frozen inputs);
+Lyapunov--Schmidt reduction and the implicit function theorem (standard).
+
+\paragraph{\lemK\ and \propBone.} \lemK: the exact trilinear structure and factorisation \eqref{eq:kappafact}; the
+certificate (certified); Paper~2's Lemmas~T2, T3 and the enclosures of $P_T(0^+)$ and $\qc$ (frozen inputs). \propBone:
+\lemK; $\tau<0$ (\cref{lem:tau}: frozen Lemma~T1/T3 data and an exact identity); $\Fix(\Dthreed)$ (exact); symmetric
+criticality, Lyapunov--Schmidt reduction and the implicit function theorem (standard).
+
+\paragraph{\lemQ.} The exact B2.1 identity $c_4=qW_q(p-q)\cfhat$; the certificate (certified); the imported, hash-pinned
+\lemK\ curve balls; Paper~2's Lemmas~S, T1, T3 (frozen inputs).
+
+\paragraph{\propBtwo.} Exactly six inputs: the exact B2.0 parity and fixed-space results; the exact B2.1
+Lyapunov--Schmidt identity; \lemQ\ (certified); $\tau<0$ (audited; \cref{lem:tau}); standard Lyapunov--Schmidt
+reduction; the analytic implicit function theorem. Intermediate steps: the reduced scalar equation, the
+implicit-function branch, the pitchfork classification, the axial curvature and the geometry.
+
+\paragraph{\propBthree\ and \corBthree.} \propBthree\ has four inputs: the exact $\Oh/\Ttwog$ invariant structure (B0,
+B2.0 and the exact isotypic projectors); \lemK\ ($\kappa\ne0$); \propBtwo; standard Lyapunov--Schmidt and centre-manifold
+theory (including Taylor's theorem). Intermediate steps: the invariant normal form, the Hessian structure on the axis,
+the identification with the axial potential of \propBtwo, the complete invariant quartic, the branch Hessian, the
+transverse inertia with its remainder bound, the centre index and the conjugate branches. \corBthree\ adds exactly one
+input, Paper~2's index theorem on the $\Ttwog$ curve (frozen input), through the derived count $m_\perp=3$ and the
+Haynsworth splitting \eqref{eq:haynsworth}. The $\Dthreed$ comparison of \cref{rem:d3d} is recorded as a consistency
+check only; the raw $24$-dimensional Hessians and the B2.2 scan are corroboration only.

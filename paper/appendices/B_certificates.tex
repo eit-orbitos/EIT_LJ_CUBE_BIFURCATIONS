@@ -1,0 +1,63 @@
+\section{Certificates, checkers and archived audit reports}\label{app:certs}
+
+\paragraph{Certificate format.} Each certificate is a JSON file in \code{data/}. It lists the boxes with exact rational
+endpoints, the recorded dyadic lower bounds, the expressions or expression hashes used, and a provenance block (software
+versions, precision, time). Its \emph{semantic} SHA-256 is computed over the canonical JSON without the provenance
+block, so that a rebuild with identical mathematics has the same semantic hash on any machine. The checkers re-derive
+the expressions independently, re-evaluate every box at higher precision and compare the semantic hash.
+
+\begin{table}[h]
+\centering\small
+\caption{Certificates and semantic SHA-256 (full values; the files and their checkers are in the repository).}\label{tab:certhashes}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.4cm}>{\raggedright\arraybackslash}p{4.3cm}X}
+\toprule
+result & file & semantic SHA-256\\
+\midrule
+\lemM\ and $P_A<16/5$ & \code{A2_lemma_M_certificate.json} & \hash{49dce160b2a17a9f61554200617b9a75b5b02e244e21963b5956317156b6a71e}\\
+\lemK\ (historical, audited) & \code{B1_kappa_certificate.json} & \hash{616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6}\\
+\lemK\ (corrected rebuild, corroboration only) & \code{B1_ERRATUM_corrected_rebuild_certificate.json} & \hash{b2f8e6dcd1c5073635babea2f7a6079b7ede03acbbc4f33ac3cb20f64d21d505}\\
+\lemQ & \code{B2_c4hat_certificate.json} & \hash{f7bc244ecac4b89ce003a38ff52047d6cbe80f63a97236049f15f5e0da5c17d2}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{\lemM.} $64$ boxes of width $1/20$ covering $[0,16/5]$, obtained by recursive bisection. On each box $B$
+with midpoint $c$, $m'(B)$ is enclosed by the mean-value form $m'(c)+(B-c)\,m''(B)$ with an exactly derived $m''$,
+evaluated in Arb at 128 bits, and the bound is rounded down to the grid $2^{-20}$. The minimum over all boxes is $L_{\min}=161457/262144$. A separate certificate of
+$m''>0$ on $[0,1/8]$ and the exact value $m'(0)$ give the bound near $r=0$ independently. The independent checker
+re-derives $m'$ and $m''$ and re-evaluates every box at 160 bits.
+
+\paragraph{\lemK.} $222$ boxes in $q$ covering $[0,101/50]$ (base partition $k/100$ with at most two bisections,
+and a corner box $[2019/1000,101/50]$). On each box a parametric
+interval Newton step for $\Dt(q,\cdot)$ on a recorded $\delta$-ball proves existence and uniqueness of the zero for every
+$q$ in the box, and the carrier $\khat$ and $\Mhat_{22}$ are enclosed on the product box. The $52$ boxes closest to the
+diagonal use Taylor models of the divided differences, with no division by $\delta$; the other $170$ use ball
+quotients ($\inf\delta>1$). The endpoint $q=0$ uses the
+certified enclosure of $P_T(0^+)$ and the corner the certified enclosure of $\qc$ from Paper~2. The minimum dyadic
+lower bound is $1311719/536870912$. Erratum E-B1 (\cref{sec:erratum}) concerned the Taylor models of the $52$
+near-diagonal boxes; the historical certificate is retained unchanged, and the corrected rebuild is stored separately.
+
+\paragraph{\lemQ.} The $222$ curve balls are imported from the historical \lemK\ certificate, pinned by its semantic
+hash and re-verified by an independent Newton inclusion. On each box $\cfhat$, $\widehat h_E$ and $\Mhat_{22}$ are
+enclosed from the thirteen closed forms of \cref{app:closed} at 128 bits: ball quotients on the $170$ far boxes and,
+on the $52$ near boxes, a symmetric Taylor series of the divided difference with an exact Lagrange remainder (the series
+length is set explicitly and checked, \cref{sec:erratum}). The checker uses no Taylor series: it encloses
+every divided difference by the integral form $\hat g(p,q)=\int_0^1 g'(q+t(p-q))\,dt$, evaluates at 192 bits, and
+treats the endpoint $q=0$ and the corner separately (at the corner every divided difference is replaced by the
+derivative, with no division by $p-q$). The minimum certified lower bound is $\cfhat\ge955723/262144$.
+
+\paragraph{Archived independent audit reports.} The reports are kept byte-identical in \code{audits/}.
+\begin{center}\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{6.3cm}X}
+\toprule
+report & SHA-256\\
+\midrule
+\code{CUBE_BIFURCATIONS_REVIEWER_REPORT.md} (Track A) & \hash{f82c5ef1a03c33c0909313bd6442d1879d39717f991cc8e245eb0c61f75d8b85}\\
+\code{CUBE_BIFURCATIONS_V03_REVIEWER_REPORT.md} (B1) & \hash{82bd4f21630a20481113702a9f49dddfa6327f2baf3c07a131af259c1baa65e5}\\
+\code{CUBE_BIFURCATIONS_V04_DEV4_B1_ERRATUM_REAUDIT.md} (E-B1) & \hash{ba482da06aa0492b6524e47680fd949170f4d0dafac0d5661a073efce4d46b74}\\
+\code{CUBE_BIFURCATIONS_V05_BLIND_B23_LEMMA_Q_REVIEWER_REPORT.md} (B2.3) & \hash{841152f2cccd0a43c4f8e73ce5d0cf37e9793d26f12047d5143ea5a053e96bcf}\\
+\code{CUBE_BIFURCATIONS_V05_BLIND_B24_REVIEWER_REPORT.md} (B2.4) & \hash{0302930b9a96ac6bca3df4e720ba34ab5937f73944aee76ba85f345706bdb1ec}\\
+\code{CUBE_BIFURCATIONS_V04_DEV6_BLIND_B25_REVIEWER_REPORT.md} (B2.5) & \hash{bffd4948721ee62f6898336734670ee51381caf546cdd69e0a2ad810e37f165a}\\
+\bottomrule
+\end{tabularx}
+\end{center}
