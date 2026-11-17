@@ -1,0 +1,186 @@
+{
+ "all_detected": true,
+ "baseline": {
+  "tests/test_B2_branch.py::test_axial_curvature_leading_terms": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_branch_side_is_derived_from_the_signs": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_classification_in_the_energy_reduced_axial_convention": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_dependency_graph_is_valid": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_generic_even_LS_expansion": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_ift_slope_and_amplitude_law": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[axial curvature upgraded to full-space stability]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[branch claimed on both sides]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[removal of evenness (flag)]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[wrong sign of tau]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[B2.4 numerical branch points used as proof]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[Lemma Q replaced by a VERIFIED-NUMERIC claim]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[unlisted input added (B1 Lemma K)]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_proposition_statement_is_valid": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_branch.py::test_reversing_elements_exchange_plus_and_minus_branches": {
+   "passes_unmutated": true
+  }
+ },
+ "n_mutations": 22,
+ "n_detected": 22,
+ "results": [
+  {
+   "mutation": "wrong sign of tau: G_mu = -tau",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_ift_slope_and_amplitude_law",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "wrong sign of tau: the derived branch side ignores the sign of tau",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_branch_side_is_derived_from_the_signs",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "wrong sign of c4: '>0' mapped to a negative symbol",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_branch_side_is_derived_from_the_signs",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "missing factor 6: G_z = c4",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_proposition_statement_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "removal of evenness: odd monomials in the generic energy",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_generic_even_LS_expansion",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "transverse solve dropped (energy along the kernel line only)",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_generic_even_LS_expansion",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "branch claimed on both sides (branch_side returns mu != 0)",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_proposition_statement_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "classification swapped",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_classification_in_the_energy_reduced_axial_convention",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "axial curvature on the branch without the factor 2",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_axial_curvature_leading_terms",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "exchange expectation: reversing elements assumed to fix f_1 and e_1",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_reversing_elements_exchange_plus_and_minus_branches",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement upgrades the axial curvature to full-space stability",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_proposition_statement_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement drops the factor 6 in the amplitude law",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_proposition_statement_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "B2.2 scan used instead of Lemma Q (graph edge)",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_dependency_graph_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "B2.2 scan added as a proof dependency (graph edge)",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_dependency_graph_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "graph: an unlisted input (Paper 2 Lemma S as a separate leaf) added",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_dependency_graph_is_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: corroboration-only nodes accepted as proof",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[B2.4 numerical branch points used as proof]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: VERIFIED-NUMERIC accepted as a proof status",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[Lemma Q replaced by a VERIFIED-NUMERIC claim]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: full-space stability and centre-manifold claims not checked",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[axial curvature upgraded to full-space stability]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: branch on both sides not checked",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[branch claimed on both sides]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: input signs not checked",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[wrong sign of tau]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: the six-input restriction not enforced",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_invalid_dependency_graph_is_rejected[unlisted input added (B1 Lemma K)]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: evenness flag not checked",
+   "file": "src/cube_bif/b2_branch.py",
+   "target": "tests/test_B2_branch.py::test_incorrect_statement_is_rejected[removal of evenness (flag)]",
+   "outcome": "DETECTED"
+  }
+ ]
+}

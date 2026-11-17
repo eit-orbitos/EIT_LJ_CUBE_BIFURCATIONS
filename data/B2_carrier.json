@@ -1,0 +1,331 @@
+{
+ "project_version": "0.4.0.dev2",
+ "status": "RESEARCH / V0.4-dev.2",
+ "label": "B2.2 = VERIFIED-NUMERIC / RECONNAISSANCE (exact identities marked in NOTES §7)",
+ "q_c_refined_100_digits": "2.019938231700799988302883185498575874900736598153693255449382580930711545649845945053662170101800097",
+ "p0_refined_100_digits": "4.796368189344416004181122459356264833343685199289495158804488637825876499650689591368857402180004849",
+ "frozen_enclosures": {
+  "q_c": [
+   "2.0199382317007999883028831854985758749007",
+   "2.0199382317007999883028831854985758749008"
+  ],
+  "P_T(0)": [
+   "4.796368189344416004181122459356",
+   "4.796368189344416004181122459357"
+  ],
+  "P_T(0) Paper 2 audit": [
+   "4.796368189344416004181122459356264828727186725514416637",
+   "4.79636818934441600418112245935626483643090650306336005"
+  ]
+ },
+ "enclosure_checks": {
+  "q_c_in_paper2_enclosure": true,
+  "p0_in_paper2_enclosure": true,
+  "p0_in_paper2_audit_enclosure": true
+ },
+ "endpoint_q0": {
+  "q": "0.0",
+  "p": "4.7963681893444160041811224593562648333436852",
+  "rho": "0.0197163555530138765207016659191037783993891877",
+  "one_plus_rho2": "1.00038873467629286112464098541315877204381897",
+  "Mh22": "1.51334037674223891873976672648487534280245359",
+  "hE": "1.99911756817778928388056764269791450929782538",
+  "hA": "2.0",
+  "Q": "4.01645757811533342780530693239357473469234151",
+  "A1g": "-0.141135747103618189040866875396615112359162606",
+  "Eg": "-0.0759837931448294230542130282277483671748897176",
+  "c4_hat": "3.79933803786688581571022702876921125515828919",
+  "Q_chart": "4.01958085773385411701976729502306843019069524",
+  "bA_chart": "0.306860986060707260076010457353766402221697671",
+  "bE_chart": "-0.225106387247020166341023059903264949070432147",
+  "det_Mh": "-1.62191613070795017803322560651740976411022003e-82",
+  "kernel_residual": "1.07788199337499611710566860788220038054140743e-82"
+ },
+ "endpoint_corner": {
+  "q": "2.0199382317007999883028831854985758749007366",
+  "p": "2.0199382317007999883028831854985758749007366",
+  "rho": "0.0277614207531459210146270045290780594516402288",
+  "one_plus_rho2": "1.00077069648223320103637655117311805503770519",
+  "Mh22": "1.45550847121252960780648491125051995094971224",
+  "hE": "1.99831736711206381860950163625861047683111641",
+  "hA": "2",
+  "Q": "4.43524294716477530834941741850667919886833308",
+  "A1g": "-0.0351662275329967254877359643722087052849890885",
+  "Eg": "-0.0230412290186566467486595691890784693620971487",
+  "c4_hat": "4.37703549061312193611302188494539202422124684",
+  "Q_chart": "4.4420820338540937636265703251026725574668198",
+  "bA_chart": "0.153232836769179382629116812164692761177941919",
+  "bE_chart": "-0.123982104721079039774289669059604810373892992",
+  "det_Mh": "2.29419860017339486947219592544115705370445942e-82",
+  "kernel_residual": "1.58238547041387130862107429053775490394740804e-82"
+ },
+ "exact": {
+  "g_at_zero": {
+   "Q_uuuu": "73/36",
+   "Q_uuuv": "8*sqrt(2)/63",
+   "Q_uuvv": "68/63",
+   "Q_uvvv": "-8*sqrt(2)/63",
+   "Q_vvvv": "472/63",
+   "bA_uu": "16*sqrt(6)/63",
+   "bA_uv": "-8*sqrt(3)/63",
+   "bA_vv": "20*sqrt(6)/63",
+   "bE_uu": "-25*sqrt(3)/126",
+   "bE_uv": "2*sqrt(6)/63",
+   "bE_vv": "-64*sqrt(3)/63",
+   "hA": "2",
+   "hE": "1/7"
+  },
+  "M_at_zero": [
+   [
+    "-16/21",
+    "4*sqrt(2)/21"
+   ],
+   [
+    "4*sqrt(2)/21",
+    "-20/21"
+   ]
+  ],
+  "q0_formulation": "f_hat = (f(p0) - f(0))/p0 with the exact f(0); Mh = (M(p0) - M(0))/p0; p0 = P_T(0) is the root of det[M(p) - M(0)] = 0 in Paper 2's certified enclosure",
+  "corner_formulation": "f_hat = f'(q_c) from exact derivative closed forms (dX/dr = -(log2/2)X, dY/dr = -(log3/2)Y); rho_c = -M'12/M'22; q_c is the root of det M'(r) = 0 in Paper 2's certified enclosure",
+  "g_prime_closed_forms": {
+   "Q_uuuu": "(486*Xr**2*r**3*(3*Xr + Yr + 3)*log(2) + 2916*Xr**2*r**2*(3*Xr + Yr + 3)*log(2) + 6075*Xr**2*r*(3*Xr + Yr + 3)*log(2) + 4374*Xr**2*(3*Xr + Yr + 3)*log(2) + 17496*Xr**2 + 96*Xr*Yr*r**3*(3*Xr + Yr + 3)*log(2) + 162*Xr*Yr*r**3*(3*Xr + Yr + 3)*log(3) + 288*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(2) + 972*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(3) - 312*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 2025*Xr*Yr*r*(3*Xr + Yr + 3)*log(3) - 1008*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 1458*Xr*Yr*(3*Xr + Yr + 3)*log(3) + 11664*Xr*Yr - 162*Xr*r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) - 972*Xr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 972*Xr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 2916*Xr*r*(3*Xr + Yr + 3)*log(2) - 2025*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 3888*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 5832*Xr*(3*Xr + Yr + 3)*log(2) - 1458*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 4050*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 34992*Xr + 32*Yr**2*r**3*(3*Xr + Yr + 3)*log(3) + 96*Yr**2*r**2*(3*Xr + Yr + 3)*log(3) - 104*Yr**2*r*(3*Xr + Yr + 3)*log(3) - 336*Yr**2*(3*Xr + Yr + 3)*log(3) + 1944*Yr**2 - 32*Yr*r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 96*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 192*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 972*Yr*r*(3*Xr + Yr + 3)*log(3) + 104*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 384*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 1944*Yr*(3*Xr + Yr + 3)*log(3) - 208*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 336*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 11664*Yr + 17496)/(432*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "Q_uuuv": "sqrt(2)*Yr*(612*Xr**2 + 408*Xr*Yr + 6*Xr*r**3*(3*Xr + Yr + 3)*log(2) + 45*Xr*r**2*(3*Xr + Yr + 3)*log(2) + 102*Xr*r*(3*Xr + Yr + 3)*log(2) + 72*Xr*(3*Xr + Yr + 3)*log(2) + 1224*Xr + 68*Yr**2 + 2*Yr*r**3*(3*Xr + Yr + 3)*log(3) + 15*Yr*r**2*(3*Xr + Yr + 3)*log(3) + 34*Yr*r*(3*Xr + Yr + 3)*log(3) + 24*Yr*(3*Xr + Yr + 3)*log(3) + 408*Yr - 2*r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 15*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 12*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 34*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 60*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 24*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 612)/(54*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "Q_uuvv": "(1458*Xr**2 + 6*Xr*Yr*r**3*(3*Xr + Yr + 3)*log(2) + 45*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(2) + 129*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 126*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 972*Xr*Yr + 243*Xr*r*(3*Xr + Yr + 3)*log(2) + 486*Xr*(3*Xr + Yr + 3)*log(2) + 2916*Xr + 2*Yr**2*r**3*(3*Xr + Yr + 3)*log(3) + 15*Yr**2*r**2*(3*Xr + Yr + 3)*log(3) + 43*Yr**2*r*(3*Xr + Yr + 3)*log(3) + 42*Yr**2*(3*Xr + Yr + 3)*log(3) + 162*Yr**2 - 2*Yr*r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 15*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 12*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 81*Yr*r*(3*Xr + Yr + 3)*log(3) - 43*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 60*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 162*Yr*(3*Xr + Yr + 3)*log(3) - 42*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 86*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 972*Yr + 1458)/(54*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "Q_uvvv": "sqrt(2)*Yr*(-180*Xr**2 - 120*Xr*Yr + 3*Xr*r**3*(3*Xr + Yr + 3)*log(2) + 9*Xr*r**2*(3*Xr + Yr + 3)*log(2) - 30*Xr*r*(3*Xr + Yr + 3)*log(2) - 72*Xr*(3*Xr + Yr + 3)*log(2) - 360*Xr - 20*Yr**2 + Yr*r**3*(3*Xr + Yr + 3)*log(3) + 3*Yr*r**2*(3*Xr + Yr + 3)*log(3) - 10*Yr*r*(3*Xr + Yr + 3)*log(3) - 24*Yr*(3*Xr + Yr + 3)*log(3) - 120*Yr - r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 3*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 6*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 10*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 12*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 24*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 180)/(54*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "Q_vvvv": "(24786*Xr**2 + 3*Xr*Yr*r**3*(3*Xr + Yr + 3)*log(2) - 18*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(2) - 111*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) - 126*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 16524*Xr*Yr + 243*Xr*r**3*(3*Xr + Yr + 3)*log(2) + 1458*Xr*r**2*(3*Xr + Yr + 3)*log(2) + 4131*Xr*r*(3*Xr + Yr + 3)*log(2) + 4374*Xr*(3*Xr + Yr + 3)*log(2) + 49572*Xr + Yr**2*r**3*(3*Xr + Yr + 3)*log(3) - 6*Yr**2*r**2*(3*Xr + Yr + 3)*log(3) - 37*Yr**2*r*(3*Xr + Yr + 3)*log(3) - 42*Yr**2*(3*Xr + Yr + 3)*log(3) + 2754*Yr**2 + 81*Yr*r**3*(3*Xr + Yr + 3)*log(3) - Yr*r**3*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 486*Yr*r**2*(3*Xr + Yr + 3)*log(3) + 6*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 6*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 1377*Yr*r*(3*Xr + Yr + 3)*log(3) - 24*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 37*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 1458*Yr*(3*Xr + Yr + 3)*log(3) - 74*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 42*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 16524*Yr + 486*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 1944*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 24786)/(54*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bA_uu": "sqrt(6)*(-27*Xr**2*r**2*(3*Xr + Yr + 3)*log(2) - 54*Xr**2*r*(3*Xr + Yr + 3)*log(2) + 324*Xr**2 - 9*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(3) - 12*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(2) - 30*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) - 18*Xr*Yr*r*(3*Xr + Yr + 3)*log(3) - 12*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 216*Xr*Yr + 9*Xr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 54*Xr*r*(3*Xr + Yr + 3)*log(2) - 36*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 18*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 108*Xr*(3*Xr + Yr + 3)*log(2) - 36*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 648*Xr - 4*Yr**2*r**2*(3*Xr + Yr + 3)*log(3) - 10*Yr**2*r*(3*Xr + Yr + 3)*log(3) - 4*Yr**2*(3*Xr + Yr + 3)*log(3) + 36*Yr**2 + 4*Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 18*Yr*r*(3*Xr + Yr + 3)*log(3) - 16*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 10*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 36*Yr*(3*Xr + Yr + 3)*log(3) - 20*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 4*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 216*Yr + 324)/(36*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bA_uv": "sqrt(3)*Yr*(-72*Xr**2 - 48*Xr*Yr - 3*Xr*r**2*(3*Xr + Yr + 3)*log(2) - 12*Xr*r*(3*Xr + Yr + 3)*log(2) - 12*Xr*(3*Xr + Yr + 3)*log(2) - 144*Xr - 8*Yr**2 - Yr*r**2*(3*Xr + Yr + 3)*log(3) - 4*Yr*r*(3*Xr + Yr + 3)*log(3) - 4*Yr*(3*Xr + Yr + 3)*log(3) - 48*Yr + r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 4*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 4*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 4*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 72)/(9*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bA_vv": "sqrt(6)*(-162*Xr**2 - 3*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(2) - 3*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 6*Xr*Yr*(3*Xr + Yr + 3)*log(2) - 108*Xr*Yr - 27*Xr*r**2*(3*Xr + Yr + 3)*log(2) - 27*Xr*r*(3*Xr + Yr + 3)*log(2) + 54*Xr*(3*Xr + Yr + 3)*log(2) - 324*Xr - Yr**2*r**2*(3*Xr + Yr + 3)*log(3) - Yr**2*r*(3*Xr + Yr + 3)*log(3) + 2*Yr**2*(3*Xr + Yr + 3)*log(3) - 18*Yr**2 - 9*Yr*r**2*(3*Xr + Yr + 3)*log(3) + Yr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 9*Yr*r*(3*Xr + Yr + 3)*log(3) - 4*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 18*Yr*(3*Xr + Yr + 3)*log(3) - 2*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 2*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 108*Yr - 36*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 162)/(18*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bE_uu": "sqrt(3)*(54*Xr**2*r**2*(3*Xr + Yr + 3)*log(2) + 189*Xr**2*r*(3*Xr + Yr + 3)*log(2) + 162*Xr**2*(3*Xr + Yr + 3)*log(2) - 648*Xr**2 + 18*Xr*Yr*r**2*(3*Xr + Yr + 3)*log(3) - 48*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 63*Xr*Yr*r*(3*Xr + Yr + 3)*log(3) - 96*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 54*Xr*Yr*(3*Xr + Yr + 3)*log(3) - 432*Xr*Yr - 18*Xr*r**2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) - 108*Xr*r*(3*Xr + Yr + 3)*log(2) - 63*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 72*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 216*Xr*(3*Xr + Yr + 3)*log(2) - 54*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 126*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 1296*Xr - 16*Yr**2*r*(3*Xr + Yr + 3)*log(3) - 32*Yr**2*(3*Xr + Yr + 3)*log(3) - 72*Yr**2 - 36*Yr*r*(3*Xr + Yr + 3)*log(3) + 16*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 72*Yr*(3*Xr + Yr + 3)*log(3) - 32*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 32*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 432*Yr - 648)/(72*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bE_uv": "sqrt(6)*Yr*(18*Xr**2 + 12*Xr*Yr + 3*Xr*r*(3*Xr + Yr + 3)*log(2) + 6*Xr*(3*Xr + Yr + 3)*log(2) + 36*Xr + 2*Yr**2 + Yr*r*(3*Xr + Yr + 3)*log(3) + 2*Yr*(3*Xr + Yr + 3)*log(3) + 12*Yr - r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 18)/(18*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "bE_vv": "sqrt(3)*(-648*Xr**2 + 6*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 12*Xr*Yr*(3*Xr + Yr + 3)*log(2) - 432*Xr*Yr - 27*Xr*r**2*(3*Xr + Yr + 3)*log(2) - 108*Xr*r*(3*Xr + Yr + 3)*log(2) - 108*Xr*(3*Xr + Yr + 3)*log(2) - 1296*Xr + 2*Yr**2*r*(3*Xr + Yr + 3)*log(3) + 4*Yr**2*(3*Xr + Yr + 3)*log(3) - 72*Yr**2 - 9*Yr*r**2*(3*Xr + Yr + 3)*log(3) - 36*Yr*r*(3*Xr + Yr + 3)*log(3) - 2*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 36*Yr*(3*Xr + Yr + 3)*log(3) - 4*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 4*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 432*Yr - 36*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) - 648)/(9*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+   "hA": "2",
+   "hE": "(9*Xr**2*r*(3*Xr + Yr + 3)*log(2) - 18*Xr**2*(3*Xr + Yr + 3)*log(2) + 216*Xr**2 + 3*Xr*Yr*r*(3*Xr + Yr + 3)*log(3) - 12*Xr*Yr*(3*Xr + Yr + 3)*log(2) - 6*Xr*Yr*(3*Xr + Yr + 3)*log(3) + 144*Xr*Yr + 36*Xr*r*(3*Xr + Yr + 3)*log(2) - 3*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 36*Xr*(3*Xr + Yr + 3)*log(2) + 6*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) + 6*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 432*Xr - 4*Yr**2*(3*Xr + Yr + 3)*log(3) + 24*Yr**2 + 12*Yr*r*(3*Xr + Yr + 3)*log(3) + 12*Yr*(3*Xr + Yr + 3)*log(3) + 4*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 144*Yr + 216)/(4*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))"
+  },
+  "M_prime_closed_form": [
+   [
+    "(27*Xr**2*r*(3*Xr + Yr + 3)*log(2) + 12*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) + 9*Xr*Yr*r*(3*Xr + Yr + 3)*log(3) + 6*Xr*Yr*(3*Xr + Yr + 3)*log(2) - 9*Xr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(2) - 54*Xr*(3*Xr + Yr + 3)*log(2) + 18*Xr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 4*Yr**2*r*(3*Xr + Yr + 3)*log(3) + 2*Yr**2*(3*Xr + Yr + 3)*log(3) - 4*Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 18*Yr*(3*Xr + Yr + 3)*log(3) - 2*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 8*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))/(6*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+    "sqrt(2)*Yr*(18*Xr**2 + 12*Xr*Yr + 3*Xr*r*(3*Xr + Yr + 3)*log(2) + 6*Xr*(3*Xr + Yr + 3)*log(2) + 36*Xr + 2*Yr**2 + Yr*r*(3*Xr + Yr + 3)*log(3) + 2*Yr*(3*Xr + Yr + 3)*log(3) + 12*Yr - r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 18)/(3*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))"
+   ],
+   [
+    "sqrt(2)*Yr*(18*Xr**2 + 12*Xr*Yr + 3*Xr*r*(3*Xr + Yr + 3)*log(2) + 6*Xr*(3*Xr + Yr + 3)*log(2) + 36*Xr + 2*Yr**2 + Yr*r*(3*Xr + Yr + 3)*log(3) + 2*Yr*(3*Xr + Yr + 3)*log(3) + 12*Yr - r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 2*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 18)/(3*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))",
+    "(162*Xr**2 + 3*Xr*Yr*r*(3*Xr + Yr + 3)*log(2) - 3*Xr*Yr*(3*Xr + Yr + 3)*log(2) + 108*Xr*Yr + 27*Xr*r*(3*Xr + Yr + 3)*log(2) - 27*Xr*(3*Xr + Yr + 3)*log(2) + 324*Xr + Yr**2*r*(3*Xr + Yr + 3)*log(3) - Yr**2*(3*Xr + Yr + 3)*log(3) + 18*Yr**2 + 9*Yr*r*(3*Xr + Yr + 3)*log(3) - Yr*r*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) - 9*Yr*(3*Xr + Yr + 3)*log(3) + Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9)*log(3) + 2*Yr*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9) + 108*Yr + 162)/(3*(3*Xr + Yr + 3)*(9*Xr**2 + 6*Xr*Yr + 18*Xr + Yr**2 + 6*Yr + 9))"
+   ]
+  ],
+  "corner_expression_free_symbols": [
+   "Xr",
+   "Yr",
+   "r"
+  ],
+  "corner_expression_contains_p_or_q": false,
+  "corner_denominators_at_qc": {
+   "W": "1.606457717942188204414446",
+   "M'22": "1.455508471212529607806485",
+   "g_hE'": "1.998317367112063818609502",
+   "1+rho^2": "1.000770696482233201036377"
+  },
+  "limit_potentials": {
+   "q -> 0": "phi/q -> 7/(3 p W_p) r^-p + log r (up to a constant); c4(phi_0) = (7/3) p0 c4_hat(0)",
+   "corner": "phi/(p - q) -> -(1/q + W'_q/W_q + log r) r^-q at p = q; c4(phi_c) = q_c W_qc c4_hat(q_c)"
+  }
+ },
+ "scan_working_digits": 50,
+ "scan": {
+  "n_points": 401,
+  "min_c4_hat": {
+   "value": "3.799338037866885815710227",
+   "q": "0.0",
+   "row": 0
+  },
+  "max_c4_hat": {
+   "value": "4.377035490613121936113022",
+   "q": "2.019938231700799988302883",
+   "row": 400
+  },
+  "smallest_abs_c4_hat": {
+   "value": "3.799338037866885815710227",
+   "q": "0.0",
+   "row": 0
+  },
+  "sign_changes": 0,
+  "all_positive": true,
+  "strictly_increasing_on_grid": true,
+  "grid_turning_points": [],
+  "min_increment": "2.51984e-6",
+  "max_increment": "0.00355883",
+  "denominator_minima": {
+   "hE": {
+    "min_abs": "1.9983173671120638186",
+    "q": "2.0199382317007999883"
+   },
+   "Mh22": {
+    "min_abs": "1.4555084712125296078",
+    "q": "2.0199382317007999883"
+   },
+   "one_plus_rho2": {
+    "min_abs": "1.0003887346762928611",
+    "q": "0.0"
+   },
+   "dDtilde_ddelta": {
+    "min_abs": "0.064337771600915850594",
+    "q": "0.0"
+   }
+  },
+  "max_kernel_residual": "1.86e-49",
+  "contribution_ranges": {
+   "Q": [
+    "4.01645757811533",
+    "4.43524294716478"
+   ],
+   "A1g": [
+    "-0.141135747103618",
+    "-0.0351662275329967"
+   ],
+   "Eg": [
+    "-0.0759837931448294",
+    "-0.0230412290186566"
+   ]
+  }
+ },
+ "endpoint_approach": {
+  "q_to_0": [
+   {
+    "q": "1e-2",
+    "c4_hat": "3.806370350927021259184617",
+    "(c4_hat - c4_hat(0))/q": "0.703231306014"
+   },
+   {
+    "q": "1e-4",
+    "c4_hat": "3.799408663240666141138591",
+    "(c4_hat - c4_hat(0))/q": "0.706253737803"
+   },
+   {
+    "q": "1e-6",
+    "c4_hat": "3.799338744150916057868075",
+    "(c4_hat - c4_hat(0))/q": "0.706284030242"
+   },
+   {
+    "q": "1e-8",
+    "c4_hat": "3.799338044929729147443951",
+    "(c4_hat - c4_hat(0))/q": "0.706284333173"
+   }
+  ],
+  "q_to_qc": [
+   {
+    "q_c - q": "1e-2",
+    "delta": "0.02001293791",
+    "c4_hat": "4.377025602917694028994632",
+    "(c4_hat - c4_hat(q_c))/(q_c - q)^2": "-0.0988769542791"
+   },
+   {
+    "q_c - q": "1e-4",
+    "delta": "0.0002000012921",
+    "c4_hat": "4.377035489625618370735736",
+    "(c4_hat - c4_hat(q_c))/(q_c - q)^2": "-0.0987503565377"
+   },
+   {
+    "q_c - q": "1e-6",
+    "delta": "2.000000129e-6",
+    "c4_hat": "4.377035490613023187019707",
+    "(c4_hat - c4_hat(q_c))/(q_c - q)^2": "-0.0987490933151"
+   },
+   {
+    "q_c - q": "1e-8",
+    "delta": "2.000000001e-8",
+    "c4_hat": "4.377035490613121926238114",
+    "(c4_hat - c4_hat(q_c))/(q_c - q)^2": "-0.0987490806831"
+   }
+  ]
+ },
+ "independent_route": [
+  {
+   "point": "q = 0.001",
+   "primary_c4_hat": "3.8000440162808625838520273025",
+   "independent_c4_hat": "3.8000440162808625838520273025",
+   "relative_difference": "5.35e-51",
+   "own_curve_point_minus_primary": "4.52e-51",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "1.13e-51"
+  },
+  {
+   "point": "q = 0.5",
+   "primary_c4_hat": "4.0838255059535374705298947452",
+   "independent_c4_hat": "4.0838255059535374705298947452",
+   "relative_difference": "5.35e-51",
+   "own_curve_point_minus_primary": "-2.06e-51",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "1.87e-51"
+  },
+  {
+   "point": "q = 1.0",
+   "primary_c4_hat": "4.25704820401701963880099960904",
+   "independent_c4_hat": "4.25704820401701963880099960904",
+   "relative_difference": "5.35e-51",
+   "own_curve_point_minus_primary": "7.83e-52",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "5.62e-52"
+  },
+  {
+   "point": "q = 1.5",
+   "primary_c4_hat": "4.34831982108678430678788801713",
+   "independent_c4_hat": "4.34831982108678430678788801713",
+   "relative_difference": "1.2e-50",
+   "own_curve_point_minus_primary": "1.77e-51",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "5.48e-52"
+  },
+  {
+   "point": "q = 2.0",
+   "primary_c4_hat": "4.3769961330124178968530469477",
+   "independent_c4_hat": "4.3769961330124178968530469477",
+   "relative_difference": "4.14e-50",
+   "own_curve_point_minus_primary": "-2.29e-52",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "7.49e-52"
+  },
+  {
+   "point": "q = 2.019",
+   "primary_c4_hat": "4.37703540367586694149612257199",
+   "independent_c4_hat": "4.37703540367586694149612257199",
+   "relative_difference": "1.24e-48",
+   "own_curve_point_minus_primary": "-9.17e-52",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "1.09e-51"
+  },
+  {
+   "point": "q = 0",
+   "primary_c4_hat": "3.79933803786688581571022702877",
+   "independent_c4_hat": "3.79933803786688581571022702877",
+   "relative_difference": "1.87e-50",
+   "own_curve_point_minus_refined": "-2.34e-56",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "2.5e-50",
+   "limit_potential_equilibrium_gradient": "2.83e-51"
+  },
+  {
+   "point": "corner",
+   "primary_c4_hat": "4.37703549061312193611302188495",
+   "independent_c4_hat": "4.37703549061312193611302188495",
+   "relative_difference": "9.35e-51",
+   "own_curve_point_minus_refined": "-3.92e-57",
+   "zero_eigenvalues": 9,
+   "b_on_kernel": "2.42e-51",
+   "limit_potential_equilibrium_gradient": "1.09e-50"
+  }
+ ],
+ "independent_nonlinear_endpoints": {
+  "q = 0": {
+   "c4_hat": "3.79933803786688581571022702877",
+   "relative_difference": "9.28e-37",
+   "richardson_error_relative": "6.97e-31"
+  },
+  "corner": {
+   "c4_hat": "4.37703549061312193611302188495",
+   "relative_difference": "7.03e-37",
+   "richardson_error_relative": "1.59e-31"
+  }
+ },
+ "falsification_file": "data/B2_falsification.json",
+ "scope": "Numerical reconnaissance. No sign of c4_hat is proved or certified; no Arb certificate; no super/subcritical classification; B2.4 and B2.5 not started.",
+ "all_checks_pass": true
+}

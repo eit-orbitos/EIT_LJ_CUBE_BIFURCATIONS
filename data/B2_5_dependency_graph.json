@@ -1,0 +1,332 @@
+{
+ "consistency_only": [
+  {
+   "id": "K_d3d_consistency",
+   "source": "b2_index.d3d_consistency",
+   "statement": "same normal form on the D3d axis: axial kappa t, transverse -2 kappa t (x2); not a proposition",
+   "status": "VERIFIED-EXACT"
+  }
+ ],
+ "corroboration_only": [
+  {
+   "id": "N_B25_hessian",
+   "source": "data/B2_5_index.json",
+   "statement": "raw 24x24 Hessian at located D2h equilibria (spectrum, Schur complement onto E_c)",
+   "status": "VERIFIED-NUMERIC"
+  },
+  {
+   "id": "N_B25_quartic_route3",
+   "source": "data/B2_5_index.json",
+   "statement": "derivative-free nonlinear LS evaluation of V4",
+   "status": "VERIFIED-NUMERIC"
+  },
+  {
+   "id": "N_B25_d3d",
+   "source": "data/B2_5_index.json",
+   "statement": "D3d consistency numerics (not a proof of anything)",
+   "status": "VERIFIED-NUMERIC"
+  },
+  {
+   "id": "N_B22_scan",
+   "source": "NOTES.md \u00a77",
+   "statement": "B2.2 scan (reconnaissance)",
+   "status": "VERIFIED-NUMERIC"
+  }
+ ],
+ "edges": [
+  [
+   "P_B3",
+   "S6_centre_index"
+  ],
+  [
+   "P_B3",
+   "S7_conjugates"
+  ],
+  [
+   "P_B3",
+   "S8_ls_quartic"
+  ],
+  [
+   "S6_centre_index",
+   "S4_branch_hessian"
+  ],
+  [
+   "S6_centre_index",
+   "S5_transverse_inertia"
+  ],
+  [
+   "S6_centre_index",
+   "IN_lemma_K_kappa"
+  ],
+  [
+   "S6_centre_index",
+   "IN_proposition_B2"
+  ],
+  [
+   "S5_transverse_inertia",
+   "S4_branch_hessian"
+  ],
+  [
+   "S5_transverse_inertia",
+   "IN_lemma_K_kappa"
+  ],
+  [
+   "S5_transverse_inertia",
+   "STD_LS_centre_manifold"
+  ],
+  [
+   "S4_branch_hessian",
+   "S2_axis_hessian_structure"
+  ],
+  [
+   "S4_branch_hessian",
+   "S3_identification_with_B2"
+  ],
+  [
+   "S4_branch_hessian",
+   "IN_proposition_B2"
+  ],
+  [
+   "S3_identification_with_B2",
+   "IN_proposition_B2"
+  ],
+  [
+   "S3_identification_with_B2",
+   "STD_LS_centre_manifold"
+  ],
+  [
+   "S3_identification_with_B2",
+   "IN_exact_Oh_T2g_structure"
+  ],
+  [
+   "S3_identification_with_B2",
+   "S8_ls_quartic"
+  ],
+  [
+   "S2_axis_hessian_structure",
+   "S1_invariant_normal_form"
+  ],
+  [
+   "S2_axis_hessian_structure",
+   "IN_exact_Oh_T2g_structure"
+  ],
+  [
+   "S1_invariant_normal_form",
+   "IN_exact_Oh_T2g_structure"
+  ],
+  [
+   "S1_invariant_normal_form",
+   "STD_LS_centre_manifold"
+  ],
+  [
+   "S8_ls_quartic",
+   "IN_exact_Oh_T2g_structure"
+  ],
+  [
+   "S8_ls_quartic",
+   "STD_LS_centre_manifold"
+  ],
+  [
+   "S7_conjugates",
+   "IN_exact_Oh_T2g_structure"
+  ],
+  [
+   "S7_conjugates",
+   "S6_centre_index"
+  ],
+  [
+   "C_B3",
+   "P_B3"
+  ],
+  [
+   "C_B3",
+   "C1_complementary_index"
+  ],
+  [
+   "C_B3",
+   "C2_index_splitting"
+  ],
+  [
+   "C1_complementary_index",
+   "P2_theorem_index_on_curve"
+  ],
+  [
+   "C2_index_splitting",
+   "STD_LS_centre_manifold"
+  ],
+  [
+   "C2_index_splitting",
+   "C1_complementary_index"
+  ]
+ ],
+ "nodes": [
+  {
+   "id": "P_B3",
+   "role": "proposition",
+   "source": "NOTES.md \u00a713",
+   "statement": "centre-manifold (3-D LS reduced) Hessian at x_+- has index 1, nullity 0",
+   "status": "PROVED (computer-assisted; not independently audited)"
+  },
+  {
+   "id": "C_B3",
+   "role": "corollary",
+   "source": "NOTES.md \u00a713.7",
+   "statement": "full-slice index 4 (= m_perp + 1, m_perp = 3 derived), nullity 0 modulo the 6 rigid motions",
+   "status": "PROVED (computer-assisted; not independently audited)"
+  },
+  {
+   "id": "S1_invariant_normal_form",
+   "role": "step",
+   "source": "b2_index.invariant_dimensions, invariant_basis_check",
+   "statement": "V_red = V0 + lam I2/2 + kappa I3 + alpha I2^2 + beta I4 + O(|a|^5); invariant dimensions 0,1,1,2 in degrees 1-4; kappa(0) = D3V[e1,e2,e3]",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S2_axis_hessian_structure",
+   "role": "step",
+   "source": "b2_index.commutant_on_axis, parity_on_axis, generic_invariant_hessian",
+   "statement": "Hess V_red(s,0,0) = [[h11,0,0],[0,d,e],[0,e,d]]; h11, d even, e odd in s; h11 = lam + 12(alpha+beta)s^2 + O(s^4), d = lam + 4 alpha s^2 + O(s^4), e = kappa s + O(s^3)",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S3_identification_with_B2",
+   "role": "step",
+   "source": "NOTES.md \u00a713.2; b2_index.ls_quartic_exact",
+   "statement": "V_red(s,0,0,mu) is the axial reduced potential of Proposition B2 (equivariance and uniqueness of w); x_+- are critical points of V_red; alpha + beta = c4/24",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S4_branch_hessian",
+   "role": "step",
+   "source": "b2_index.branch_hessian_series",
+   "statement": "on the branch: h11 = (c4/3) s^2 + O(s^4) = -2 tau mu + O(mu^2), d = -4 beta s^2 + O(s^4), e = kappa s + O(s^3), det(transverse) = -kappa^2 s^2 + O(s^4)",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S5_transverse_inertia",
+   "role": "step",
+   "source": "b2_index.transverse_eigensystem, transverse_sign_bound",
+   "statement": "eigenvalues d +- e on (0,1,+-1)/sqrt2; remainder bound: opposite signs for 0 < |s| < |kappa|/(C_D + C_E), independent of the signs of kappa and s",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S6_centre_index",
+   "role": "step",
+   "source": "b2_index.centre_index_from_signs",
+   "statement": "index(Hess V_red) = 0 (h11 > 0) + 1 (transverse) = 1, nullity 0",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S7_conjugates",
+   "role": "step",
+   "source": "b2_index.conjugate_branches, congruence_preserves_inertia",
+   "statement": "the six D2h branch points form one orbit; Hessians congruent; one index type",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "S8_ls_quartic",
+   "role": "step",
+   "source": "b2_index.ls_quartic_exact, generic_ls_multid",
+   "statement": "complete invariant quartic V4 = (1/24)D4V[x^4] - (1/8)<b, H_W^-1 b> = alpha I2^2 + beta I4 (generic pair potential); multi-dimensional LS quartic formula",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "C1_complementary_index",
+   "role": "step",
+   "source": "b2_index.complementary_index, paper2_curve_consistency",
+   "statement": "m_perp = 3 by counting the frozen block signs on the curve (Eu x2, A2u x1 negative; rigid and critical excluded); H_WW invertible; constant along 0 < q < q_c",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "id": "C2_index_splitting",
+   "role": "step",
+   "source": "b2_index.schur_hessian_identity, haynsworth_check",
+   "statement": "ind H_slice(x) = ind H_WW(x) + ind Hess V_red(a); D2V_red = Schur complement; rigid tangent in ker H(x); inertia of H_WW(x) = inertia at (y*, P_T(q)) for small mu",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B2_index.py"
+  },
+  {
+   "allowed_input": "exact Oh/T2g invariant structure",
+   "id": "IN_exact_Oh_T2g_structure",
+   "includes": [
+    "B0 (NOTES.md \u00a74)",
+    "B2.0 (NOTES.md \u00a76.1)",
+    "exact isotypic projectors (group.py)"
+   ],
+   "role": "input",
+   "source": "NOTES.md \u00a74, \u00a76.1",
+   "statement": "B0: T(R) = sigma(R) R on the critical T2g coordinates; I3 invariant; B2.0: Sigma = Stab(e_1), N(Sigma) minus Sigma reverses e_1; O_h acts orthogonally on R^24 and V is invariant",
+   "status": "VERIFIED-EXACT",
+   "tests": "tests/test_B0_t2g.py, tests/test_B2_symmetry.py"
+  },
+  {
+   "allowed_input": "audited kappa != 0",
+   "audit": "INDEPENDENTLY AUDITED (NOTES.md \u00a75.11, \u00a711)",
+   "id": "IN_lemma_K_kappa",
+   "role": "input",
+   "source": "NOTES.md \u00a75.7, \u00a75.11, \u00a711",
+   "statement": "Lemma K: kappa(q) != 0 for 0 < q < q_c (kappa > 0 in the gauge n_u > 0); CERTIFIED, independently audited, erratum closed",
+   "status": "CERTIFIED",
+   "tests": "tests/test_B1_certificate.py"
+  },
+  {
+   "allowed_input": "audited Proposition B2 branch/amplitude result",
+   "audit": "designated an established (independently audited) input by the author's B2.5 request; the audit report is not in this package, so NOTES.md \u00a712 keeps its label",
+   "id": "IN_proposition_B2",
+   "includes": [
+    "Lemma Q (B2.3) and tau < 0 (B1.8), as recorded in its own graph (data/B2_4_dependency_graph.json)"
+   ],
+   "role": "input",
+   "source": "NOTES.md \u00a712",
+   "statement": "Proposition B2: x_+-(mu) exist for mu > 0, s*^2 = -6 tau mu/c4 + O(mu^2), tau < 0, c4 > 0, axial reduced curvature -2 tau mu + O(mu^2) > 0",
+   "status": "PROVED (computer-assisted)",
+   "tests": "tests/test_B2_branch.py"
+  },
+  {
+   "allowed_input": "standard Lyapunov-Schmidt/centre-manifold theory",
+   "id": "STD_LS_centre_manifold",
+   "includes": [
+    "slice: critical points of V on y* + R^perp near y* are critical points of V (V is E(3)-invariant, grad V(x) is orthogonal to the rigid orbit at x)",
+    "rigid tangent fields lie in the kernel of the Hessian at a critical point",
+    "Golubitsky, Stewart & Schaeffer Vol. II Ch. XIII; Haynsworth (1968), Linear Algebra Appl. 1"
+   ],
+   "role": "input",
+   "source": "textbook",
+   "statement": "equivariant Lyapunov-Schmidt reduction with a three-dimensional kernel on the slice transverse to the rigid motions; the reduced Hessian is the Schur complement and the Morse index splits (Haynsworth inertia additivity); analytic implicit function theorem; Taylor's theorem",
+   "status": "STANDARD"
+  },
+  {
+   "allowed_input": "explicitly named frozen Paper 2 spectral results",
+   "id": "P2_theorem_index_on_curve",
+   "role": "input",
+   "source": "Paper 2 manuscript \u00a75 (Theorem index, Table regions), \u00a72 (Hred)",
+   "statement": "Paper 2 Theorem (index) (b)-(d) on p = P_T(q), 0 < q < q_c: Eu < 0 (Lemma E); A1g, Eg, T1u int, T2u > 0 (Lemma S); upper T2g > 0 (Lemma T1); lower T2g = 0 (Lemma T3); A2u < 0 (Lemma T4); rigid modes excluded (Hred on R(x)^perp)",
+   "status": "FROZEN INPUT"
+  }
+ ],
+ "proposition": "Proposition B3 and Corollary B3'",
+ "roots": {
+  "C_B3": [
+   "IN_exact_Oh_T2g_structure",
+   "IN_lemma_K_kappa",
+   "IN_proposition_B2",
+   "P2_theorem_index_on_curve",
+   "STD_LS_centre_manifold"
+  ],
+  "P_B3": [
+   "IN_exact_Oh_T2g_structure",
+   "IN_lemma_K_kappa",
+   "IN_proposition_B2",
+   "STD_LS_centre_manifold"
+  ]
+ }
+}

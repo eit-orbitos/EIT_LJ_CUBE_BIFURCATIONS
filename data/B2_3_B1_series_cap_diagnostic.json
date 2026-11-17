@@ -1,0 +1,70 @@
+{
+ "project_version": "0.4.0.dev3",
+ "finding": "Diagnostic found during Phase B2.3: python-flint truncates every arb_series at ctx.cap (default 10), whatever prec= is passed. The B1 generator (b1_cert._taylor, N = 16) and the B1 checker (b1_check.Model.taylor, N = 20) ask for longer series and pad the returned coefficients with zeros, so their near-regime Taylor models silently drop the coefficients from index 10 on, including the remainder. This script measures the effect and re-checks the stored B1 certificate. It reads B1's code and data and modifies neither.",
+ "series_truncation": {
+  "python-flint": "0.9.0",
+  "default_ctx_cap": 10,
+  "exp series, prec=16, ctx.cap=10: coefficients returned": 10,
+  "exp series, prec=16, ctx.cap=16: coefficients returned": 16
+ },
+ "b1_generator_taylor_model": {
+  "coefficients 10..15 returned as exact zeros (default cap)": true,
+  "coefficients 0..9 agree with the complete series": true,
+  "largest dropped |c_j| (j = 10..15, any function)": "[5.22652e-9 +/- 2.62e-15]"
+ },
+ "b1_near_divided_difference": {
+  "point": {
+   "q": "1.9",
+   "delta": "0.9"
+  },
+  "functions whose default-cap enclosure excludes the quotient value": [
+   "M11",
+   "M12",
+   "M22",
+   "uuu",
+   "uuv",
+   "uvv",
+   "vvv"
+  ],
+  "worst function": "uvv",
+  "default-cap enclosure": "[-2.031171625660702153425980 +/- 1.21e-25]",
+  "quotient value (256 bits)": "[-2.031171622867651708396495 +/- 4.04e-25]",
+  "complete-series enclosure (cap 32)": "[-2.031171623 +/- 5.22e-10]",
+  "complete-series enclosures all contain the quotient values": true
+ },
+ "stored_certificate": {
+  "stored B1 certificate, B1 checker with ctx.cap = 10": {
+   "ok": true,
+   "newton_confirmed": 222,
+   "carrier_confirmed": 222,
+   "boxes_checked": 222,
+   "boxes_refined_by_checker": 0,
+   "failures": []
+  },
+  "stored B1 certificate, B1 checker with ctx.cap = 32": {
+   "ok": true,
+   "newton_confirmed": 222,
+   "carrier_confirmed": 222,
+   "boxes_checked": 222,
+   "boxes_refined_by_checker": 0,
+   "failures": []
+  },
+  "fresh B1 build with ctx.cap = 32": {
+   "semantic_sha256": "77282594ec2ce1851408c7b4bdabf88907622bebbe412703a161798d9f6ba71b",
+   "stored_semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+   "same": false,
+   "boxes_differing_from_stored": 222,
+   "n_boxes": 222,
+   "min_lower_bound": "1311719/536870912",
+   "stored_min_lower_bound": "1311719/536870912",
+   "passes_B1_checker_with_cap_32": true
+  }
+ },
+ "B2.3 checker (no Taylor series), imported B1 delta-balls re-verified": "222/222",
+ "conclusion": "The defect is in the B1 code path, not in the stored B1 data: the stored certificate passes B1's own checker with complete series (ctx.cap = 32) as well as with the default cap, and the B2.3 checker re-verifies every imported delta-ball without Taylor series. A corrected generator produces different but equally valid bytes (another semantic hash), so the B1 test that compares fresh and stored semantic hashes would fail after a fix.",
+ "proposed_erratum (not applied; B1 is audited and unchanged here)": [
+  "b1_cert._taylor and b1_check.Model.taylor: set ctx.cap to the requested length for the call and assert that no returned series is longer than requested (never pad a truncated series).",
+  "Keep the audited certificate data/B1_kappa_certificate.json (semantic 616817fc...8518c6), which the corrected checker accepts; replace the fresh-versus-stored hash test by 'the fresh build passes the corrected checker' and 'the stored certificate passes the corrected checker'.",
+  "Add a regression test on the series length; record the erratum in NOTES.md section 5 and the audit folder; a short targeted re-audit of the erratum is a gate decision."
+ ]
+}

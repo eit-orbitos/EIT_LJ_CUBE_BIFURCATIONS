@@ -1,0 +1,247 @@
+{
+ "erratum": "E-B1",
+ "project_version": "0.4.0.dev4",
+ "status": "RESEARCH / V0.4-dev.4",
+ "environment": {
+  "python": "3.13.5",
+  "python-flint": "0.9.0",
+  "FLINT": "3.6.0",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "default_ctx_cap": 10
+ },
+ "diagnostic_point": {
+  "point": {
+   "q": "19/10",
+   "delta": "9/10"
+  },
+  "ctx.cap during the evaluation (default)": 10,
+  "old_generator_excludes": [
+   "M11",
+   "M12",
+   "M22",
+   "uuu",
+   "uuv",
+   "uvv",
+   "vvv"
+  ],
+  "corrected_generator_excludes": [],
+  "old_checker_excludes": [
+   "M11",
+   "M12",
+   "M22",
+   "uuu",
+   "uuv",
+   "uvv",
+   "vvv"
+  ],
+  "corrected_checker_excludes": [],
+  "worst_old_generator": {
+   "function": "uvv",
+   "error_of_midpoint": "2.79e-9",
+   "old_radius": "1.50e-37"
+  },
+  "functions": {
+   "M11": {
+    "mpmath_quotient_60_digits": "-0.0424432876093762622154749050066",
+    "old_generator": "[-0.0424432888043782545503938970051 +/- 1.86e-32]",
+    "old_generator_contains": false,
+    "corrected_generator": "[-0.042443288 +/- 5.51e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[-0.0424432888043782545503938970051 +/- 1.86e-32]",
+    "old_checker_contains": false,
+    "corrected_checker": "[-0.042443287609 +/- 9.17e-13]",
+    "corrected_checker_contains": true
+   },
+   "M12": {
+    "mpmath_quotient_60_digits": "-0.0451148378927617046500500269129",
+    "old_generator": "[-0.0451148381643304251681227530691 +/- 6.60e-33]",
+    "old_generator_contains": false,
+    "corrected_generator": "[-0.0451148379 +/- 6.40e-11]",
+    "corrected_generator_contains": true,
+    "old_checker": "[-0.0451148381643304251681227530691 +/- 6.60e-33]",
+    "old_checker_contains": false,
+    "corrected_checker": "[-0.045114837893 +/- 6.54e-13]",
+    "corrected_checker_contains": true
+   },
+   "M22": {
+    "mpmath_quotient_60_digits": "1.55233878780830861884849348199",
+    "old_generator": "[1.55233878911627728485494658465 +/- 3.92e-30]",
+    "old_generator_contains": false,
+    "corrected_generator": "[1.552338788 +/- 4.42e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[1.55233878911627728485494658465 +/- 3.92e-30]",
+    "old_checker_contains": false,
+    "corrected_checker": "[1.55233878781 +/- 2.56e-12]",
+    "corrected_checker_contains": true
+   },
+   "uuu": {
+    "mpmath_quotient_60_digits": "0.0116583391848193747392761606231",
+    "old_generator": "[0.0116583385068656129252382982206 +/- 3.99e-32]",
+    "old_generator_contains": false,
+    "corrected_generator": "[0.011658339 +/- 3.70e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[0.0116583385068656129252382982206 +/- 3.99e-32]",
+    "old_checker_contains": false,
+    "corrected_checker": "[0.01165833918 +/- 5.82e-12]",
+    "corrected_checker_contains": true
+   },
+   "uuv": {
+    "mpmath_quotient_60_digits": "0.0421282856975800639464693046928",
+    "old_generator": "[0.0421282849239097530508326537288 +/- 7.55e-33]",
+    "old_generator_contains": false,
+    "corrected_generator": "[0.042128286 +/- 4.07e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[0.0421282849239097530508326537288 +/- 7.55e-33]",
+    "old_checker_contains": false,
+    "corrected_checker": "[0.04212828570 +/- 3.33e-12]",
+    "corrected_checker_contains": true
+   },
+   "uvv": {
+    "mpmath_quotient_60_digits": "-2.03117162286765170839649540316",
+    "old_generator": "[-2.03117162566070215342597987989 +/- 1.09e-30]",
+    "old_generator_contains": false,
+    "corrected_generator": "[-2.031171623 +/- 5.22e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[-2.03117162566070215342597987989 +/- 1.09e-30]",
+    "old_checker_contains": false,
+    "corrected_checker": "[-2.03117162287 +/- 3.63e-12]",
+    "corrected_checker_contains": true
+   },
+   "vvv": {
+    "mpmath_quotient_60_digits": "-0.0071326308341860334330466144742",
+    "old_generator": "[-0.00713263139075163920466039380380 +/- 4.61e-33]",
+    "old_generator_contains": false,
+    "corrected_generator": "[-0.007132631 +/- 2.45e-10]",
+    "corrected_generator_contains": true,
+    "old_checker": "[-0.00713263139075163920466039380380 +/- 4.61e-33]",
+    "old_checker_contains": false,
+    "corrected_checker": "[-0.007132630834 +/- 8.99e-13]",
+    "corrected_checker_contains": true
+   }
+  }
+ },
+ "historical_certificate_replay": {
+  "file": "data/B1_kappa_certificate.json",
+  "file_sha256": "dee3ad024af69f76620de35f3d0aa8be06a9f4f099ca0ffb001c4914178f87ab",
+  "semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "hash_file": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "pinned_semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "ok": true,
+  "boxes_checked": 222,
+  "newton_confirmed": 222,
+  "carrier_confirmed": 222,
+  "boxes_refined_by_checker": 0,
+  "max_checker_refinement_depth": 0,
+  "endpoints_accepted": true,
+  "corner_identification_and_sign_change_accepted": true,
+  "min_lower_bound": "1311719/536870912",
+  "min_lower_bound_recomputed": "1311719/536870912",
+  "endpoint_lower_bounds": {
+   "q=0": "772963/268435456",
+   "corner": "7399993/1073741824"
+  },
+  "ctx.cap before / after": [
+   10,
+   10
+  ],
+  "precision_bits": 160,
+  "taylor_order": 20,
+  "failures": []
+ },
+ "fresh_corrected_rebuild": {
+  "stored_as": "data/B1_ERRATUM_corrected_rebuild_certificate.json",
+  "semantic_sha256": "b2f8e6dcd1c5073635babea2f7a6079b7ede03acbbc4f33ac3cb20f64d21d505",
+  "historical_semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "same_semantic_hash_as_historical": false,
+  "passes_corrected_checker": true,
+  "checker_newton_confirmed": 222,
+  "checker_carrier_confirmed": 222,
+  "checker_failures": [],
+  "n_boxes": 222,
+  "max_depth_used": 2,
+  "min_lower_bound": "1311719/536870912",
+  "min_lower_bound_decimal": "0.0024432670325",
+  "historical_min_lower_bound": "1311719/536870912",
+  "endpoints": {
+   "q=0": {
+    "certified": true,
+    "kappa_hat": "[0.002879512579955235482686978 +/- 2.08e-28]",
+    "kappa_hat_lower_bound": "772963/268435456",
+    "historical_kappa_hat_lower_bound": "772963/268435456"
+   },
+   "corner": {
+    "certified": true,
+    "kappa_hat": "[0.006891782309648378299130289 +/- 2.84e-28]",
+    "kappa_hat_lower_bound": "7399993/1073741824",
+    "historical_kappa_hat_lower_bound": "7399993/1073741824"
+   }
+  },
+  "endpoint_records_identical_to_historical": true,
+  "corner_identification": {
+   "q": "2019/1000",
+   "delta_lo": "141790161158189579347/75557863725914323419136",
+   "delta_hi": "2268642578531033269553/1208925819614629174706176",
+   "positive": true,
+   "q_c_inside_corner_box": true
+  },
+  "identical_to_historical": {
+   "claim": true,
+   "statement": true,
+   "expressions": true,
+   "expression_sha256": true,
+   "frozen_inputs": true,
+   "method": true
+  },
+  "same_q_partition": true,
+  "build_conditions": "as scripts/run_B1.py: mpmath 40 digits, Arb 128 bits, python-flint default ctx.cap",
+  "boxes_differing_from_historical": 52,
+  "differing_boxes_by_regime": {
+   "near": 52
+  },
+  "near_regime_boxes_in_historical": 52,
+  "differing_fields_count": {
+   "delta_lo": 52,
+   "delta_hi": 52,
+   "kappa_hat_lower_bound": 52
+  },
+  "delta_balls_overlapping_historical": 222,
+  "lower_bounds_vs_historical": {
+   "higher": 52,
+   "equal": 170,
+   "lower": 0
+  },
+  "lemma_K_claim_identical": true,
+  "ctx.cap before / after": [
+   10,
+   10
+  ]
+ },
+ "B2_3_non_taylor_cross_check": {
+  "ok": true,
+  "boxes_checked": 222,
+  "curve_reverified_b1_boxes": 222,
+  "carrier_confirmed": 222,
+  "failures": [],
+  "semantic_sha256": "f7bc244ecac4b89ce003a38ff52047d6cbe80f63a97236049f15f5e0da5c17d2",
+  "import_attempts_blocked": [],
+  "b1_modules_imported": [],
+  "method": "src/cube_bif/b2_check.py, Arb at 192 bits: divided differences from the integral f_hat = int_0^1 f'(q + t(p - q)) dt (midpoint rule with exact remainder, centred forms), no Taylor series; run in a fresh interpreter in which importing cube_bif.b1_cert or cube_bif.b1_check raises",
+  "static": {
+   "modules_imported": [
+    "flint",
+    "hashlib",
+    "itertools",
+    "json",
+    "pathlib",
+    "sympy"
+   ],
+   "imports_project_modules": [],
+   "uses_arb_series": false,
+   "mentions_b1_cert_or_b1_check": false,
+   "calls_a_taylor_routine": false
+  }
+ },
+ "historical_certificate_bytes_unchanged": true,
+ "all_required": true
+}

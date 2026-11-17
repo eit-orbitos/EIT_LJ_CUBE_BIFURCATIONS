@@ -1,0 +1,371 @@
+{
+ "snapshot_sha256": "1b106b005112877ee57836f9918997f81d219a3c7a474f9903ba5de3eb57e89a",
+ "snapshot_vs_final_tree": "src/, data/, tests/ (except tests/test_docs.py, run separately on the final tree) and the pre-existing scripts/ are byte-identical to the final RC1 tree; the three RC1-only release scripts are run separately",
+ "environment": {
+  "python-flint": "0.9.0",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "pytest": "9.2.0",
+  "python": "3.15.1 (main, Oct 21 2026, 22:24:45) [GCC 14.2.0]"
+ },
+ "paper2_archive": "EIT_LJ_FULL_VECTOR_STABILITY_V1.0.zip sha256 bb70721d...762d supplied via EIT_LJ_PAPER2_ARCHIVE",
+ "pytest_excluding_test_docs": {
+  "collected": 459,
+  "passed": 459,
+  "skipped": 0,
+  "failed": 0,
+  "errors": 0,
+  "pieces": 54,
+  "each_id_executed_exactly_once": true,
+  "interruptions": [
+   "pytest_test_B1_certificate__006: outer command timeout terminated unfinished attempt; no completed node reported in buffered log; rerun required",
+   "pytest_test_B1_certificate__007: outer command timeout terminated unfinished attempt; no completed node reported in buffered log; rerun required",
+   "pytest_test_B1_certificate__009: execution marker recovered from complete JUnit XML",
+   "pytest_test_B1_certificate__002: timeout exit 124 at 100.11 s, no completed nodes; split into individual nodes"
+  ]
+ },
+ "regeneration": {
+  "scripts": [
+   "run_A0",
+   "run_A1",
+   "run_B0",
+   "run_B2",
+   "run_B2_2",
+   "run_B2_4",
+   "run_B2_5"
+  ],
+  "all_exit_0": true,
+  "comparison": {
+   "regen:A0_representation.json": {
+    "sha_snapshot": "a63f68a3534bc58d193bcfa2221a2309bc0cc3d1b8e8a0f82baecd132db4103c",
+    "sha_regenerated": "b750515d55dd03967203f36d569502008a08f1547e489156adc6d47aeb489201",
+    "differing_paths": [
+     "/status",
+     "/version"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:A1_quartic.json": {
+    "sha_snapshot": "d61f5750f96a3b650f9ac774aeb80eebe8a1d01911d7e6c56d7f3e73702deb6d",
+    "sha_regenerated": "ac3b52b92862fe2baf8be787a0ef41bd8b3caa3e463109ce8f88d2fe0d564260",
+    "differing_paths": [
+     "/status",
+     "/version"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B0_t2g.json": {
+    "sha_snapshot": "b74279fcdb14d22fa14c04ca81f5efc020b9c0679265d7c2e54a3cd441dfa37f",
+    "sha_regenerated": "149f275b1c26dddb9e4a070cdb9f74c398eade2e69f11dfc6910826ea383ef60",
+    "differing_paths": [
+     "/status",
+     "/version"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B2_4_branch.json": {
+    "sha_snapshot": "3d92a5666a750184d829787e5c854a43c3b436546e53fcd967f7a870aa93c9a6",
+    "sha_regenerated": "a630f6751dc4e16d6018ac539775acf291e1cbd7dd99a317a53128e4964fdf70",
+    "differing_paths": [
+     "/project_version",
+     "/status_line"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B2_carrier.json": {
+    "sha_snapshot": "632120d5c0907b8ec8b62f36c49daac4491b1705eebbd84fb7c7c04f0279182a",
+    "sha_regenerated": "6af9a6cd76a7e551b64e1dcdb4b3235bcd7c159c547bdc51cd68701d4d507226",
+    "differing_paths": [
+     "/project_version",
+     "/status"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B2_falsification.json": {
+    "sha_snapshot": "8bf4e07e205b961c8e9b7598f05081304a91f2d844587694e7ea34adb32e3e4f",
+    "sha_regenerated": "23bd37a8cc5d7ceb2ec9732191f2f5eafecb9f087b66d131cca77e68e53d5c27",
+    "differing_paths": [
+     "/project_version"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B2_quartic.json": {
+    "sha_snapshot": "8bdf80b2fcd37ff1074c009ce1da4a0b4b73855a0e53b731075d6a19432aa113",
+    "sha_regenerated": "500416a0fd96ca2c3f45721a639bf07b3c67205c55afb63b188a114283860eab",
+    "differing_paths": [
+     "/project_version",
+     "/status"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "regen:B2_symmetry.json": {
+    "sha_snapshot": "fa66b0607911b1f9ab434318dd03ecc6efc28219512c97536a53e8d6894dc995",
+    "sha_regenerated": "086148aeaed31f6a11f4be8b62994e050f8595e42772ae6a19f1abcfc85cc136",
+    "differing_paths": [
+     "/project_version",
+     "/status"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:A2_lemma_M_certificate.json": {
+    "sha_snapshot": "d86826b9650cabfa0f465a690ee987242cf33f507ab747a9025f8509f98fed4d",
+    "sha_regenerated": "8b3558df14673d9555a4104fd66271b559f6163867c15c5c680dced8df6a4e74",
+    "differing_paths": [
+     "/provenance/platform",
+     "/provenance/project_version",
+     "/provenance/python",
+     "/provenance/seconds",
+     "/provenance/timestamp_utc"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:B1_ERRATUM_corrected_rebuild_certificate.json": {
+    "sha_snapshot": "162adea1752375c858fd1dceb1f5f40cbee50333b94f0f007349d6b4e633666b",
+    "sha_regenerated": "75f6c9df86356f5c890d4d9073918f550dc7f20ea3506f00544a21e3a28b34a6",
+    "differing_paths": [
+     "/provenance/project_version",
+     "/provenance/python",
+     "/provenance/seconds",
+     "/provenance/timestamp_utc"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:B1_ERRATUM_report.json": {
+    "sha_snapshot": "c61ac5b0f3bfc9d8f3d6feb147b2c120cb87a4f8463b1dca14d5a88ca5da6c04",
+    "sha_regenerated": "140583d6f80bee98367ab0af5fdf4fc9ecbb743523d0931ab0738a12cd1ebe0f",
+    "differing_paths": [
+     "/environment/python",
+     "/project_version",
+     "/status"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:B2_3_check_report.json": {
+    "sha_snapshot": "34ba30d3879393e6bb9c727c17629ee67bec79379276edbc3030f427d63a23b9",
+    "sha_regenerated": "877c1505f59499c251270e451c6d9136c9af7a1415b988e3d78986dca76ba93c",
+    "differing_paths": [
+     "/project_version",
+     "/status"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:B2_3_method_controls.json": {
+    "sha_snapshot": "4f17f9c0ac3de5a97ad9d49eb89371bb79f70b8b65a7a3ad8efdf46e17c5bd44",
+    "sha_regenerated": "8d99fef93df37ef14ce08a4773154b24dcff411867fee8b4f0716e947744a716",
+    "differing_paths": [
+     "/project_version"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   },
+   "replay:B2_c4hat_certificate.json": {
+    "sha_snapshot": "9f6b31404ce9e03372b321567f53cb95254e2955c332e7eea7c381ca0f4d4209",
+    "sha_regenerated": "340f42433449716e976c56014accf6e03a66dff9867863fe6b8f7df7dde884b3",
+    "differing_paths": [
+     "/provenance/platform",
+     "/provenance/project_version",
+     "/provenance/python",
+     "/provenance/seconds",
+     "/provenance/timestamp_utc"
+    ],
+    "result": "IDENTICAL AFTER REMOVING ONLY VERSION/STATUS/TIMING/PLATFORM KEYS",
+    "non_allowed_differences": []
+   }
+  },
+  "note": "all other data/ files byte-identical; keys differing are only version/status/status_line, timing (seconds, timestamp_utc) and platform/python provenance"
+ },
+ "certificate_replays": {
+  "run_B1_erratum (full script, single run, 68.2 s)": {
+   "all_required": true
+  },
+  "run_B1_erratum (piecewise re-execution of the same functions)": {
+   "all_required": true
+  },
+  "historical_B1": {
+   "ok": true,
+   "semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+   "newton_confirmed": 222,
+   "carrier_confirmed": 222,
+   "endpoints_accepted": true,
+   "min_lower_bound": "1311719/536870912",
+   "certificate_bytes_unchanged": true
+  },
+  "corrected_rebuild": {
+   "semantic_sha256": "b2f8e6dcd1c5073635babea2f7a6079b7ede03acbbc4f33ac3cb20f64d21d505",
+   "passes_corrected_checker": true,
+   "checker_newton_confirmed": 222,
+   "checker_carrier_confirmed": 222,
+   "min_lower_bound": "1311719/536870912",
+   "lemma_K_claim_identical": true
+  },
+  "B2_3_non_taylor": {
+   "ok": true,
+   "boxes_checked": 222,
+   "curve_reverified_b1_boxes": 222,
+   "carrier_confirmed": 222,
+   "semantic_sha256": "f7bc244ecac4b89ce003a38ff52047d6cbe80f63a97236049f15f5e0da5c17d2"
+  },
+  "run_B2_3": {
+   "semantic_sha256": "f7bc244ecac4b89ce003a38ff52047d6cbe80f63a97236049f15f5e0da5c17d2",
+   "n_boxes": 222,
+   "independent_check": true,
+   "method_controls": "15/15"
+  },
+  "run_A2": {
+   "semantic_sha256": "49dce160b2a17a9f61554200617b9a75b5b02e244e21963b5956317156b6a71e"
+  }
+ },
+ "negative_controls": {
+  "main": {
+   "mutations": 34,
+   "detected": 34,
+   "outcomes": {
+    "detected (tests fail)": 34
+   },
+   "baseline_targets": 24,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_detected",
+    "controls"
+   ]
+  },
+  "b22": {
+   "mutations": 9,
+   "detected": 9,
+   "outcomes": {
+    "detected (tests fail)": 9
+   },
+   "baseline_targets": 6,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_detected",
+    "controls"
+   ]
+  },
+  "b23": {
+   "mutations": 24,
+   "detected": 24,
+   "outcomes": {
+    "detected (tests fail)": 24
+   },
+   "baseline_targets": 16,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_detected",
+    "baseline",
+    "controls"
+   ]
+  },
+  "b1e": {
+   "mutations": 13,
+   "detected": 12,
+   "outcomes": {
+    "detected (every target fails)": 12,
+    "not detected by this target, as expected": 1
+   },
+   "baseline_targets": 10,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_as_required",
+    "baseline",
+    "controls"
+   ],
+   "not_detected": [
+    {
+     "mutation": "generator: V0.4-dev.3 _taylor restored verbatim; the fresh B1 certificate is still accepted (no target in the certificate tests sees the defect, which is why the erratum tests exist)",
+     "file": "src/cube_bif/b1_cert.py",
+     "targets": [
+      "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker"
+     ],
+     "targets_failed": 0,
+     "required": "expected_not_detected",
+     "outcome": "not detected by this target, as expected",
+     "as_required": true,
+     "failure_is_an_assertion_or_error": null
+    }
+   ]
+  },
+  "b24": {
+   "mutations": 22,
+   "detected": 22,
+   "outcomes": {
+    "DETECTED": 22
+   },
+   "baseline_targets": 15,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_detected",
+    "baseline",
+    "n_mutations",
+    "n_detected",
+    "results"
+   ]
+  },
+  "b25": {
+   "mutations": 28,
+   "detected": 28,
+   "outcomes": {
+    "DETECTED": 28
+   },
+   "baseline_targets": 15,
+   "baseline_all_pass": true,
+   "stored_keys": [
+    "all_detected",
+    "baseline",
+    "n_mutations",
+    "n_detected",
+    "results"
+   ]
+  }
+ },
+ "negative_controls_total": {
+  "mutations": 130,
+  "as_required": 130,
+  "detected": 129,
+  "expected_not_detected": 1,
+  "baselines": 86
+ },
+ "identity_controls_V0_4_dev6": {
+  "on_RC1_tree": "NOT APPLICABLE: the dev.6 controls pin the dev.6 version string and audit set; on the RC1 tree they abort at the version-mutation pattern (expected). Superseded by scripts/preservation_controls_V1_0_0_rc1.py",
+  "on_original_dev6_tree": "62/62 forbidden modifications rejected; unmodified tree PASS"
+ },
+ "final_tree_tests": {
+  "files": [
+   "tests/test_docs.py",
+   "tests/test_release_rc1.py"
+  ],
+  "collected": 16,
+  "passed": 16,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "conditions": "final release-candidate tree with regenerated SHA256SUMS; EIT_LJ_PAPER2_ARCHIVE and EIT_LJ_DEV6_ARCHIVE set"
+ },
+ "harness_note": "Runs were split into pieces under 110 s (sandbox command limit) using the suites' own test ids, mutation lists and per-mutation predicates; no project file was edited. The B1 erratum replay was executed once as the full script (68.2 s) and once piecewise (same functions); both all_required = true.",
+ "totals": {
+  "collected": 475,
+  "passed": 475,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0
+ },
+ "preservation": {
+  "check": "PASS (ADDED 55, CHANGED 8, IDENTICAL 117; mathematical source files changed: 0)",
+  "controls": "baseline PASS; 55/55 forbidden edits rejected"
+ },
+ "release_text_scan": "PASS, 0 findings; 30/30 references cited",
+ "figures": "make_figures.py regenerates fig1/fig2/fig3 PDFs and figure_data.json byte-identically",
+ "appendix_closed_forms": "paper/tools/check_appendix_closed_forms.py: ALL PRINTED CLOSED FORMS AGREE"
+}

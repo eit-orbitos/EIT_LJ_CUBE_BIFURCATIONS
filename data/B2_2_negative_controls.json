@@ -1,0 +1,59 @@
+{
+ "all_detected": true,
+ "controls": [
+  {
+   "mutation": "B2.2 corner: values g(q_c) used instead of the derivatives g'(q_c)",
+   "target": "tests/test_B2_carrier.py::test_corner_formulation",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 endpoint q = 0: projective kernel sign flipped (rho = +Mh12/Mh22)",
+   "target": "tests/test_B2_carrier.py::test_endpoint_q0_formulation",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 derivative closed forms: chain-rule sign of dX/dr flipped",
+   "target": "tests/test_B2_carrier.py::test_derivative_closed_forms_agree_with_numerical_differentiation",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 carrier assembly: unit normalisation (1 + rho^2)^2 -> (1 + rho^2) for Q",
+   "target": "tests/test_B2_carrier.py::test_corner_formulation",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 independent route: q -> 0 limit potential coefficient 7/3 -> 7/4",
+   "target": "tests/test_B2_carrier.py::test_independent_route_at_the_endpoints",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 independent route: corner limit potential, sign of W'/W flipped",
+   "target": "tests/test_B2_carrier.py::test_independent_route_at_the_endpoints",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 independent route: corner normaliser q_c W_qc -> q_c",
+   "target": "tests/test_B2_carrier.py::test_independent_route_at_the_endpoints",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 scan summary: minimum searched over interior rows only (endpoints dropped)",
+   "target": "tests/test_B2_carrier.py::test_coarse_scan",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "B2.2 falsification: the 'Eg deleted' variant silently returns the true carrier",
+   "target": "tests/test_B2_carrier.py::test_falsification_statements_are_exposed",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  }
+ ]
+}

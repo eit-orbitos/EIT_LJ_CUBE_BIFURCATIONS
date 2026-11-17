@@ -1,0 +1,312 @@
+{
+ "stabiliser_of_e1": {
+  "order": 8,
+  "label": "D2h (axes: 1 coordinate + 2 face-diagonal)",
+  "types": {
+   "C2'": 2,
+   "C4^2": 1,
+   "E": 1,
+   "i": 1,
+   "sigma_d": 2,
+   "sigma_h": 1
+  },
+  "contains_inversion": true,
+  "elements": [
+   [
+    -1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1
+   ],
+   [
+    -1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    0,
+    0,
+    -1
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    -1,
+    0
+   ],
+   [
+    -1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    -1,
+    0,
+    -1,
+    0
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0
+   ]
+  ]
+ },
+ "stabiliser_equals_3x3_stabiliser_of_100": true,
+ "fix_rank": 4,
+ "isotypic_ranks_of_Fix": {
+  "A1g": 1,
+  "A2g": 0,
+  "Eg": 1,
+  "T1g": 0,
+  "T2g": 2,
+  "A1u": 0,
+  "A2u": 0,
+  "Eu": 0,
+  "T1u": 0,
+  "T2u": 0
+ },
+ "character_prediction": {
+  "A1g": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 1,
+   "predicted_rank": 1
+  },
+  "A2g": {
+   "multiplicity_in_R24": 0,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "Eg": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 1,
+   "predicted_rank": 1
+  },
+  "T1g": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "T2g": {
+   "multiplicity_in_R24": 2,
+   "dim_Fix_in_irrep": 1,
+   "predicted_rank": 2
+  },
+  "A1u": {
+   "multiplicity_in_R24": 0,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "A2u": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "Eu": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "T1u": {
+   "multiplicity_in_R24": 2,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  },
+  "T2u": {
+   "multiplicity_in_R24": 1,
+   "dim_Fix_in_irrep": 0,
+   "predicted_rank": 0
+  }
+ },
+ "fixed_basis": {
+  "A1g": "E_BR/sqrt(24) (breathing)",
+  "Eg": "E_TET_X/sqrt(48), field s -> (2 s1, -s2, -s3)",
+  "T2g_u": "uh_1 = -W_1/4",
+  "T2g_v": "vh_1 = -(sqrt2/4) U_1",
+  "note": "span{uh_1, vh_1} = span{e_1, f_1}, f_1 = -n_v uh_1 + n_u vh_1"
+ },
+ "relayed_claim_Fix_equals_span_e_A1g_Eg1_Eg2": {
+  "claimed_vector_is_fixed": {
+   "e_crit": true,
+   "A1g": true,
+   "Eg(1) tetragonal x": true,
+   "Eg(2) orthorhombic yz": false
+  },
+  "f1_is_fixed": true,
+  "f1_in_claimed_span": false,
+  "rank_of_claimed_span": 4,
+  "rank_of_P_Fix_applied_to_claimed": 3,
+  "P_Fix_kills_Eg(2)": true
+ },
+ "b_projection_nonzero": {
+  "A1g": true,
+  "A2g": false,
+  "Eg": true,
+  "T1g": false,
+  "T2g": false,
+  "A1u": false,
+  "A2u": false,
+  "Eu": false,
+  "T1u": false,
+  "T2u": false
+ },
+ "b_equals_A1g_plus_Eg_projections": true,
+ "b_T2g_inner_products_all_zero": true,
+ "n_T2g_inner_products_checked": 18,
+ "b_dot_f1_zero": true,
+ "b_dot_e1_zero": true,
+ "b_reconstruction_exact": {
+  "uu": true,
+  "uv": true,
+  "vv": true
+ },
+ "b_components_generic_psi": {
+  "uu": {
+   "A1g": "4*sqrt(6)*psi2_1/3 + 32*sqrt(6)*psi2_2/3 + 28*sqrt(6)*psi2_3/3 + 32*sqrt(6)*psi3_2/3 + 16*sqrt(6)*psi3_3",
+   "Eg": "-4*sqrt(3)*psi2_1/3 - 20*sqrt(3)*psi2_2/3 - 16*sqrt(3)*psi2_3/3 - 32*sqrt(3)*psi3_2/3"
+  },
+  "uv": {
+   "A1g": "16*sqrt(3)*psi2_3/3 + 16*sqrt(3)*psi3_3",
+   "Eg": "4*sqrt(6)*psi2_3/3"
+  },
+  "vv": {
+   "A1g": "20*sqrt(6)*psi2_1/3 + 20*sqrt(6)*psi2_3/3 + 8*sqrt(6)*psi3_1/3 + 8*sqrt(6)*psi3_3",
+   "Eg": "16*sqrt(3)*psi2_1/3 + 16*sqrt(3)*psi2_3/3 + 16*sqrt(3)*psi3_1/3"
+  }
+ },
+ "b_formula": "b = sum_cc' w_cc' n^cc' (bA_cc' A_HAT + bE_cc' E_HAT), w = (1, 2, 1) for uu, uv, vv",
+ "sym2_T2g_part_equivariant": true,
+ "sym2_diagonal_part_permuted": true,
+ "sym2_T2g_part_on_axis_100": [
+  0,
+  0,
+  0
+ ],
+ "reversing_elements": {
+  "count": 8,
+  "actions_on_Fix_basis": [
+   "{\"A1g\": 1, \"Eg\": 1, \"T2g_u\": -1, \"T2g_v\": -1}"
+  ],
+  "all_Fix_basis_vectors_eigenvectors": true
+ },
+ "vertex_orbits": [
+  {
+   "orbit": [
+    [
+     -1,
+     -1,
+     -1
+    ],
+    [
+     -1,
+     1,
+     1
+    ],
+    [
+     1,
+     -1,
+     -1
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "representative": [
+    -1,
+    -1,
+    -1
+   ],
+   "stabiliser_order": 2
+  },
+  {
+   "orbit": [
+    [
+     -1,
+     -1,
+     1
+    ],
+    [
+     -1,
+     1,
+     -1
+    ],
+    [
+     1,
+     -1,
+     1
+    ],
+    [
+     1,
+     1,
+     -1
+    ]
+   ],
+   "representative": [
+    -1,
+    -1,
+    1
+   ],
+   "stabiliser_order": 2
+  }
+ ],
+ "orbit_fields_in_Fix": true,
+ "orbit_fields_rank": 4,
+ "first_order_displacement": "vertex s: -(s n_u/4)(0, s3, s2) - (s n_v sqrt2/4)(s1 s2 s3)(1, 0, 0)",
+ "cuboid_family_Fix_Z2cubed_rank": 3,
+ "e1_f1_orthogonal_to_cuboid_family": true,
+ "all_checks_pass": true,
+ "project_version": "0.4.0.dev1",
+ "status": "RESEARCH / V0.4-dev.1"
+}

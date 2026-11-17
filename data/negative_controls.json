@@ -1,0 +1,175 @@
+{
+ "all_detected": true,
+ "controls": [
+  {
+   "mutation": "A2u field uses s1 s2 instead of s1 s2 s3",
+   "target": "tests/test_A0_representation.py",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "character table: A2u sign on C4 flipped",
+   "target": "tests/test_A0_representation.py",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "D4 Faa di Bruno coefficient 8 -> 6",
+   "target": "tests/test_A1_quartic.py::test_full_energy_and_scale_free_c4_agree_on_curve",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "scale-free chain constant: u-rescaling sqrt6 -> sqrt5",
+   "target": "tests/test_A1_quartic.py::test_scale_free_chain_constant",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "c4 numeric route: factor 3 -> 2 in the LS correction",
+   "target": "tests/test_A1_quartic.py::test_c4_by_the_24D_numeric_route",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "frozen r* last digit changed",
+   "target": "tests/test_A1_quartic.py::test_r_star_and_P_A_soft_match_frozen_constants",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "T2g representation without the sigma(R) factor",
+   "target": "tests/test_B0_t2g.py",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "Paper 2 M(r): off-diagonal (r+2) -> (r+1)",
+   "target": "tests/test_B0_t2g.py::test_block_factorises_through_paper2_M",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "isotropy: normaliser action ignored (always +1)",
+   "target": "tests/test_B0_t2g.py::test_branch_types_from_invariant_and_normalizer",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 generator: dx/dr sign flipped in the chain rule",
+   "target": "tests/test_A2_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 generator: mean-value remainder dropped (point value used as box bound)",
+   "target": "tests/test_A2_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 generator: lower bound raised by 2^-8 above its enclosure, Arb check removed (false on the first box)",
+   "target": "tests/test_A2_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 checker: coverage test disabled",
+   "target": "tests/test_A2_certificate.py::test_rejects_a_gap",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 checker: claim not compared",
+   "target": "tests/test_A2_certificate.py::test_rejects_a_flipped_relation",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "A2 checker: positivity of lower bounds not required",
+   "target": "tests/test_A2_certificate.py::test_rejects_a_nonpositive_lower_bound",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "Theorem A graph: transversality (H3) dropped from the theorem's dependencies",
+   "target": "tests/test_A2_theorem.py::test_hypotheses_H1_to_H4_are_dependencies_of_theorem_A",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "Theorem A graph: a numerical check listed as a proof dependency of the branch side",
+   "target": "tests/test_A2_theorem.py::test_no_numerical_check_is_a_dependency",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 exact layer: coefficient 54 -> 52 in the closed form g_uuv",
+   "target": "tests/test_B1_exact.py::test_each_coefficient_is_an_exact_difference_form",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 generator: wrong kernel vector (rho = +Mh12/Mh22) in the carrier",
+   "target": "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 generator: centre value used as the box bound (mean-value slopes dropped)",
+   "target": "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 generator: lower bound placed above the enclosure, Arb confirmation removed",
+   "target": "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 checker: coverage test disabled",
+   "target": "tests/test_B1_certificate.py::test_tampered_certificate_is_rejected",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 checker: Newton inclusion not required",
+   "target": "tests/test_B1_certificate.py::test_tampered_certificate_is_rejected",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B1 checker: stored expressions not compared with the derivation",
+   "target": "tests/test_B1_certificate.py::test_tampered_certificate_is_rejected",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.0: fixed Eg vector replaced by the orthorhombic yz direction (the relayed claim's Eg(2))",
+   "target": "tests/test_B2_symmetry.py::test_explicit_orthonormal_basis_of_the_fixed_space",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.0: projector averaged over O_h instead of the stabiliser",
+   "target": "tests/test_B2_symmetry.py::test_isotypic_decomposition_of_the_fixed_space",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.0: mixed channel weight 2 -> 1 in b(n)",
+   "target": "tests/test_B2_quartic.py::test_route2a_raw_b_vector_equals_the_B2_0_vector",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 1: back-reaction factor 3 -> 2",
+   "target": "tests/test_B2_quartic.py::test_route2_numeric_raw_24D_agrees",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 1: Eg back-reaction dropped (A1g only)",
+   "target": "tests/test_B2_quartic.py::test_route2_numeric_raw_24D_agrees",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 1: binomial weight of the uuvv channel 6 -> 4",
+   "target": "tests/test_B2_quartic.py::test_route2a_raw_quartic_equals_route1",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 closed form: bE_uv denominator 27 -> 26",
+   "target": "tests/test_B2_quartic.py::test_closed_forms_match_pairsum_and_have_no_division_by_r",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 2: b as the first instead of the second derivative of the gradient along e_1",
+   "target": "tests/test_B2_quartic.py::test_route2_numeric_raw_24D_agrees",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 3: transverse coordinates not solved (energy along the kernel line only)",
+   "target": "tests/test_B2_quartic.py::test_route3_restricted_family_agrees",
+   "outcome": "detected (tests fail)"
+  },
+  {
+   "mutation": "B2.1 route 3: Richardson ratio 4 -> 2",
+   "target": "tests/test_B2_quartic.py::test_route3_restricted_family_agrees",
+   "outcome": "detected (tests fail)"
+  }
+ ]
+}

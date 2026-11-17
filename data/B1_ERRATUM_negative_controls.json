@@ -1,0 +1,202 @@
+{
+ "all_as_required": true,
+ "baseline": {
+  "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_an_unraised_capacity_is_detected_not_zero_padded": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_checker_series_have_the_requested_length_and_correct_high_coefficients": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_ctx_cap_is_restored_after_the_call_and_after_an_exception": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_diagnostic_point_corrected_checker_contains_the_reference": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_diagnostic_point_corrected_generator_contains_the_reference": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_divided_differences_contain_the_reference_on_a_near_grid": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_high_coefficients_against_a_cauchy_integral": {
+   "passes_unmutated": true
+  },
+  "tests/test_B1_erratum.py::test_zero_padding_only_for_exact_trailing_zeros": {
+   "passes_unmutated": true
+  }
+ },
+ "controls": [
+  {
+   "mutation": "generator: V0.4-dev.3 _taylor restored verbatim (no ctx.cap, zero padding)",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_high_coefficients_against_a_cauchy_integral",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_generator_contains_the_reference",
+    "tests/test_B1_erratum.py::test_divided_differences_contain_the_reference_on_a_near_grid"
+   ],
+   "targets_failed": 4,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "generator: V0.4-dev.3 _taylor restored verbatim; the fresh B1 certificate is still accepted (no target in the certificate tests sees the defect, which is why the erratum tests exist)",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_certificate.py::test_fresh_certificate_passes_the_independent_checker"
+   ],
+   "targets_failed": 0,
+   "required": "expected_not_detected",
+   "outcome": "not detected by this target, as expected",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": null
+  },
+  {
+   "mutation": "generator: ctx.cap set to 10 (the python-flint default) instead of max(old, n)",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_generator_contains_the_reference"
+   ],
+   "targets_failed": 2,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "generator: ctx.cap set to 10 and the capacity guard removed",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_generator_contains_the_reference"
+   ],
+   "targets_failed": 2,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "generator: previous ctx.cap not restored",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_ctx_cap_is_restored_after_the_call_and_after_an_exception"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "generator: check that the capacity really is in force removed",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_an_unraised_capacity_is_detected_not_zero_padded"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "generator: zero padding without the exact-zero check",
+   "file": "src/cube_bif/b1_cert.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_zero_padding_only_for_exact_trailing_zeros"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "checker: V0.4-dev.3 Model.taylor restored verbatim (no ctx.cap, zero padding)",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_checker_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_checker_contains_the_reference",
+    "tests/test_B1_erratum.py::test_divided_differences_contain_the_reference_on_a_near_grid"
+   ],
+   "targets_failed": 3,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "checker: ctx.cap set to 10 instead of the requested length",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_checker_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_checker_contains_the_reference"
+   ],
+   "targets_failed": 2,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": false
+  },
+  {
+   "mutation": "checker: ctx.cap set to 10 and the capacity guard removed",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_checker_series_have_the_requested_length_and_correct_high_coefficients",
+    "tests/test_B1_erratum.py::test_diagnostic_point_corrected_checker_contains_the_reference"
+   ],
+   "targets_failed": 2,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": false
+  },
+  {
+   "mutation": "checker: saved ctx.cap not restored on exit",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_ctx_cap_is_restored_after_the_call_and_after_an_exception"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "checker: check that the capacity really is in force removed",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_an_unraised_capacity_is_detected_not_zero_padded"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  },
+  {
+   "mutation": "checker: zero padding without the exact-zero check",
+   "file": "src/cube_bif/b1_check.py",
+   "targets": [
+    "tests/test_B1_erratum.py::test_zero_padding_only_for_exact_trailing_zeros"
+   ],
+   "targets_failed": 1,
+   "required": "detected",
+   "outcome": "detected (every target fails)",
+   "as_required": true,
+   "failure_is_an_assertion_or_error": true
+  }
+ ]
+}

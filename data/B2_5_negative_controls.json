@@ -1,0 +1,222 @@
+{
+ "all_detected": true,
+ "baseline": {
+  "tests/test_B2_index.py::test_axis_commutant_and_parity": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_branch_hessian_series": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_centre_index_gauge_and_sign_independent": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_complementary_index_derived_from_frozen_table": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_conjugate_branches_one_index_type": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_d3d_consistency": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_corollary_statements_rejected[Paper 2 complementary index assumed]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_corollary_statements_rejected[rigid motions counted (flag)]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_proposition_statements_rejected[full-space stability from centre index]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_proposition_statements_rejected[index attributed to the axial curvature only (flag)]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_proposition_statements_rejected[kappa s replaced by kappa s^2]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_false_proposition_statements_rejected[transverse block positive definite]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_invalid_graphs_rejected[B2.2 scan as proof]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_statement_and_graph_valid": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_index.py::test_transverse_eigensystem_and_bound": {
+   "passes_unmutated": true
+  }
+ },
+ "n_mutations": 28,
+ "n_detected": 28,
+ "results": [
+  {
+   "mutation": "omission of the kappa s term: cubic invariant dropped from the generic reduced potential",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_branch_hessian_series",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "kappa s replaced by kappa s^2: cubic term replaced by kappa a1 I3",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_branch_hessian_series",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "kappa s term dropped in the derived statement (transverse block becomes definite)",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "c4 = 12(alpha + beta) instead of 24(alpha + beta) on the branch (missing factor)",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_branch_hessian_series",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "axis parity: e assumed even (reversing elements fix e)",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_axis_commutant_and_parity",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "axial curvature alone counted as the centre index (transverse part dropped)",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_centre_index_gauge_and_sign_independent",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "transverse block taken positive definite in the centre index (det sign ignored)",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_centre_index_gauge_and_sign_independent",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "remainder bound: admissible radius doubled",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_transverse_eigensystem_and_bound",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement: transverse block negative definite",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement: transverse block positive definite",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement: h23 = kappa s^2",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement: full-space stability claimed from the centre index",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "statement: status upgraded to independently audited",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "corollary: rigid motions counted",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "corollary: Paper 2 complementary index assumed",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "frozen table: A2u sign flipped to +",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_complementary_index_derived_from_frozen_table",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "index counting: rigid motions added to the full-slice index",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_complementary_index_derived_from_frozen_table",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "Paper 2 index formula: T2g multiplicity 2 instead of 3",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_complementary_index_derived_from_frozen_table",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "conjugates: copies counted as distinct index types",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_conjugate_branches_one_index_type",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "D3d consistency: transverse eigenvalue sign flipped",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_d3d_consistency",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: m_perp derivation not checked",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_corollary_statements_rejected[Paper 2 complementary index assumed]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: rigid-motion counting not checked",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_corollary_statements_rejected[rigid motions counted (flag)]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: stability flags not checked",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_proposition_statements_rejected[full-space stability from centre index]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: axial-only flag not checked",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_proposition_statements_rejected[index attributed to the axial curvature only (flag)]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: transverse block type not checked",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_proposition_statements_rejected[transverse block positive definite]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: hessian_e not compared with the derivation",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_false_proposition_statements_rejected[kappa s replaced by kappa s^2]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: numeric/scan wording not checked and corroboration nodes accepted",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_invalid_graphs_rejected[B2.2 scan as proof]",
+   "outcome": "DETECTED"
+  },
+  {
+   "mutation": "validator: Paper 2 spectrum allowed as a centre-index input",
+   "file": "src/cube_bif/b2_index.py",
+   "target": "tests/test_B2_index.py::test_statement_and_graph_valid",
+   "outcome": "DETECTED"
+  }
+ ]
+}

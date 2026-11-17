@@ -1,0 +1,102 @@
+{
+ "project_version": "0.4.0.dev2",
+ "all_exposed": true,
+ "statements": [
+  {
+   "statement": "c4_hat >= (observed minimum)(1 + 1e-6) on the closed curve",
+   "test": "every scan row compared with the bound",
+   "exposed": true,
+   "evidence": {
+    "bound": "3.7993418372049236826",
+    "violating_rows": 1,
+    "first_violation_q": "0.0"
+   }
+  },
+  {
+   "statement": "carrier with Eg back-reaction deleted equals c4_hat",
+   "test": "compared with the independent raw 24-D route at every comparison point",
+   "exposed": true,
+   "evidence": {
+    "min_relative_deviation": "0.0052641",
+    "max_relative_deviation": "0.019999"
+   }
+  },
+  {
+   "statement": "carrier with factor 3 -> 2 equals c4_hat",
+   "test": "compared with the independent raw 24-D route at every comparison point",
+   "exposed": true,
+   "evidence": {
+    "min_relative_deviation": "0.0044328",
+    "max_relative_deviation": "0.019049"
+   }
+  },
+  {
+   "statement": "carrier with unit normalisation (1+rho^2)^2 -> (1+rho^2) equals c4_hat",
+   "test": "compared with the independent raw 24-D route at every comparison point",
+   "exposed": true,
+   "evidence": {
+    "min_relative_deviation": "0.00038873",
+    "max_relative_deviation": "0.0007707"
+   }
+  },
+  {
+   "statement": "the projective kernel is (1, -rho) (sign of rho flipped)",
+   "test": "kernel residual |Mh (1, -rho)| and comparison with the independent route",
+   "exposed": true,
+   "evidence": {
+    "min_relative_deviation": "0.0055684",
+    "min_kernel_residual": "0.059687",
+    "true_kernel_residual_max": "1.86e-49"
+   }
+  },
+  {
+   "statement": "at the corner the divided differences may be replaced by the values g(q_c)",
+   "test": "compared with the independent corner route (derivative potential)",
+   "exposed": true,
+   "evidence": {
+    "relative_deviation": "0.99038"
+   }
+  },
+  {
+   "statement": "raw c4 is nonzero at q = 0 and at q = q_c",
+   "test": "raw c4 = q W_q (p - q) c4_hat at the two endpoint rows; raw 24-D c4 near the ends",
+   "exposed": true,
+   "evidence": {
+    "raw_c4_at_q0": "0.0",
+    "raw_c4_at_corner": "0.0",
+    "raw_c4_near_the_ends": [
+     {
+      "q": "0.001",
+      "p - q": "4.7934268",
+      "c4_raw": "0.04249256339",
+      "c4_raw/(q W_q (p - q))": "3.8000440162808625839"
+     },
+     {
+      "q": "1.0e-5",
+      "p - q": "4.7963388",
+      "c4_raw": "0.000425201113",
+      "c4_raw/(q W_q (p - q))": "3.799345100679649098"
+     },
+     {
+      "q": "1.0e-7",
+      "p - q": "4.7963679",
+      "c4_raw": "4.25203868e-6",
+      "c4_raw/(q W_q (p - q))": "3.7993381084953163791"
+     },
+     {
+      "q": "2.0189382317",
+      "p - q": "0.0020001292",
+      "c4_raw": "0.02839836251",
+      "c4_raw/(q W_q (p - q))": "4.3770353918512790587"
+     },
+     {
+      "q": "2.0199282317",
+      "p - q": "2.0000013e-5",
+      "c4_raw": "0.0002840640086",
+      "c4_raw/(q W_q (p - q))": "4.3770354906032470153"
+     }
+    ]
+   }
+  }
+ ]
+}

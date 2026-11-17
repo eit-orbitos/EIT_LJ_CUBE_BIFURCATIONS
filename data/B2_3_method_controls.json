@@ -1,0 +1,149 @@
+{
+ "project_version": "0.4.0.dev3",
+ "all_as_required": true,
+ "controls": [
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "false bound: c4_hat > 19/5 on the first curve box (c4_hat(0) = 3.79934 < 19/5)",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "b1_index": 0,
+    "q_lo": "0",
+    "q_hi": "1/1600",
+    "reason": "carrier not certified above the claimed bound"
+   },
+   "root_of_c4_hat_minus_19_5": "0.000937626749756"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "false bound: c4_hat > 19/5 at the endpoint q = 0",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "endpoint_enclosure": "[3.79933803786688581571022702877 +/- 7.89e-31]"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "false function: 21/5 - c4_hat on all 222 curve boxes (it vanishes at the root below)",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "root_of_c4_hat_minus_21_5": "0.803156262702102",
+   "box_containing_the_root": 80,
+   "box_containing_the_root_failed": true,
+   "all_boxes_beyond_the_root_failed": true,
+   "n_boxes_failed": 180,
+   "first_failed_box": {
+    "b1_index": 42,
+    "q": [
+     "21/50",
+     "43/100"
+    ],
+    "reason": "lower bound not above the claimed bound"
+   },
+   "note": "failures start below the root because the generator's box enclosures are wide in the quotient regime (up to 0.9 near q = 1.35, 0.25 on the first box): it certifies a margin only when it exceeds the enclosure width, and the recorded lower bounds of the true carrier are correspondingly conservative"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "raw (unnormalised) c4 = q W_q delta c4_hat on the first curve box (q = 0)",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": "q in [0, 1/25600]: the enclosure of q W_q delta c4_hat contains 0"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "raw (unnormalised) c4 = q W_q delta c4_hat on the corner box (p = q at q_c)",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": "q in [2019/1000, 103373/51200]: the enclosure of q W_q delta c4_hat contains 0"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "variant 'wrong kernel sign': its endpoint enclosures must exclude the B2.2 reference values",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "q0_enclosure": "[3.77818198595332647404377745872 +/- 3.57e-30]",
+   "corner_enclosure": "[4.33560685848968296695543969870 +/- 1.94e-31]"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "variant 'Eg deleted': its endpoint enclosures must exclude the B2.2 reference values",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "q0_enclosure": "[3.87532183101171523876444005700 +/- 3.05e-30]",
+   "corner_enclosure": "[4.40007671963177858286168145413 +/- 4.48e-30]"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "variant 'factor 3 -> 2': its endpoint enclosures must exclude the B2.2 reference values",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "q0_enclosure": "[3.82466596891516229006163137151 +/- 1.80e-30]",
+   "corner_enclosure": "[4.38471590028600748502924174134 +/- 1.76e-30]"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "corner with values f(q_c) instead of the derivatives f'(q_c): must exclude the B2.2 corner value",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "corner_enclosure": "[7.2836101459511656691 +/- 1.43e-20]"
+  },
+  {
+   "side": "generator (b2_cert.py)",
+   "control": "positive control: the true carrier on curve boxes 50..60",
+   "required": "certify",
+   "certified": true,
+   "as_required": true
+  },
+  {
+   "side": "checker (b2_check.py)",
+   "control": "false bound: c4_hat > 19/5 on the first box",
+   "required": "fail",
+   "certified": false,
+   "as_required": true
+  },
+  {
+   "side": "checker (b2_check.py)",
+   "control": "false function: 21/5 - c4_hat > 0 on the box containing its zero",
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "box": {
+    "index": 80,
+    "q": [
+     "4/5",
+     "81/100"
+    ]
+   }
+  },
+  {
+   "side": "checker (b2_check.py)",
+   "control": "raw (unnormalised) c4 = q W_q delta c4_hat > 0 on the first box (q = 0)",
+   "required": "fail",
+   "certified": false,
+   "as_required": true
+  },
+  {
+   "side": "checker (b2_check.py)",
+   "control": "raw (unnormalised) c4 = q W_q delta c4_hat > 0 on the corner box",
+   "required": "fail",
+   "certified": false,
+   "as_required": true
+  },
+  {
+   "side": "checker (b2_check.py)",
+   "control": "positive control: the recorded bounds on box 100",
+   "required": "certify",
+   "certified": true,
+   "as_required": true
+  }
+ ]
+}

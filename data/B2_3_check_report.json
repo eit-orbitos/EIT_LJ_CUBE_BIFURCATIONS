@@ -1,0 +1,32 @@
+{
+ "project_version": "0.4.0.dev3",
+ "status": "RESEARCH / V0.4-dev.3",
+ "checker": "src/cube_bif/b2_check.py",
+ "certificate": "data/B2_c4hat_certificate.json",
+ "ok": true,
+ "semantic_sha256": "f7bc244ecac4b89ce003a38ff52047d6cbe80f63a97236049f15f5e0da5c17d2",
+ "endpoints": {
+  "q=0": {
+   "c4_hat": "[3.7993380 +/- 7.87e-8]",
+   "hE_hat": "[1.99911757 +/- 3.19e-9]",
+   "Mh22": "[1.51334038 +/- 4.20e-9]",
+   "v_norm2": "[2.29108938 +/- 7.17e-9]"
+  },
+  "corner": {
+   "c4_hat": "[4.3770354906131219361 +/- 1.31e-20]",
+   "hE_hat": "[1.99831736711 +/- 2.07e-12]",
+   "Mh22": "[1.45550847121 +/- 2.53e-12]",
+   "v_norm2": "[2.12013763405 +/- 2.99e-12]"
+  }
+ },
+ "boxes_checked": 222,
+ "precision_bits": 192,
+ "curve_reverified_b1_boxes": 222,
+ "curve_max_q_split": 0,
+ "curve_max_n": 32,
+ "carrier_confirmed": 222,
+ "carrier_max_split": 0,
+ "carrier_max_n": 32,
+ "centre_values_inside_stored_enclosures": 222,
+ "failures": []
+}

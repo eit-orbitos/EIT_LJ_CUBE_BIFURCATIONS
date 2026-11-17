@@ -1,0 +1,103 @@
+{
+ "controls": [
+  {
+   "control": "false bound: kappa_hat > 3/1000 on [0, 1/10] (true kappa_hat(0) = 0.0028795)",
+   "interval": [
+    "0",
+    "1/10"
+   ],
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "q_lo": "0",
+    "q_hi": "1/40960",
+    "depth": 12,
+    "reason": "carrier not certified above the claimed bound"
+   },
+   "seconds": 1.17
+  },
+  {
+   "control": "sign change: 9/2000 - kappa_hat on [2/5, 3/5] (positive at 2/5, negative at 3/5)",
+   "interval": [
+    "2/5",
+    "3/5"
+   ],
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "q_lo": "9473/20480",
+    "q_hi": "4737/10240",
+    "depth": 12,
+    "reason": "lower bound not above the claimed bound"
+   },
+   "seconds": 6.03,
+   "root_of_9/2000-kappa_hat": "0.462937322724"
+  },
+  {
+   "control": "raw kappa (not normalised) on [0, 1/100]: vanishes at q = 0",
+   "interval": [
+    "0",
+    "1/100"
+   ],
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "q_lo": "0",
+    "q_hi": "1/409600",
+    "depth": 12,
+    "reason": "carrier not certified above the claimed bound"
+   },
+   "seconds": 1.13
+  },
+  {
+   "control": "raw kappa (not normalised) on the corner box: vanishes at q_c",
+   "interval": [
+    "2019/1000",
+    "101/50"
+   ],
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "q_lo": "2019/1000",
+    "q_hi": "101/50",
+    "depth": 0,
+    "reason": "carrier not certified above the claimed bound"
+   },
+   "seconds": 0.09
+  },
+  {
+   "control": "wrong kernel vector: rho = +Mh12/Mh22 on [1/2, 1]",
+   "interval": [
+    "1/2",
+    "1"
+   ],
+   "required": "fail",
+   "certified": false,
+   "as_required": true,
+   "failure": {
+    "q_lo": "1/2",
+    "q_hi": "4097/8192",
+    "depth": 12,
+    "reason": "carrier not certified above the claimed bound"
+   },
+   "seconds": 1.13
+  },
+  {
+   "control": "positive control: the true carrier on [1/2, 1]",
+   "interval": [
+    "1/2",
+    "1"
+   ],
+   "required": "certify",
+   "certified": true,
+   "as_required": true,
+   "failure": null,
+   "seconds": 2.19
+  }
+ ],
+ "all_as_required": true
+}

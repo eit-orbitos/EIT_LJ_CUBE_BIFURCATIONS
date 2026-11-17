@@ -1,0 +1,53 @@
+{
+ "erratum": "E-B1",
+ "what": "the V0.4-dev.3 B1 Taylor routines, unmodified, before the patch",
+ "archive": "EIT_LJ_CUBE_BIFURCATIONS_V0.4-dev.3.zip",
+ "archive_sha256": "cf331557f9cf6fd074920368a69268c331e4c84d1f3b64fd89b421a3b45d5c81",
+ "python": "3.13.5",
+ "result": {
+  "project_version_of_the_code_run": "0.4.0.dev3",
+  "python-flint": "0.9.0",
+  "default_ctx_cap": 10,
+  "arb_series exp, prec=16, ctx.cap=10: coefficients returned": 10,
+  "generator b1_cert._taylor(1, 16): c_10..c_15 all exactly zero": true,
+  "generator: coefficients c_10..c_15 whose enclosure excludes the mpmath value": 42,
+  "generator: coefficients c_0..c_9 enclosing the mpmath value": 70,
+  "checker b1_check.Model.taylor(1, 20): c_10..c_19 all exactly zero": true,
+  "checker: coefficients c_10..c_19 whose enclosure excludes the mpmath value": 70,
+  "example: M22 c_12 at r = 1, mpmath": "-5.6199345878802576681e-11",
+  "example: M22 c_12 at r = 1, V0.4-dev.3 generator": "0",
+  "diagnostic point": {
+   "q": "19/10",
+   "delta": "9/10"
+  },
+  "generator divided differences excluding the 60-digit quotient": [
+   "M11",
+   "M12",
+   "M22",
+   "uuu",
+   "uuv",
+   "uvv",
+   "vvv"
+  ],
+  "checker divided differences excluding the 60-digit quotient": [
+   "M11",
+   "M12",
+   "M22",
+   "uuu",
+   "uuv",
+   "uvv",
+   "vvv"
+  ],
+  "worst generator divided difference": {
+   "function": "uvv",
+   "enclosure": "[-2.031171625660702153425980 +/- 1.21e-25]",
+   "radius": "1.50e-37",
+   "mpmath quotient": "-2.031171622867651708396495",
+   "midpoint error": "2.79e-9"
+  },
+  "V0.4-dev.3 generator, mpmath 40 digits (as scripts/run_B1.py): semantic SHA-256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "reproduces the historical certificate 616817fc...": true,
+  "ctx.cap after": 10
+ },
+ "defect_reproduced": true
+}

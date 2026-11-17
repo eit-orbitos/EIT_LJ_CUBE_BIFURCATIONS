@@ -1,0 +1,278 @@
+{
+ "graph": {
+  "proposition": "Proposition B2",
+  "root": "P_B2",
+  "allowed_inputs": [
+   "B18_tau",
+   "B20_parity_fixed_space",
+   "B21_LS_c4_identity",
+   "LQ_lemma_Q",
+   "STD_implicit_function_theorem",
+   "STD_lyapunov_schmidt"
+  ],
+  "nodes": [
+   {
+    "id": "P_B2",
+    "role": "proposition",
+    "status": "PROVED (computer-assisted; not independently audited)",
+    "statement": "Local D2h-axial pitchfork on the T2g curve (NOTES.md §12)",
+    "source": "NOTES.md §12"
+   },
+   {
+    "id": "L1_reduced_equation",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "V_red = V0(mu) + lambda(mu) s^2/2 + c4(mu) s^4/24 + O(s^6), even in s; dV_red/ds = s G(s^2, mu), G = lambda + c4 z/6 + O(z^2); lambda(0) = 0, lambda'(0) = tau, c4(0) = c4",
+    "source": "NOTES.md §12.2; src/cube_bif/b2_branch.py (generic_ls_checks, model_structure, schur_identities, reduced_G)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "L2_ift_branch",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "unique local curve mu = mu*(z), mu*'(0) = -c4/(6 tau) > 0; s^2 = -6 tau mu/c4 + O(mu^2); nontrivial equilibria only for mu > 0",
+    "source": "NOTES.md §12.3; src/cube_bif/b2_branch.py (ift_branch, branch_side)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "L3_pitchfork",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "cube for both signs; s = +-s*(mu) only for mu > 0; exchanged by N(Sigma) minus Sigma; supercritical in the energy-reduced axial convention",
+    "source": "NOTES.md §12.4; src/cube_bif/b2_branch.py (classify, exchange_exact)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "L4_axial_curvature",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "d2V_red/ds2 = tau mu + O(mu^2) < 0 at the cube (mu > 0); -2 tau mu + O(mu^2) > 0 at +-s*",
+    "source": "NOTES.md §12.5; src/cube_bif/b2_branch.py (axial_curvature)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "L5_geometry",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "isotropy exactly Sigma; rhombic sections at first order; opposite tetrahedral translation weight n_v; O(s^2) corrections in span{A_HAT, E_HAT}; f_1 component O(s^3)",
+    "source": "NOTES.md §12.6; src/cube_bif/b2_branch.py (isotropy_exact, rhombus_exact, generic_ls_checks)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "X_generic_LS",
+    "role": "step",
+    "status": "VERIFIED-EXACT",
+    "statement": "generic Z2-invariant LS expansion: odd coefficients 0, s^2 coefficient = Schur/2, s^4 coefficient at mu = 0 = (D4V - 3 b^T H^-1 b)/24",
+    "source": "NOTES.md §12.2 step 7; src/cube_bif/b2_branch.py (generic_ls_checks)",
+    "tests": "tests/test_B2_branch.py"
+   },
+   {
+    "id": "B20_parity_fixed_space",
+    "role": "input",
+    "status": "VERIFIED-EXACT",
+    "allowed_input": "exact B2.0 parity/fixed-space results",
+    "statement": "B2.0: Sigma = Stab(e_1), order 8; Fix(Sigma) = span{A_HAT, E_HAT, uh_1, vh_1}; the 8 elements of N(Sigma) minus Sigma act on Fix(Sigma) as diag(1, 1, -1, -1)",
+    "includes": [
+     "Fix(Sigma) contains no rigid motion",
+     "first-order displacement of s e_1: vertex s moves by -(s n_u/4)(0, s3, s2) - (s n_v sqrt2/4)(s1 s2 s3)(1, 0, 0)",
+     "stated in the B0 bases uh_k, vh_k and with the B0 block K (exact definitions used by B2.0)"
+    ],
+    "source": "NOTES.md §6.1",
+    "tests": "tests/test_B2_symmetry.py, tests/test_B0_t2g.py"
+   },
+   {
+    "id": "B21_LS_c4_identity",
+    "role": "input",
+    "status": "VERIFIED-EXACT",
+    "allowed_input": "exact B2.1 LS coefficient identity",
+    "statement": "B2.1: H|Fix(Sigma) = diag(h_A, h_E) (+) K; c4 = D4V[e_1^4] - 3<b, H_perp^-1 b> = Q - 3 b_A^2/h_A - 3 b_E^2/h_E with <b, f_1> = 0; c4 = q W_q (p - q) c4_hat",
+    "includes": [
+     "the identity's recorded hypotheses: h_A > 0, h_E > 0 (Paper 2 Lemma S, FROZEN INPUT) and tr K > 0 (Paper 2 Lemma T1, FROZEN INPUT), as stated in NOTES.md §6.2"
+    ],
+    "source": "NOTES.md §6.1-6.2",
+    "tests": "tests/test_B2_quartic.py, tests/test_B2_symmetry.py"
+   },
+   {
+    "id": "LQ_lemma_Q",
+    "role": "input",
+    "status": "CERTIFIED",
+    "allowed_input": "certified Lemma Q from B2.3",
+    "statement": "B2.3 Lemma Q: c4_hat > 0 on the closed T2g curve, hence c4(q) > 0 for 0 < q < q_c (certified; not independently audited)",
+    "includes": [
+     "the corollary c4(q) = q W_q (P_T(q) - q) c4_hat(q) > 0 of NOTES.md §9.1, which uses Paper 2 Lemmas T2, T3 (FROZEN INPUT) as recorded there"
+    ],
+    "source": "NOTES.md §9; data/B2_c4hat_certificate.json (semantic f7bc244e...)",
+    "tests": "tests/test_B2_certificate.py"
+   },
+   {
+    "id": "B18_tau",
+    "role": "input",
+    "status": "FROZEN INPUT",
+    "allowed_input": "audited B1/Paper-2 transversality result tau < 0",
+    "statement": "tau = n^T dK/dp n < 0 for 0 < q < q_c on the T2g curve p = P_T(q), where ker K = span{n} (B1.8; independently audited with B1)",
+    "includes": [
+     "Paper 2 Lemmas T1 (tr K > 0) and T3 (unique curve point P_T(q) > q, D_p < 0) and the exact adj identity, as recorded in NOTES.md §5.8"
+    ],
+    "source": "NOTES.md §5.8, §5.11",
+    "tests": "tests/test_B1_d3d.py, tests/test_B1_exact.py"
+   },
+   {
+    "id": "STD_lyapunov_schmidt",
+    "role": "input",
+    "status": "STANDARD",
+    "allowed_input": "standard Lyapunov-Schmidt reduction",
+    "statement": "Lyapunov-Schmidt reduction of an equivariant gradient problem with a one-dimensional kernel (Golubitsky & Schaeffer, Vol. I, Ch. I §3 and Ch. VII; Golubitsky, Stewart & Schaeffer, Vol. II, Ch. XIII)",
+    "includes": [
+     "its hypotheses, checked in NOTES.md §12.2 steps 1-2: V_p is real-analytic in (x, p) near (y*, P_T(q)) (pair distances near 1, sqrt2, sqrt3; r^-p = exp(-p log r)); the O_h action is finite and orthogonal, so grad V is in Fix(Sigma) on y* + Fix(Sigma) (symmetric criticality)"
+    ],
+    "source": "textbook"
+   },
+   {
+    "id": "STD_implicit_function_theorem",
+    "role": "input",
+    "status": "STANDARD",
+    "allowed_input": "implicit function theorem",
+    "statement": "real-analytic implicit function theorem (Krantz & Parks, The Implicit Function Theorem, Thm 2.3.5)",
+    "source": "textbook"
+   }
+  ],
+  "edges": [
+   [
+    "P_B2",
+    "L1_reduced_equation"
+   ],
+   [
+    "P_B2",
+    "L2_ift_branch"
+   ],
+   [
+    "P_B2",
+    "L3_pitchfork"
+   ],
+   [
+    "P_B2",
+    "L4_axial_curvature"
+   ],
+   [
+    "P_B2",
+    "L5_geometry"
+   ],
+   [
+    "L1_reduced_equation",
+    "X_generic_LS"
+   ],
+   [
+    "L1_reduced_equation",
+    "B20_parity_fixed_space"
+   ],
+   [
+    "L1_reduced_equation",
+    "B21_LS_c4_identity"
+   ],
+   [
+    "L1_reduced_equation",
+    "B18_tau"
+   ],
+   [
+    "L1_reduced_equation",
+    "STD_lyapunov_schmidt"
+   ],
+   [
+    "L1_reduced_equation",
+    "STD_implicit_function_theorem"
+   ],
+   [
+    "L2_ift_branch",
+    "L1_reduced_equation"
+   ],
+   [
+    "L2_ift_branch",
+    "LQ_lemma_Q"
+   ],
+   [
+    "L2_ift_branch",
+    "B18_tau"
+   ],
+   [
+    "L2_ift_branch",
+    "STD_implicit_function_theorem"
+   ],
+   [
+    "L3_pitchfork",
+    "L2_ift_branch"
+   ],
+   [
+    "L3_pitchfork",
+    "B20_parity_fixed_space"
+   ],
+   [
+    "L4_axial_curvature",
+    "L2_ift_branch"
+   ],
+   [
+    "L5_geometry",
+    "L2_ift_branch"
+   ],
+   [
+    "L5_geometry",
+    "B20_parity_fixed_space"
+   ],
+   [
+    "L5_geometry",
+    "X_generic_LS"
+   ],
+   [
+    "X_generic_LS",
+    "STD_lyapunov_schmidt"
+   ]
+  ],
+  "corroboration_only": [
+   {
+    "id": "N_B22_scan",
+    "status": "VERIFIED-NUMERIC",
+    "statement": "B2.2 401-point scan of c4_hat (reconnaissance)",
+    "source": "NOTES.md §7"
+   },
+   {
+    "id": "N_B24_branch_points",
+    "status": "VERIFIED-NUMERIC",
+    "statement": "B2.4 located branch points, reduced scans, amplitude law (this phase)",
+    "source": "data/B2_4_branch.json"
+   }
+  ]
+ },
+ "statement": {
+  "name": "Proposition B2",
+  "scope": "fixed q in (0, q_c); mu = p - P_T(q); equilibria of V_p in y* + Fix(Sigma) near y*, |mu| small",
+  "coordinate": "s = <x - y*, e_1>, e_1 = n_u uh_1 + n_v vh_1, unit n in ker K at mu = 0, n_u > 0",
+  "inputs": {
+   "tau_sign": "<0",
+   "c4_sign": ">0"
+  },
+  "reduced_potential": "V0 + lam*s**2/2 + c4*s**4/24",
+  "reduced_potential_remainder": "O(s^6, mu s^4, mu^2 s^2) with lam = tau mu + O(mu^2)",
+  "even_in_s": true,
+  "G": "lam + c4*z/6",
+  "G_remainder": "O(z^2, mu z, mu^2)",
+  "mu_star_slope": "-c4/(6*tau)",
+  "amplitude_law": "-6*tau*mu/c4",
+  "branch_side": "mu > 0",
+  "branch_on_both_sides": false,
+  "cube_exists_for_both_signs": true,
+  "nontrivial_equilibria_on_branch_side": 2,
+  "nontrivial_equilibria_on_other_side": 0,
+  "pitchfork_symmetry": "Z2 generated by any element of N(Sigma) minus Sigma (8 elements); (s, wf) -> (-s, -wf)",
+  "classification": "supercritical",
+  "classification_convention": "energy-reduced axial",
+  "axial_curvature_cube_branch_side": "tau*mu",
+  "axial_curvature_branch": "-2*tau*mu",
+  "isotropy_of_branch_points": "exactly Sigma (order 8, D2h)",
+  "claims_cuboid": false,
+  "claims_full_space_stability": false,
+  "claims_centre_manifold_index": false,
+  "status": "PROVED (computer-assisted; not independently audited)",
+  "dependency_root": "P_B2"
+ },
+ "graph_validation_failures": [],
+ "statement_validation_failures": []
+}

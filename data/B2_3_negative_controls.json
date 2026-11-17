@@ -1,0 +1,223 @@
+{
+ "all_detected": true,
+ "baseline": {
+  "tests/test_B2_certificate.py::test_B1_certificate_is_pinned_and_loaded_only_with_the_pinned_hash": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_checker_box_ranges_contain_exact_values": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_checker_point_values_contain_the_reference": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_checker_rejects_a_delta_ball_that_misses_the_curve": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[altered hE_hat]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[deleted Eg correction]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[gap in the q-coverage]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[inflated lower bound on the first box]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[modified imported B1 delta-ball]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[raw c4 > 0 claimed at q = 0]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[wrong B1 semantic hash]": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_generator_divided_differences_contain_the_quotient": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_modified_semantic_hash_and_hash_file_are_rejected": {
+   "passes_unmutated": true
+  },
+  "tests/test_B2_certificate.py::test_stored_certificate_passes_the_independent_checker": {
+   "passes_unmutated": true
+  }
+ },
+ "controls": [
+  {
+   "mutation": "generator: Q coefficient 6 -> 4 for Qh_uuvv",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: Eg back-reaction deleted",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: Eg factor 3 -> 2",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: kernel sign flipped (rho = +Mh12/Mh22)",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: hE_hat closed form doubled",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: corner from the values f(q_c) instead of the derivatives f'(q_c)",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: q = 0 endpoint without the exact values f(0)",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: recorded lower bound = upper end of the box enclosure",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_fresh_build_is_accepted_by_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: series length not set (python-flint cap; truncated series zero-padded)",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_generator_series_have_the_requested_length_and_correct_high_coefficients",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: symmetric Taylor remainder dropped",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_generator_divided_differences_contain_the_quotient",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "generator: B1 semantic-hash pin not enforced",
+   "file": "src/cube_bif/b2_cert.py",
+   "target": "tests/test_B2_certificate.py::test_B1_certificate_is_pinned_and_loaded_only_with_the_pinned_hash",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: imported B1 semantic hash not compared with the pin",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[wrong B1 semantic hash]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: gaps and overlaps in the q-coverage not checked",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[gap in the q-coverage]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: imported B1 boxes not compared",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[modified imported B1 delta-ball]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: kernel sign flipped (v = (Mh22, +Mh12))",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_stored_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: midpoint-rule remainder dropped",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_checker_point_values_contain_the_reference",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: centred form without the t-variation inside a subinterval",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_checker_box_ranges_contain_exact_values",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: raw c4 at the endpoints not checked",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[raw c4 > 0 claimed at q = 0]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: box bound compared with 0 instead of the recorded lower bound",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[inflated lower bound on the first box]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: corner evaluated off the diagonal (delta = 1 instead of 0)",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_stored_certificate_passes_the_independent_checker",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: semantic hash not compared",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_modified_semantic_hash_and_hash_file_are_rejected",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: Newton inclusion always accepted",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_checker_rejects_a_delta_ball_that_misses_the_curve",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: stored expressions not compared with the independent derivation",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[altered hE_hat]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  },
+  {
+   "mutation": "checker: stored formulas not compared",
+   "file": "src/cube_bif/b2_check.py",
+   "target": "tests/test_B2_certificate.py::test_consistent_forgery_is_rejected[deleted Eg correction]",
+   "outcome": "detected (tests fail)",
+   "failure_is_an_assertion": true
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "project": "EIT-LJ Cube Bifurcations (Paper 3)",
+ "version": "0.3.0.dev0",
+ "status": "RESEARCH / V0.3-dev",
+ "phase": "B1",
+ "exact": {
+  "trilinear_values_computed": 216,
+  "nonzero_values": 48,
+  "nonzero_only_on_permutations_of_123": true,
+  "independent_coefficients_generic_psi": {
+   "uuu": "-12*psi2_2 - 12*psi2_3 - 32*psi3_3",
+   "uuv": "-10*sqrt(2)*psi2_3 - 16*sqrt(2)*psi3_3",
+   "uvv": "-8*psi2_1 - 8*psi2_3 - 16*psi3_3",
+   "vvv": "-8*sqrt(2)*psi3_3"
+  },
+  "kappa_generic": "t_uuu n_u^3 + 3 t_uuv n_u^2 n_v + 3 t_uvv n_u n_v^2 + t_vvv n_v^3",
+  "route2_raw24_equals_route1": {
+   "uuu": true,
+   "uuv": true,
+   "uvv": true,
+   "vvv": true
+  },
+  "raw24_cubic_restriction_equals_6_kappa_a1a2a3": true,
+  "difference_form_residuals_zero": {
+   "uuu": true,
+   "uuv": true,
+   "uvv": true,
+   "vvv": true
+  },
+  "g_closed_forms": {
+   "uuu": "(-3*Xr/4 + Yr*(4*r + 7)/27)*(r + 2)/(Xr + Yr/3 + 1)",
+   "uuv": "sqrt(2)*Yr*(r + 2)*(4*r + 1)/(54*Xr + 18*Yr + 54)",
+   "uvv": "(r + 2)*(Yr*(2*r + 2)/27 - 2)/(Xr + Yr/3 + 1)",
+   "vvv": "sqrt(2)*Yr*(r + 2)*(r + 4)/(27*Xr + 9*Yr + 27)"
+  },
+  "M_closed_form_paper2": [
+   [
+    "(Xr*r + Yr*(4*r/9 + 2/9) - 2)/(Xr + Yr/3 + 1)",
+    "2*sqrt(2)*Yr*(r + 2)/(9*(Xr + Yr/3 + 1))"
+   ],
+   [
+    "2*sqrt(2)*Yr*(r + 2)/(9*(Xr + Yr/3 + 1))",
+    "(Yr*(2*r/9 - 2/9) + 2*r - 2)/(Xr + Yr/3 + 1)"
+   ]
+  ],
+  "factorisation": "kappa = q W_q (p - q) kappa_hat, kappa_hat = sum binom n^.. (g_m(p) - g_m(q))/(p - q)",
+  "chart": "n = (1, rho), rho = -Mh12/Mh22; Mh (1, rho)^T = (det Mh / Mh22, 0)^T"
+ },
+ "route3_direct_differentiation": [
+  {
+   "q": "0.05",
+   "p": "4.700370562902744078",
+   "kappa_chart_formula": "0.0016466130082737231664",
+   "kappa_chart_direct": "0.0016466130082737231664",
+   "relative_difference": "1.84e-40"
+  },
+  {
+   "q": "0.3",
+   "p": "4.2504483867967081932",
+   "kappa_chart_formula": "0.010270991169912714955",
+   "kappa_chart_direct": "0.010270991169912714955",
+   "relative_difference": "1.26e-40"
+  },
+  {
+   "q": "1.0",
+   "p": "3.1963656488371873347",
+   "kappa_chart_formula": "0.024570313281254153276",
+   "kappa_chart_direct": "0.024570313281254153276",
+   "relative_difference": "1.15e-41"
+  },
+  {
+   "q": "1.5",
+   "p": "2.5774133595470691295",
+   "kappa_chart_formula": "0.018686295306857732791",
+   "kappa_chart_direct": "0.018686295306857732791",
+   "relative_difference": "3.44e-40"
+  },
+  {
+   "q": "1.8",
+   "p": "2.246312189797683654",
+   "kappa_chart_formula": "0.0091324892468381242362",
+   "kappa_chart_direct": "0.0091324892468381242362",
+   "relative_difference": "2.87e-39"
+  },
+  {
+   "q": "2.0",
+   "p": "2.0399279621930162686",
+   "kappa_chart_formula": "0.00088662978626529168099",
+   "kappa_chart_direct": "0.00088662978626529168099",
+   "relative_difference": "3.93e-38"
+  }
+ ],
+ "endpoint_limits": {
+  "q->0+": {
+   "P_T(0)": "4.796368189344416004181122",
+   "rho": "0.019716355553013876521",
+   "kappa_hat": "0.0028795125799552354827",
+   "raw_kappa": "q W_q (p - q) kappa_hat -> 0 linearly (factor q)"
+  },
+  "q->q_c-": {
+   "q_c": "2.019938231700799988302883",
+   "rho_c": "0.027761420753145921015",
+   "kappa_hat": "0.0068917823096483782991",
+   "tau_tilde": "-0.0740233795082236",
+   "raw_kappa": "q W_q (p - q) kappa_hat -> 0 linearly (p - q = 2(q_c - q) + O((q_c - q)^2), Paper 2 Prop. supplementary (iii))"
+  }
+ },
+ "scan": {
+  "grid": "q_k = k q_c / 400, k = 0..400; the last point is the corner limit",
+  "min_abs_kappa_hat": "0.00287951257995524",
+  "at_q": "0.0",
+  "max_kappa_hat": "0.00689178230964838",
+  "sign_changes_in_chart_gauge": 0,
+  "kappa_hat_monotone_increasing": true,
+  "endpoint_q0": "0.0028795125799552354827",
+  "endpoint_corner": "0.0068917823096483782991",
+  "rho_range": [
+   "0.01971635555",
+   "0.02776142075"
+  ],
+  "Mh22_range": [
+   "1.455508471",
+   "1.513340377"
+  ],
+  "dDtilde_ddelta_range": [
+   "-0.10774166",
+   "-0.064337772"
+  ],
+  "dP_T_dq_range": [
+   "-1.93963",
+   "-1.00065"
+  ],
+  "tau_tilde_range": [
+   "-0.07402338",
+   "-0.042513748"
+  ],
+  "status": "VERIFIED-NUMERIC (candidate scan; the certificate is separate)"
+ },
+ "transversality": {
+  "status": "FROZEN INPUT + VERIFIED-EXACT",
+  "argument": "tau = n^T dK/dp n = q W_q n^T M'(P_T(q)) n (unit n). On the curve N = M(p) - M(q) is singular symmetric with kernel n, so adj N = tr(N) n n^T and dD/dp = tr(N) n^T M'(p) n. Paper 2 Lemma T1: tr K > 0, so tr N > 0; Lemma T3: dD/dp(P_T(q), q) < 0 for 0 <= q < q_c. Hence tau < 0 for every 0 < q < q_c.",
+  "normalised_near_corner": "tau_hat = n^T M'(p) n = (p - q) tau_tilde, tau_tilde -> n_c^T M''(q_c) n_c / 2"
+ },
+ "d3d_corroboration": [
+  {
+   "q": "0.3",
+   "rel_mu": "1e-6",
+   "mu": "4.2504484e-6",
+   "s_predicted": "5.21065467265e-5",
+   "s_found": "5.15969428723e-5",
+   "relative_difference": "0.00978",
+   "full_gradient_norm": "2.08e-50",
+   "kappa_unit": "0.0102635523667",
+   "tau_unit": "-0.125821612759"
+  },
+  {
+   "q": "0.3",
+   "rel_mu": "-1e-6",
+   "mu": "-4.2504484e-6",
+   "s_predicted": "-5.21065467265e-5",
+   "s_found": "-5.2636893909e-5",
+   "relative_difference": "0.0102",
+   "full_gradient_norm": "2.26e-50",
+   "kappa_unit": "0.0102635523667",
+   "tau_unit": "-0.125821612759"
+  },
+  {
+   "q": "0.3",
+   "rel_mu": "1e-7",
+   "mu": "4.2504484e-7",
+   "s_predicted": "5.21065467265e-6",
+   "s_found": "5.20546784202e-6",
+   "relative_difference": "0.000995",
+   "full_gradient_norm": "6.4e-51",
+   "kappa_unit": "0.0102635523667",
+   "tau_unit": "-0.125821612759"
+  },
+  {
+   "q": "0.3",
+   "rel_mu": "-1e-7",
+   "mu": "-4.2504484e-7",
+   "s_predicted": "-5.21065467265e-6",
+   "s_found": "-5.21586223231e-6",
+   "relative_difference": "0.000999",
+   "full_gradient_norm": "2.35e-50",
+   "kappa_unit": "0.0102635523667",
+   "tau_unit": "-0.125821612759"
+  },
+  {
+   "q": "1.0",
+   "rel_mu": "1e-6",
+   "mu": "3.1963656e-6",
+   "s_predicted": "3.31767283282e-5",
+   "s_found": "3.30258720558e-5",
+   "relative_difference": "0.00455",
+   "full_gradient_norm": "8.6e-51",
+   "kappa_unit": "0.0245457789078",
+   "tau_unit": "-0.254773304401"
+  },
+  {
+   "q": "1.0",
+   "rel_mu": "-1e-6",
+   "mu": "-3.1963656e-6",
+   "s_predicted": "-3.31767283282e-5",
+   "s_found": "-3.33303775272e-5",
+   "relative_difference": "0.00463",
+   "full_gradient_norm": "7.96e-51",
+   "kappa_unit": "0.0245457789078",
+   "tau_unit": "-0.254773304401"
+  },
+  {
+   "q": "1.0",
+   "rel_mu": "1e-7",
+   "mu": "3.1963656e-7",
+   "s_predicted": "3.31767283282e-6",
+   "s_found": "3.31615186023e-6",
+   "relative_difference": "0.000458",
+   "full_gradient_norm": "5.11e-50",
+   "kappa_unit": "0.0245457789078",
+   "tau_unit": "-0.254773304401"
+  },
+  {
+   "q": "1.0",
+   "rel_mu": "-1e-7",
+   "mu": "-3.1963656e-7",
+   "s_predicted": "-3.31767283282e-6",
+   "s_found": "-3.31919659792e-6",
+   "relative_difference": "0.000459",
+   "full_gradient_norm": "4.91e-51",
+   "kappa_unit": "0.0245457789078",
+   "tau_unit": "-0.254773304401"
+  },
+  {
+   "q": "1.8",
+   "rel_mu": "1e-6",
+   "mu": "2.2463122e-6",
+   "s_predicted": "2.35515149072e-5",
+   "s_found": "2.34840533602e-5",
+   "relative_difference": "0.00286",
+   "full_gradient_norm": "6.71e-51",
+   "kappa_unit": "0.00912200526479",
+   "tau_unit": "-0.0956398865454"
+  },
+  {
+   "q": "1.8",
+   "rel_mu": "-1e-6",
+   "mu": "-2.2463122e-6",
+   "s_predicted": "-2.35515149072e-5",
+   "s_found": "-2.36197577153e-5",
+   "relative_difference": "0.0029",
+   "full_gradient_norm": "1.88e-50",
+   "kappa_unit": "0.00912200526479",
+   "tau_unit": "-0.0956398865454"
+  },
+  {
+   "q": "1.8",
+   "rel_mu": "1e-7",
+   "mu": "2.2463122e-7",
+   "s_predicted": "2.35515149072e-6",
+   "s_found": "2.35447338739e-6",
+   "relative_difference": "0.000288",
+   "full_gradient_norm": "1.73e-50",
+   "kappa_unit": "0.00912200526479",
+   "tau_unit": "-0.0956398865454"
+  },
+  {
+   "q": "1.8",
+   "rel_mu": "-1e-7",
+   "mu": "-2.2463122e-7",
+   "s_predicted": "-2.35515149072e-6",
+   "s_found": "-2.35583037528e-6",
+   "relative_difference": "0.000288",
+   "full_gradient_norm": "5.65e-51",
+   "kappa_unit": "0.00912200526479",
+   "tau_unit": "-0.0956398865454"
+  }
+ ],
+ "certificate": {
+  "n_boxes": 222,
+  "max_depth_used": 2,
+  "min_lower_bound": "1311719/536870912",
+  "min_lower_bound_decimal": "0.0024432670325",
+  "semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+  "independent_check": {
+   "ok": true,
+   "boxes_checked": 222,
+   "newton_confirmed": 222,
+   "carrier_confirmed": 222,
+   "boxes_refined_by_checker": 0,
+   "max_checker_refinement_depth": 0,
+   "failures": [],
+   "semantic_sha256": "616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6",
+   "precision_bits": 160,
+   "taylor_order": 20
+  }
+ },
+ "negative_controls_all_as_required": true,
+ "seconds": 85.9
+}

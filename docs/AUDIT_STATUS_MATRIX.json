@@ -1,0 +1,284 @@
+{
+  "project": "EIT-LJ Cube Bifurcations (Paper 3)",
+  "version": "1.0.0",
+  "status": "FINAL RELEASE PREPARED / V1.0.0 · PENDING RC2→V1.0.0 DELTA AUDIT",
+  "mathematical_baseline": {
+    "archive": "EIT_LJ_CUBE_BIFURCATIONS_V0.4-dev.6.zip",
+    "sha256": "c473af60f8b54c0beecd252d9e8409eef734ba475c0d693b300946f57941b691"
+  },
+  "frozen_input": {
+    "archive": "EIT_LJ_FULL_VECTOR_STABILITY_V1.0.zip",
+    "sha256": "bb70721df7f0aa17edca30d84d1b4aaf980c0a76693be14fa780e4ab8f64762d",
+    "doi": "10.5281/zenodo.24187155"
+  },
+  "records": [
+    {
+      "id": "Lemma M",
+      "phase": "A2",
+      "claim": "m'(r) >= 161457/262144 > 0 on [0, 16/5]",
+      "status": "CERTIFIED",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_REVIEWER_REPORT.md",
+          "sha256": "f82c5ef1a03c33c0909313bd6442d1879d39717f991cc8e245eb0c61f75d8b85"
+        }
+      ],
+      "dependencies": [
+        "Arb ball-arithmetic certificate data/A2_lemma_M_certificate.json (semantic 49dce160...)",
+        "independent checker certcheck.py"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§3.7"
+    },
+    {
+      "id": "Corollary M",
+      "phase": "A2",
+      "claim": "c4(q) > 0 on the whole A2u curve, 0 < q < r*",
+      "status": "PROVED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_REVIEWER_REPORT.md",
+          "sha256": "f82c5ef1a03c33c0909313bd6442d1879d39717f991cc8e245eb0c61f75d8b85"
+        }
+      ],
+      "dependencies": [
+        "Lemma M",
+        "exact A1 identity c4 = (16/3) q W_q [m(P_A(q)) - m(q)]",
+        "FROZEN INPUT Paper 2 Lemma A"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§3.8"
+    },
+    {
+      "id": "Theorem A",
+      "phase": "A2",
+      "claim": "supercritical (energy-reduced convention) Z2 pitchfork of T_d branches at p = P_A(q), 0 < q < r*, branches only for p > P_A(q)",
+      "status": "PROVED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_REVIEWER_REPORT.md",
+          "sha256": "f82c5ef1a03c33c0909313bd6442d1879d39717f991cc8e245eb0c61f75d8b85"
+        }
+      ],
+      "dependencies": [
+        "A0 exact A2u representation (VERIFIED-EXACT)",
+        "Corollary M",
+        "FROZEN INPUT Paper 2 Theorem 4', Lemma A, Prop. A (transversality, kernel)",
+        "standard Lyapunov-Schmidt reduction",
+        "implicit function theorem"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§3.9; data/A2_theorem_A_dependencies.json"
+    },
+    {
+      "id": "Lemma K",
+      "phase": "B1",
+      "claim": "kappa_hat >= 1311719/536870912 > 0 on the closed physical T2g curve",
+      "status": "CERTIFIED",
+      "audit": "INDEPENDENTLY AUDITED · ERRATUM CLOSED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V03_REVIEWER_REPORT.md",
+          "sha256": "82bd4f21630a20481113702a9f49dddfa6327f2baf3c07a131af259c1baa65e5"
+        },
+        {
+          "file": "CUBE_BIFURCATIONS_V04_DEV4_B1_ERRATUM_REAUDIT.md",
+          "sha256": "ba482da06aa0492b6524e47680fd949170f4d0dafac0d5661a073efce4d46b74"
+        }
+      ],
+      "dependencies": [
+        "exact B1 trilinear structure and factorisation kappa = q W_q (p - q) kappa_hat (VERIFIED-EXACT)",
+        "historical Arb certificate data/B1_kappa_certificate.json (semantic 616817fc...)",
+        "FROZEN INPUT Paper 2 Lemmas T2/T3 and P_T(0) enclosure"
+      ],
+      "computer_assisted": true,
+      "erratum": {
+        "id": "E-B1",
+        "description": "python-flint arb_series truncated at ctx.cap (default 10) in b1_cert._taylor and b1_check.Model.taylor; zero-padding; historical near-diagonal Taylor implementation not rigorous as written",
+        "certificate_of_record": "historical, semantic SHA-256 616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6, unchanged and accepted by the corrected checker",
+        "corroboration": [
+          "corrected checker: 222/222 inclusions, 222/222 bounds, endpoints, same lower bound",
+          "fresh corrected rebuild, semantic SHA-256 b2f8e6dcd1c5073635babea2f7a6079b7ede03acbbc4f33ac3cb20f64d21d505 (not a replacement)",
+          "Taylor-free B2.3 checker: 222/222 curve balls"
+        ],
+        "closed": true,
+        "closed_by": "CUBE_BIFURCATIONS_V04_DEV4_B1_ERRATUM_REAUDIT.md (PASS), recorded in V0.4-dev.5"
+      },
+      "notes_section": "§5.7, §10, §11"
+    },
+    {
+      "id": "Proposition B1",
+      "phase": "B1",
+      "claim": "D3d transcritical branches s* = -(tau/kappa) mu + O(mu^2) on both sides of p = P_T(q), 0 < q < q_c (implicit function theorem, not Ihrig's theorem); no stability claim",
+      "status": "CERTIFIED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED · ERRATUM CLOSED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V03_REVIEWER_REPORT.md",
+          "sha256": "82bd4f21630a20481113702a9f49dddfa6327f2baf3c07a131af259c1baa65e5"
+        },
+        {
+          "file": "CUBE_BIFURCATIONS_V04_DEV4_B1_ERRATUM_REAUDIT.md",
+          "sha256": "ba482da06aa0492b6524e47680fd949170f4d0dafac0d5661a073efce4d46b74"
+        }
+      ],
+      "dependencies": [
+        "Lemma K",
+        "B1.8 transversality tau < 0 (FROZEN INPUT Paper 2 Lemmas T1, T3 plus exact identity)",
+        "B0 exact T2g representation and D3d isotropy",
+        "standard Lyapunov-Schmidt reduction",
+        "implicit function theorem"
+      ],
+      "computer_assisted": true,
+      "erratum": {
+        "id": "E-B1",
+        "closed": true,
+        "see": "Lemma K"
+      },
+      "notes_section": "§5.9"
+    },
+    {
+      "id": "Lemma Q",
+      "phase": "B2.3",
+      "claim": "c4_hat > 0 on the closed physical T2g curve; hence c4(q) = q W_q (P_T(q) - q) c4_hat > 0 for 0 < q < q_c",
+      "status": "CERTIFIED",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V05_BLIND_B23_LEMMA_Q_REVIEWER_REPORT.md",
+          "sha256": "841152f2cccd0a43c4f8e73ce5d0cf37e9793d26f12047d5143ea5a053e96bcf"
+        }
+      ],
+      "dependencies": [
+        "exact B2.1 identity c4 = D4V[e1^4] - 3 b_A^2/h_A - 3 b_E^2/h_E = q W_q (p - q) c4_hat",
+        "Arb certificate data/B2_c4hat_certificate.json (semantic f7bc244e...)",
+        "imported hash-pinned B1 curve balls (Lemma K certificate)",
+        "FROZEN INPUT Paper 2 Lemma T3, Lemma S"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§9"
+    },
+    {
+      "id": "Proposition B2",
+      "phase": "B2.4",
+      "claim": "Z2-symmetric D2h pitchfork, branches only for mu = p - P_T(q) > 0, s*^2 = -(6 tau/c4) mu + O(mu^2), supercritical in the energy-reduced axial convention; exact isotropy D2h; not a cuboid",
+      "status": "PROVED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V05_BLIND_B24_REVIEWER_REPORT.md",
+          "sha256": "0302930b9a96ac6bca3df4e720ba34ab5937f73944aee76ba85f345706bdb1ec"
+        }
+      ],
+      "dependencies": [
+        "B2.0 exact parity/fixed space",
+        "B2.1 exact LS coefficient identity",
+        "Lemma Q",
+        "B1.8 tau < 0 (audited)",
+        "standard Lyapunov-Schmidt reduction",
+        "implicit function theorem"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§12; data/B2_4_dependency_graph.json"
+    },
+    {
+      "id": "Proposition B3",
+      "phase": "B2.5",
+      "claim": "centre-manifold (3-D T2g reduced) Hessian at every D2h branch point has inertia (1, 0, 2): Morse index 1, nullity 0; same on all six conjugate branch points; not a stability statement",
+      "status": "PROVED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V04_DEV6_BLIND_B25_REVIEWER_REPORT.md",
+          "sha256": "bffd4948721ee62f6898336734670ee51381caf546cdd69e0a2ad810e37f165a"
+        }
+      ],
+      "dependencies": [
+        "exact O_h/T2g invariant structure",
+        "Lemma K (kappa != 0, audited)",
+        "Proposition B2 (audited)",
+        "standard Lyapunov-Schmidt/centre-manifold theory",
+        "exact Hessian expansion with analytic remainder bound"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§13; data/B2_5_dependency_graph.json"
+    },
+    {
+      "id": "Corollary B3′",
+      "phase": "B2.5",
+      "claim": "full-slice inertia (4, 0, 14) (m_perp = 3 from Eu x2 and A2u x1); raw R^24 inertia (4, 6, 14), six zero modes rigid; not a stability statement",
+      "status": "PROVED (computer-assisted)",
+      "audit": "INDEPENDENTLY AUDITED",
+      "audit_reports": [
+        {
+          "file": "CUBE_BIFURCATIONS_V04_DEV6_BLIND_B25_REVIEWER_REPORT.md",
+          "sha256": "bffd4948721ee62f6898336734670ee51381caf546cdd69e0a2ad810e37f165a"
+        }
+      ],
+      "dependencies": [
+        "Proposition B3",
+        "FROZEN INPUT Paper 2 Theorem (index) block signs",
+        "Haynsworth inertia additivity (standard)"
+      ],
+      "computer_assisted": true,
+      "erratum": null,
+      "notes_section": "§13.6"
+    }
+  ],
+  "D2h_branch_inertia": {
+    "ordering": "negative / zero / positive",
+    "centre": [
+      1,
+      0,
+      2
+    ],
+    "slice": [
+      4,
+      0,
+      14
+    ],
+    "R24": [
+      4,
+      6,
+      14
+    ],
+    "centre_morse_index": 1,
+    "centre_nullity": 0,
+    "slice_morse_index": 4,
+    "slice_nullity": 0,
+    "raw_zero_modes": "six rigid motions (translations and rotations), not counted",
+    "implies_stability": false
+  },
+  "note": "Independent audits were performed by AI systems and are not journal peer review. Status strings embedded in data/*.json and in STATUS_PROVED constants of b2_branch.py/b2_index.py are historical and byte-identical with V0.4-dev.6; this file is the current status.",
+  "freeze": "NO",
+  "github": "HOLD",
+  "zenodo": "HOLD",
+  "springer_submission": "HOLD",
+  "v1_0_0_tag": "NOT CREATED",
+  "final_blind_release_audit": "RELEASE-READY",
+  "not_results_of_paper_3": [
+    "Morse index of the D3d branch (any centre-index comparison is a consistency check only)",
+    "full Morse index of the A2u/Td branch",
+    "global continuation, secondary bifurcations, global branch graph, global energy barriers, C2h, A3, technology/application claims"
+  ],
+  "final_blind_release_audit_record": {
+    "audited_version": "1.0.0-rc2",
+    "audited_archive_sha256": "6dee0be5f975d23fce3a36770ddebad8041aae9e3f302df0cd923fad91481a08",
+    "report": "audits/PAPER3_RC2_FINAL_BLIND_RELEASE_AUDIT.md",
+    "report_sha256": "37b0b4d68f4675b4546f7313aca6937c51cdf1ee11d1cc20b528918e636d7448",
+    "blocking_findings": 0,
+    "nature": "computational release verification, not journal peer review"
+  },
+  "human_approvals": "CLOSED (author decision, AUTHOR_DECISION_V1.0.0.md)",
+  "rc2_to_v1_delta_audit": "PENDING",
+  "public_release": "NOT YET EXECUTED"
+}
