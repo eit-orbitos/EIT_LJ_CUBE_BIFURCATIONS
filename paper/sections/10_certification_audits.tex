@@ -1,0 +1,102 @@
+\section{Computer-assisted certification and independent audits}\label{sec:cert}
+
+\subsection{Kinds of evidence}
+
+Every link of every proof falls into exactly one of the following classes; the dependency graphs of \cref{app:graphs}
+record the class of each node and are validated mechanically.
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Exact symbolic identities}, computed in SymPy \citep{SymPy2017} in rational or algebraic arithmetic, each
+with its own test (for example the closed forms of \cref{app:closed}, \cref{lem:a0,lem:fix,lem:invariants,lem:hessform}).
+\item \emph{Standard theorems} whose hypotheses are checked: the analytic implicit function theorem
+\citep{KrantzParks2013}, equivariant Lyapunov--Schmidt reduction
+\citep{GolubitskySchaeffer1985,GolubitskyStewartSchaeffer1988,Kielhoefer2012}, symmetric criticality
+\citep{Palais1979}, Haynsworth inertia additivity \citep{Haynsworth1968}, Taylor's theorem.
+\item \emph{Frozen inputs from Paper~2}, quoted with their labels (\cref{sec:curves}).
+\item \emph{Arb certificates}: \lemM, the bound $P_A(q)<16/5$, \lemK\ and \lemQ, proved with outward-rounded ball arithmetic
+(Arb through python-flint \citep{Johansson2017,PythonFlint}; see also \citep{MooreKearfottCloud2009,Tucker2011}), each
+re-verified by an independent checker in the repository.
+\item \emph{Independent re-certifications} in the external audits, with separate implementations based on MPFR directed
+rounding \citep{Fousse2007} or Arb at higher precision.
+\item \emph{Independent raw-coordinate reconstructions}: derivative tensors, Hessians and quartic coefficients recomputed in
+the $24$ raw coordinates without symmetry reduction.
+\item \emph{Numerical corroboration} (mpmath \citep{mpmath}, 40--60 digits): branch location, amplitude laws and spectra.
+It is never a proof dependency.
+\end{enumerate}
+
+\subsection{The certificates}
+
+\Cref{tab:certs} summarises the four certificates; \cref{app:certs} gives more detail and the semantic hashes. Each
+certificate is a JSON file listing every box with exact rational endpoints, the recorded dyadic lower bound, and the
+expressions used; its semantic SHA-256 is computed without the provenance block. Tampered certificates (gaps, overlaps,
+inflated bounds, altered expressions, wrong hashes) are rejected by tests, and method controls show that the same method
+fails on false claims (for example $m'>0$ on $[7,8]$, where $m'$ has a zero, or $\cfhat>19/5$ near $q=0$).
+
+\begin{table}[h]
+\centering\small
+\caption{Certificates. ``Checker'' is the independent checker in the repository; ``re-certification'' refers to the
+external audits (\cref{tab:audits}).}\label{tab:certs}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{3.2cm}}
+\toprule
+result & claim and method & checker & re-certification\\
+\midrule
+\lemM & $m'\ge161457/262144$ on $[0,16/5]$; $64$ boxes; mean-value test; Arb, 128 bits & separate derivation, Arb, 160 bits & MPFR, 192 bits, all bounds on $128$ half-boxes\\
+$P_A<16/5$ & $h_A(16/5)<-6/7$, $h_A'(16/5)<0$; Arb & as above & confirmed without Arb\\
+\lemK & $\khat\ge1311719/536870912$, $\Mhat_{22}>0$ on the closed curve; $222$ boxes; parametric interval Newton; Arb, 128 bits & own derivation and evaluator, Arb, 160 bits & Arb, 192 bits; erratum re-audit (\cref{sec:erratum})\\
+\lemQ & $\cfhat\ge955723/262144$, $\widehat h_E>0$, $\Mhat_{22}>0$ on the closed curve; $222$ boxes (imported from \lemK); Arb, 128 bits & no Taylor series; integral divided differences; Arb, 192 bits & MPFR, 320 bits; endpoints independently\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Erratum E-B1: series length in the Lemma K Taylor routines}\label{sec:erratum}
+
+During the certification of \lemQ\ we found a defect in the implementation used for \lemK. With python-flint 0.9.0, each
+power series computed with \texttt{arb\_series} is truncated at the context length \texttt{ctx.cap}, whose default is
+$10$, whatever length is requested. The generator and the checker of the \lemK\ certificate requested longer series in
+their near-diagonal Taylor models (for the divided differences on the $52$ boxes closest to the diagonal $p=q$) without
+raising \texttt{ctx.cap}, and padded the shortened coefficient lists with zeros. Coefficients from index $10$ on, and
+the Lagrange remainder term, were therefore replaced by zero. \emph{The original near-diagonal Taylor implementation was
+therefore not rigorous as written}: at $(q,\delta)=(1.9,0.9)$ its enclosures of all seven affected divided differences
+excluded the true values (the worst by $2.8\times10^{-9}$, with an enclosure radius of order $10^{-37}$).
+
+The defect was in the code that enclosed divided differences, not in the mathematics: the formulas, the curve argument,
+the box partition and the claimed bound were unaffected. The following evidence shows that the stored historical
+certificate, and \lemK\ itself, remain valid.
+\begin{enumerate}[label=(\roman*)]
+\item Both routines were corrected: the series length is raised before every evaluation and restored afterwards (also
+after an exception), and a shortened series is rejected unless a recomputation shows that the missing coefficients are
+exact zeros. Regression tests compare every coefficient up to index $23$ with an independent high-precision computation;
+they fail on the old code and pass on the corrected code.
+\item The corrected checker accepts the stored historical certificate (semantic SHA-256 \hash{616817fcc70e0fab7f106404e5e5332b17b9c4480bd440355f1ac5257a8518c6}):
+$222/222$ Newton inclusions and $222/222$ carrier bounds, both endpoints, and the unchanged lower bound $1311719/536870912$.
+\item A fresh rebuild with the corrected generator proves the same \lemK\ claim with the same lower bound and identical
+endpoint records; it differs only in the $52$ near-diagonal boxes, whose recorded bounds are higher. It is stored as
+corroboration and does not replace the historical certificate.
+\item The independent checker of \lemQ, which uses integral divided differences and no Taylor series, re-verifies all
+$222$ curve balls of the historical certificate, in a process in which the two affected modules could not be loaded.
+\item A targeted independent re-audit of the correction and of this evidence passed, with no finding above the informational level (\cref{tab:audits}).
+\end{enumerate}
+The erratum is closed. \lemK\ and \propBone\ are unchanged.
+
+\subsection{Independent audits}
+
+Each phase was reproduced in a blind audit by a separate AI system (Kimi Agent, Moonshot AI; the \lemQ\ report does not
+name its system), working from the archived package only: integrity checks, clean reproduction of all records, tests and controls, independent exact
+derivations, independent interval re-certification and adversarial checks. These are computational audits, not journal
+peer review. The reports are archived byte-identically in the repository; \cref{tab:audits} lists them.
+
+\begin{table}[h]
+\centering\small
+\caption{Independent audit reports (archived in \code{audits/}; SHA-256 of each report in \cref{app:certs}).}\label{tab:audits}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.9cm}}
+\toprule
+scope & audited package and independent work & verdict\\
+\midrule
+Track A: \lemM, \corM, \thmA & V0.2-dev; MPFR re-certification of \lemM; exact checks without project code & pass; two minor wording corrections, applied\\
+B1: \lemK, \propBone & V0.3-dev; Arb replay at 192 bits; exact derivations & pass, no correction\\
+Erratum E-B1 & V0.4-dev.4 against V0.4-dev.3; reproduction of the defect and of the evidence above & pass; erratum closed\\
+B2.3: \lemQ & V0.4-dev.5; MPFR re-certification (320 bits) of all boxes and both endpoints & pass; no finding requiring correction\\
+B2.4: \propBtwo & V0.4-dev.5; independent derivation, isotropy and geometry checks & pass; no finding requiring correction\\
+B2.5: \propBthree, \corBthree & V0.4-dev.6; independent invariant and Hessian derivations, independent raw $24$-dimensional numerics & pass; no finding requiring correction\\
+\bottomrule
+\end{tabularx}
+\end{table}

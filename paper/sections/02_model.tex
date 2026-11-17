@@ -1,0 +1,47 @@
+\section{Model and scale normalisation}\label{sec:model}
+
+Label the vertices of the cube by $s\in\{-1,1\}^3$ and write a configuration as $x=(x_s)_s\in\R^{24}$. The energy is
+$V(x)=\sum_{\{s,s'\}}\phi(|x_s-x_{s'}|)$ with $\phi$ as in \eqref{eq:pot}. With $U_r(x)=\sum_{\{s,s'\}}|x_s-x_{s'}|^{-r}$
+we have $V=AU_p-BU_q$.
+
+\paragraph{Unit-edge normalisation.} Let $\ystar_s=s/2$ be the unit-edge cube. Its $28$ pair distances are $1$
+(twelve edges), $\sqrt2$ (twelve face diagonals) and $\sqrt3$ (four body diagonals), so $U_r(\ystar)=12W_r$ with
+\begin{equation}\label{eq:W}
+W_r=1+2^{-r/2}+\tfrac13\,3^{-r/2}.
+\end{equation}
+Rescaling lengths and energy maps $V=AU_p-BU_q$, for any $A,B>0$, to
+\begin{equation}\label{eq:Vp}
+V_p=t(p,q)\,U_p-U_q,\qquad t(p,q)=\frac{qW_q}{pW_p},
+\end{equation}
+for which $\frac{d}{d\lambda}V_p(\lambda\ystar)|_{\lambda=1}=-12(ptW_p-qW_q)=0$: the unit-edge cube is an equilibrium of
+$V_p$ for every $p>q$, and the gradient of $V_p$ at $\ystar$ vanishes identically (it lies in the one-dimensional
+$\Oh$-fixed breathing direction, \cref{sec:symmetry}). We fix $q$ and use $p$ as the bifurcation parameter. Paper~2
+normalises instead $A=B=1$ with edge length $e=t^{-1/(p-q)}$; this multiplies the $n$-th derivative of the energy at
+the cube by the positive factor $e^{-q-n}$ and changes no sign used below. Near $(\ystar,p_0)$ all pair distances
+stay close to $1,\sqrt2,\sqrt3$, so $V_p(x)$ is real-analytic in $(x,p)$.
+
+\paragraph{Rigid motions and the slice.} $V$ is invariant under translations and rotations. Let $\mathcal T\subset\R^{24}$
+be the six-dimensional space of infinitesimal rigid motions at $\ystar$ and $\mathcal S=\ystar+\mathcal T^{\perp}$ the
+slice. Equilibria of $V_p$ near $\ystar$ correspond, up to rigid motion, to critical points of $V_p|_{\mathcal S}$: since
+$V$ is invariant under the Euclidean group, $\nabla V(x)$ is orthogonal to the rigid orbit through $x$, so a critical
+point of $V|_{\mathcal S}$ near $\ystar$ is a critical point of $V$. \emph{Morse index} means throughout the number of
+negative eigenvalues of the Hessian restricted to $\mathcal T^\perp$ (the rigid-motion-reduced configuration space)~\citep{Milnor1963};
+rigid translations and rotations are never counted. For an equilibrium $x$ near $\ystar$ the rigid fields at $x$ span
+the kernel of the $\R^{24}$ Hessian that comes from the Euclidean symmetry, and $\mathcal T^\perp$ is a complement of it,
+so the $\R^{24}$ inertia is obtained from the slice inertia by adding six zeros.
+
+\paragraph{Lyapunov--Schmidt reduction.} At a transition point $(\ystar,p_0)$ let $E_c\subset\mathcal T^\perp$ be the
+kernel of the slice Hessian and $W$ its orthogonal complement in $\mathcal T^\perp$. If the Hessian block $H_{WW}$ is
+invertible (it need not be definite), the analytic implicit function theorem \citep{KrantzParks2013} solves
+$\partial_W V_p(\ystar+a+w)=0$ uniquely by an analytic $w=w(a,\mu)$, $a\in E_c$, with $w(0,\mu)=0$, and the reduced
+potential $\Vred(a,\mu)=V_p(\ystar+a+w(a,\mu))$ has the property that its critical points near $0$ correspond one to
+one to the equilibria of $V_p$ in $\mathcal S$ near $\ystar$
+\citep{GolubitskySchaeffer1985,Kielhoefer2012}. If a group acts orthogonally and preserves $E_c$, $W$ and $V_p$,
+uniqueness makes $w$ equivariant and $\Vred$ invariant \citep{GolubitskyStewartSchaeffer1988}. At a critical point of
+the reduction, $D^2\Vred=H_{cc}-H_{cW}H_{WW}^{-1}H_{Wc}$, so by Haynsworth's inertia additivity \citep{Haynsworth1968}
+\begin{equation}\label{eq:haynsworth}
+\In\bigl(H|_{\mathcal T^\perp}\bigr)=\In(H_{WW})+\In\bigl(D^2\Vred\bigr).
+\end{equation}
+For a finite group acting orthogonally, critical points of $V$ restricted to a fixed-point subspace are critical
+points of $V$ (the principle of symmetric criticality \citep{Palais1979}, elementary in this case because
+$\nabla V(gx)=g\nabla V(x)$).

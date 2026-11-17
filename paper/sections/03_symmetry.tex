@@ -1,0 +1,38 @@
+\section{Cubic symmetry and displacement representations}\label{sec:symmetry}
+
+The group $\Oh$ is realised by the $48$ signed permutation matrices $R$, acting on configurations by
+$(D(R)x)_{Rs}=Rx_s$ (the convention of Paper~2). $D(R)$ is orthogonal, fixes $\ystar$, and preserves $V$ because it
+permutes pair distances. For $R\in\Oh$ let $\sigma(R)$ be the product of the nonzero entries of $R$. Character
+projectors, as in the standard treatment of symmetry coordinates~\citep{WilsonDeciusCross1955}, give the decomposition
+\begin{equation}\label{eq:gamma24}
+\R^{24}=\Aonegg\oplus\Eg\oplus\Tonegg\oplus2\Ttwog\oplus\Atwou\oplus\Eu\oplus2\Toneu\oplus\Ttwou,
+\end{equation}
+in which $\Tonegg$ (rotations) and one copy of $\Toneu$ (translations) form $\mathcal T$.
+
+\paragraph{Exact fields.} The breathing field $E_{\mathrm{br}}(s)=s$ spans $\Fix(\Oh)$, and $\ebr=E_{\mathrm{br}}/\sqrt{24}$. The
+$\Atwou$ field is
+\begin{equation}\label{eq:eA}
+E_A(s)=(s_1s_2s_3)\,s,\qquad \eA=E_A/\sqrt{24}.
+\end{equation}
+It is radial at every vertex and points outwards on the even tetrahedron $\{s_1s_2s_3=+1\}$ and inwards on the odd
+tetrahedron $\{s_1s_2s_3=-1\}$; it is orthogonal to $\mathcal T$ and to $\ebr$, and $D(R)\eA=\sigma(R)\eA$ for all $R$, so
+$\chi_{\Atwou}=\sigma$. For the two $\Ttwog$ copies we use, for $k=1,2,3$,
+\begin{equation}\label{eq:t2gbasis}
+\uh_k=-\tfrac14W_k,\quad W_k(s)=S_k s,\qquad \vh_k=-\tfrac{\sqrt2}{4}U_k,\quad U_k(s)=(s_1s_2s_3)\,\varepsilon_k,
+\end{equation}
+where $S_k$ is the symmetric $0/1$ matrix with ones in the two off-diagonal positions not involving index $k$ (so
+$W_1(s)=(0,s_3,s_2)$) and $\varepsilon_k$ is the $k$-th unit vector. The fields $W_k$ shear the cube; the fields $U_k$
+translate the two tetrahedra in opposite directions. The six vectors are orthonormal, span the $\Ttwog$ isotypic
+component, and both triples transform by the same matrices
+\begin{equation}\label{eq:TR}
+T(R)=\sigma(R)\,R .
+\end{equation}
+The kernel of $R\mapsto T(R)$ is $\{I,-I\}$, and its image is a group of $24$ signed permutation matrices (those with an
+even number of entries $-1$), acting on $\R^3$ as $\Td$. For $k=3$ the pair $(\uh_3,\vh_3)$ is the pair $(u,v)$ of
+Paper~2.
+
+\paragraph{Hessian blocks.} At the cube the Hessian is block diagonal in \eqref{eq:gamma24}. The one-dimensional blocks
+$\Aonegg$, $\Atwou$ and the two-dimensional $\Eg$ block are scalars; on each pair $\{\uh_k,\vh_k\}$ the Hessian acts by one
+symmetric $2\times2$ matrix $K$, the same for $k=1,2,3$, with no coupling between different $k$ (Paper~2, Lemma~4.4 and
+Lemma~T0). All these statements are exact identities, verified symbolically for a generic pair potential
+$\phi(r)=\psi(r^2)$; \cref{app:closed} lists the closed forms used.

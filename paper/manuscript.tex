@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.6cm]{geometry}
+\input{macros}
+\hypersetup{pdftitle={Symmetry-Breaking Bifurcations from the Cubic Equilibrium in Two-Term Inverse-Power Clusters},
+  pdfauthor={Toni Mladenovski; Mihail Mladenski}}
+
+\title{Symmetry-Breaking Bifurcations from the Cubic Equilibrium\\ in Two-Term Inverse-Power Clusters}
+\author{Toni Mladenovski$^{1,*}$\quad$\cdot$\quad Mihail Mladenski$^{1}$}
+\date{\small $^{1}$EITNetworks LLC, Tobyhanna, Pennsylvania, USA\\[2pt]
+$^{*}$Corresponding author: Toni Mladenovski, \texttt{info@eitnetworks.org}, ORCID
+\href{https://orcid.org/0009-0009-8343-662X}{0009-0009-8343-662X}\\[6pt]
+Version 1.0.0; mathematics as audited at repository version V0.4-dev.6}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Eight identical particles interacting through the two-term pair potential $\phi(r)=Ar^{-p}-Br^{-q}$ ($A,B>0$,
+$p>q>0$) have a cubic equilibrium for every exponent pair. A companion work classified its linear spectrum and showed
+that zero modes beyond the six rigid motions occur only on two transition curves: $p=P_A(q)$, where a one-dimensional
+$\Atwou$ mode becomes critical, and $p=P_T(q)$, where a three-dimensional $\Ttwog$ mode becomes critical. We determine
+the nonlinear local branches born at these curves. On the $\Atwou$ curve the bifurcation is a $\Z_2$-symmetric
+pitchfork, supercritical in the reduced-energy convention, whose branches consist of two concentric regular tetrahedra
+of unequal radii with point group $\Td$. On the $\Ttwog$ curve the critical representation carries the cubic invariant
+$a_1a_2a_3$ with a coefficient that is nonzero along the whole curve; the $\Dthreed$ branches are therefore
+transcritical. The $\Dtwoh$ branches are $\Z_2$-symmetric pitchforks, supercritical in the reduced-energy axial
+convention, opening towards $p>P_T(q)$; their configurations have point group exactly $\Dtwoh$ and are not cuboids. On
+these branches the Hessian of the reduced potential on the three-dimensional centre space has inertia $(1,0,2)$, and
+with the frozen spectral data of the companion work the full Hessian modulo rigid motions has inertia $(4,0,14)$:
+the branch points are saddles with four unstable directions. The signs of the two nonlinear coefficients that decide
+the branch types are proved with rigorous ball-arithmetic certificates; every computer-assisted step, including an
+implementation erratum that was found, corrected and closed, was reproduced in independent blind computational audits.
+\end{abstract}
+
+\medskip
+\noindent\textbf{Keywords:} two-term power-law potential; Lennard-Jones and Mie clusters; equivariant bifurcation;
+Lyapunov--Schmidt reduction; octahedral symmetry; Morse index; computer-assisted proof; ball arithmetic.
+
+\noindent\textbf{MSC 2020:} Primary 37G40, 70F10; Secondary 58K05, 20C35, 65G20.
+
+\tableofcontents
+
+\input{sections/01_introduction}
+\input{sections/02_model}
+\input{sections/03_symmetry}
+\input{sections/04_transition_curves}
+\input{sections/05_a2u_pitchfork}
+\input{sections/06_t2g_invariants}
+\input{sections/07_d3d_transcritical}
+\input{sections/08_d2h_pitchfork}
+\input{sections/09_centre_index}
+\input{sections/10_certification_audits}
+\input{sections/11_discussion}
+\input{sections/12_reproducibility}
+\input{sections/13_declarations}
+
+\appendix
+\input{appendices/A_closed_forms}
+\input{appendices/B_certificates}
+\input{appendices/C_dependency_graphs}
+\input{appendices/D_correspondence}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

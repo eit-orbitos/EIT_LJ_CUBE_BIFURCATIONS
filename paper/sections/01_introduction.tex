@@ -1,0 +1,72 @@
+\section{Introduction}\label{sec:intro}
+
+Small clusters bound by pair potentials are a classical object of mathematical chemistry: their equilibria,
+saddles and rearrangement pathways organise the energy landscape
+\citep{HoarePal1971,HoareMcInnes1983,DoyeWales2002,Trombach2018,SchwerdtfegerWales2024}. For the two-term family
+\begin{equation}\label{eq:pot}
+\phi(r)=Ar^{-p}-Br^{-q},\qquad A,B>0,\quad p>q>0,
+\end{equation}
+which contains the Lennard-Jones potential $(p,q)=(12,6)$ and the Mie potentials, symmetric configurations are
+equilibria for structural reasons, and their stability can change with the exponents. The eight-particle cube is the
+simplest such configuration with a nontrivial spectrum.
+
+A companion work \citep{Paper2} (``Paper~2'') settled the linear problem. With the exact $\Oh$ block decomposition of
+the $24$-dimensional displacement space it showed that the cubic equilibrium is a saddle for every $p>q>0$, with Morse
+index $2+\one\{q\ge\rstar\text{ or }p>P_A(q)\}+3\cdot\one\{q\ge\qc\text{ or }p>P_T(q)\}\in\{2,3,6\}$, and that zero
+modes other than the six rigid motions occur exactly on two disjoint transition curves: $p=P_A(q)$ ($0<q<\rstar$),
+where a one-dimensional $\Atwou$ eigenvalue changes sign, and $p=P_T(q)$ ($0<q<\qc$), where the lower eigenvalue of a
+$\Ttwog$ block changes sign, with multiplicity three (\cref{fig:plane}). The constants are $\rstar=1.4749107381\ldots$ and
+$\qc=2.0199382317\ldots$. An earlier companion preprint \citep{Paper1} (``Paper~1'') studied the constrained radial
+problem for the same family.
+
+This paper determines what happens nonlinearly at these curves: which equilibria branch off the cube, on which side
+of each curve they exist, what their symmetry and shape are, and how many unstable directions they have. The answer is
+local, for each fixed $q$, near the transition point; it rests on equivariant Lyapunov--Schmidt reduction
+\citep{GolubitskySchaeffer1985,GolubitskyStewartSchaeffer1988,ChossatLauterbach2000,Field2007} and on two nonlinear
+coefficients whose signs we prove with rigorous ball arithmetic.
+
+\paragraph{Results.} Write $\mu$ for the distance $p-P_A(q)$ or $p-P_T(q)$ from the relevant curve, at fixed $q$.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{The $\Atwou$ pitchfork} (\thmA, \cref{sec:a2u}). The reduced potential is even, its quartic coefficient
+is positive along the whole curve (\corM, from the certified \lemM), and two branch equilibria exist for $\mu>0$
+only, with amplitude $a^2\propto\mu$. Each consists of two concentric regular tetrahedra of unequal radii on
+inversion-related vertex-direction sets and has point group $\Td$.
+\item \emph{The $\Ttwog$ representation} (\cref{sec:t2g}). The critical space carries the cubic invariant
+$I_3=a_1a_2a_3$; its coefficient $\kappa$ factorises as $qW_q(p-q)\khat$ with $\khat>0$ on the closed curve
+(\lemK, certified).
+\item \emph{The $\Dthreed$ branches} (\propBone, \cref{sec:d3d}) are transcritical: one branch through the cube with
+amplitude $s_*=-(\tau/\kappa)\mu+O(\mu^2)$, on both sides of the curve.
+\item \emph{The $\Dtwoh$ branches} (\propBtwo, \cref{sec:d2h}) are $\Z_2$-symmetric pitchforks, supercritical in the
+reduced-energy axial convention, with $s_*^2=-(6\tau/c_4)\mu+O(\mu^2)$ for $\mu>0$ only; the sign of the quartic
+coefficient $c_4$ is the certified \lemQ. The branch configurations have point group exactly $\Dtwoh$, are not
+cuboids, and have rhombic (sheared) cross-sections at first order.
+\item \emph{Morse indices of the $\Dtwoh$ branches} (\propBthree\ and \corBthree, \cref{sec:index}). The Hessian of the
+reduced potential on the three-dimensional centre space has inertia $(1,0,2)$; the cubic invariant splits the two
+transverse directions at order $|s|$. With the frozen block signs of Paper~2 the Hessian on the slice transverse to
+the rigid motions has inertia $(4,0,14)$, and in $\R^{24}$ it has inertia $(4,6,14)$, the six zero modes being the
+rigid motions. None of these statements is a stability statement.
+\end{enumerate}
+\Cref{tab:summary} collects the results. Throughout, inertia triples are ordered (negative, zero, positive).
+
+\paragraph{Method and verification.} Every step is either an exact symbolic identity, a standard theorem whose
+hypotheses are checked, a frozen result of Paper~2 quoted with its label, or a rigorous interval certificate checked
+by an independent implementation (\cref{sec:cert}). Numerical computations are used only for corroboration and are
+never proof dependencies; machine-readable dependency graphs make this checkable (\cref{app:graphs}). Each phase was
+reproduced in a blind computational audit by a separate AI system, which also re-certified the interval lemmas with
+independent implementations (MPFR directed rounding or higher-precision Arb). During the work an implementation defect in the Taylor routines of one
+certificate was found; it is documented in \cref{sec:erratum}, together with the evidence that the stored certificate
+and the lemma it proves are unaffected.
+
+\paragraph{Relation to the literature.} The equivariant branching lemma \citep{Cicogna1981,GolubitskyStewartSchaeffer1988}
+predicts branches along axial isotropy subgroups; for representations with quadratic equivariants, such as the
+$\Ttwog$ representation here, Ihrig and Golubitsky \citep{IhrigGolubitsky1984} showed that axial branches are
+generically unstable near the bifurcation (see also \citep{ArjevaniField2022}). That is a stability statement; whether
+a given axial branch is transcritical or a pitchfork is decided axis by axis, and we derive both types directly from
+the implicit function theorem. Bushes of nonlinear vibrational modes in octahedral Lennard-Jones systems were studied
+in \citep{Chechin2003}. We are not aware of a prior complete classification of these local branches for this
+specific eight-particle two-term inverse-power system.
+
+\paragraph{Organisation.} \Cref{sec:model,sec:symmetry,sec:curves} fix the model, the symmetry conventions and the
+frozen inputs from Paper~2. \Cref{sec:a2u} treats the $\Atwou$ curve, \cref{sec:t2g,sec:d3d,sec:d2h,sec:index} the
+$\Ttwog$ curve. \Cref{sec:cert} describes the certificates, the audits and the erratum; \cref{sec:discussion} discusses
+limitations, and \cref{sec:repro} reproducibility.

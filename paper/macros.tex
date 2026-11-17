@@ -1,0 +1,99 @@
+% macros.tex -- journal-neutral preamble (Paper 3; adapted from the Paper 2 preamble so that the source can move to a journal class)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{bm}
+\usepackage{booktabs,array,tabularx}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\renewcommand{\bibfont}{\raggedright}% long URLs and hashes: no stretched lines
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\usepackage{xurl}
+\usepackage{seqsplit}
+\newcommand{\code}[1]{\nolinkurl{#1}}
+\newcommand{\hash}[1]{{\footnotesize\texttt{\seqsplit{#1}}}}
+
+% ---------- theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{corollary}[proposition]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+% Named main results (Theorem A, Lemma M, Lemma K, Proposition B1, Lemma Q, Proposition B2, Proposition B3, ...);
+% the names are those of the repository, so that every statement can be traced to its proof record.
+\newcommand{\resultname}{}
+\theoremstyle{plain}
+\newtheorem*{namedresultinner}{\resultname}
+\newenvironment{named}[1]{\renewcommand{\resultname}{#1}\begin{namedresultinner}}{\end{namedresultinner}}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{remark}{Remark}{Remarks}
+\crefname{table}{Table}{Tables}
+\crefname{figure}{Figure}{Figures}
+\newcommand{\thmA}{\hyperref[thm:A]{Theorem~A}}
+\newcommand{\lemM}{\hyperref[lem:M]{Lemma~M}}
+\newcommand{\corM}{\hyperref[cor:M]{Corollary~M}}
+\newcommand{\lemK}{\hyperref[lem:K]{Lemma~K}}
+\newcommand{\propBone}{\hyperref[prop:B1]{Proposition~B1}}
+\newcommand{\lemQ}{\hyperref[lem:Q]{Lemma~Q}}
+\newcommand{\propBtwo}{\hyperref[prop:B2]{Proposition~B2}}
+\newcommand{\propBthree}{\hyperref[prop:B3]{Proposition~B3}}
+\newcommand{\corBthree}{\hyperref[cor:B3]{Corollary~B3$'$}}
+
+% ---------- author notes and release placeholders (set \draftnotesfalse to hide author notes) ----------
+\newif\ifdraftnotes \draftnotestrue
+\newcommand{\authornote}[1]{\ifdraftnotes{\color{BrickRed}\textsf{[#1]}}\fi}
+% Release placeholders: always visible, easy to locate (search for "TO BE ASSIGNED AT PUBLIC RELEASE").
+\newcommand{\PaperThreeGitHub}{{\color{BrickRed}\textsf{[PAPER 3 GITHUB RELEASE --- TO BE ASSIGNED AT PUBLIC RELEASE]}}}
+\newcommand{\PaperThreeDOI}{{\color{BrickRed}\textsf{[PAPER 3 ZENODO DOI --- TO BE ASSIGNED AT PUBLIC RELEASE]}}}
+
+% ---------- notation ----------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ind}{\operatorname{ind}}
+\newcommand{\nul}{\operatorname{null}}
+\newcommand{\In}{\operatorname{In}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\adj}{\operatorname{adj}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Vred}{V_{\mathrm{red}}}
+\newcommand{\ystar}{y^{*}}
+\newcommand{\rstar}{r_{*}}
+\newcommand{\qc}{q_{c}}
+\newcommand{\Dt}{\widetilde{D}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\eA}{e_{A}}
+\newcommand{\ebr}{e_{\mathrm{br}}}
+\newcommand{\Ahat}{\widehat{A}}
+\newcommand{\Ehat}{\widehat{E}}
+\newcommand{\uh}{\widehat{u}}
+\newcommand{\vh}{\widehat{v}}
+\newcommand{\khat}{\widehat{\kappa}}
+\newcommand{\cfhat}{\widehat{c}_4}
+\newcommand{\Mhat}{\widehat{M}}
+\newcommand{\Aonegg}{A_{1g}}
+\newcommand{\Eg}{E_{g}}
+\newcommand{\Tonegg}{T_{1g}}
+\newcommand{\Ttwog}{T_{2g}}
+\newcommand{\Atwou}{A_{2u}}
+\newcommand{\Eu}{E_{u}}
+\newcommand{\Toneu}{T_{1u}}
+\newcommand{\Ttwou}{T_{2u}}
+\newcommand{\Oh}{O_{h}}
+\newcommand{\Td}{T_{d}}
+\newcommand{\Dthreed}{D_{3d}}
+\newcommand{\Dtwoh}{D_{2h}}
+\newcommand{\Dfourh}{D_{4h}}
+\newcommand{\repo}{\code{EIT_LJ_CUBE_BIFURCATIONS}}

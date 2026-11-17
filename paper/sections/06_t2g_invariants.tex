@@ -1,0 +1,77 @@
+\section{The critical $\Ttwog$ representation and its invariants}\label{sec:t2g}
+
+Fix $q\in(0,\qc)$ and put $\mu=p-P_T(q)$. On the curve $K$ is singular with $\tr K>0$, so its kernel is spanned by a
+unit vector $n=(n_u,n_v)$, which we fix at $\mu=0$ in the gauge $n_u>0$ (justified in \cref{sec:d3d}). The critical
+vectors and their partners are
+\begin{equation}\label{eq:ek}
+e_k=n_u\,\uh_k+n_v\,\vh_k,\qquad f_k=-n_v\,\uh_k+n_u\,\vh_k\qquad(k=1,2,3),
+\end{equation}
+and $E_c=\Span\{e_1,e_2,e_3\}$ is the slice kernel at $\mu=0$ (Paper~2, Theorem~2: no other block vanishes on the
+curve). Numerically $n\approx(0.9997,\,0.02\text{--}0.03)$ along the curve: the critical mode is almost a pure shear with
+a small opposite translation of the two tetrahedra. We write $a=(a_1,a_2,a_3)$ for the coordinates of
+$\sum_ka_ke_k\in E_c$; by \eqref{eq:TR}, $\Oh$ acts on $a$ by $T(R)=\sigma(R)R$.
+
+\subsection{Invariant theory}
+
+\begin{lemma}[invariants and isotropy]\label{lem:invariants}
+Let $G_T=\{T(R):R\in\Oh\}$ ($24$ matrices).
+\begin{enumerate}[label=(\alph*)]
+\item The $G_T$-invariant polynomials of degree $1,\dots,6$ have dimensions $0,1,1,2,1,3$. Degree $2$ is spanned by
+$I_2=|a|^2$, degree $3$ by $I_3=a_1a_2a_3$, and degree $4$ by $I_2^2$ and $I_4=a_1^4+a_2^4+a_3^4$.
+\item The isotropy subgroups of $\Oh$ on $E_c$, their fixed spaces and representatives are as in \cref{tab:isotropy}. The
+stabiliser in $\Oh$ of $\sum_ka_ke_k\in\R^{24}$ equals the stabiliser of $a$ under $T$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) Reynolds averaging over $G_T$ applied to all monomials of each degree \citep{Sturmfels2008}, in exact arithmetic.
+(b) Stabilisers of all integer vectors in $[-2,2]^3$ computed from the matrices; element types classified from
+the matrices; the $24$-dimensional stabilisers checked at representatives with symbolic $n$.
+\end{proof}
+
+\begin{table}[h]
+\centering\small
+\caption{Isotropy on the critical $\Ttwog$ space (computed). Only the two axial types give branches by the
+equivariant branching lemma.}\label{tab:isotropy}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.3cm}cccc>{\raggedright\arraybackslash}X}
+\toprule
+isotropy & order & conjugates & $\dim\Fix$ & representative $a$ & action of the normaliser on the axis\\
+\midrule
+$\Dthreed$ & 12 & 4 & 1 & $(1,1,1)$ & trivial; $I_3\ne0$ on the axis\\
+$\Dtwoh$ (one $C_4$ axis, two face diagonals) & 8 & 3 & 1 & $(1,0,0)$ & normaliser $\Dfourh$ contains $a\mapsto-a$\\
+$C_{2h}$ (face-diagonal axis) & 4 & 6 & 2 & $(1,1,0)$ & not axial\\
+$C_i$ & 2 & 1 & 3 & generic & ---\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+On the $\Dtwoh$ axis some element of the normaliser reverses $a$, so the reduced equation there is odd (pitchfork
+type); on the $\Dthreed$ axis no element reverses $a$, and $I_3$ does not vanish there. Because $I_3$ is invariant,
+$\nabla I_3$ is a nonzero quadratic equivariant; this is the setting of Ihrig and Golubitsky \citep{IhrigGolubitsky1984}.
+Their theorem concerns stability (generic instability of axial branches near the bifurcation); it does not decide
+whether a branch is transcritical, and it is not used in any proof below.
+
+\subsection{The reduced potential on $E_c$}
+
+With the Lyapunov--Schmidt reduction of \cref{sec:model} on the slice (here $H_{WW}$ is invertible but indefinite, with
+index $3$; \cref{tab:blocks}) and the invariance of $\Vred$ under $G_T$, \cref{lem:invariants}(a) gives the normal form
+\begin{equation}\label{eq:normalform}
+\Vred(a,\mu)=V_0(\mu)+\tfrac12\lambda(\mu)I_2+\kappa(\mu)I_3+\alpha(\mu)I_2^2+\beta(\mu)I_4+O(|a|^5),
+\end{equation}
+with coefficients analytic in $\mu$. Since $w=O(|a|^2)$, the cubic part is $\frac16D^3V[x,x,x]$ with $x=\sum a_ke_k$, so
+$\kappa(0)=\kappa:=D^3V[e_1,e_2,e_3]$ (\cref{sec:d3d}). The quartic coefficients $\alpha,\beta$ are determined in
+\cref{sec:index}; their sum is $c_4/24$, where $c_4$ is the quartic coefficient on the $\Dtwoh$ axis (\cref{sec:d2h}).
+
+\subsection{Transversality}
+
+Let $\tau:=n^{\mathsf T}\partial_pK\,n=qW_q\,n^{\mathsf T}M'(P_T(q))\,n$ at $\mu=0$.
+
+\begin{lemma}[transversality]\label{lem:tau}
+$\tau<0$ for every $0<q<\qc$, and $\lambda(0)=0$, $\lambda'(0)=\tau$ in \eqref{eq:normalform}.
+\end{lemma}
+\begin{proof}
+On the curve $N=M(p)-M(q)$ is symmetric and singular with kernel $n$, so $\adj N=\tr(N)\,nn^{\mathsf T}$ (exact
+identity) and $\partial_pD=\tr(N)\,n^{\mathsf T}M'(p)\,n$. By Lemma~T1, $\tr N>0$; by Lemma~T3, $\partial_pD(P_T(q),q)<0$.
+Hence $n^{\mathsf T}M'(p)n<0$ and $\tau<0$. For the second statement: $\lambda(\mu)$ is the Schur complement
+$\det K(p)/(f^{\mathsf T}K(p)f)$ with $f=(-n_v,n_u)$ (the breathing and other blocks do not couple at second order), so
+$\lambda(0)=0$ and $\lambda'(0)=n^{\mathsf T}\partial_pK\,n=\tau$; this is checked symbolically for a generic $K(\mu)$.
+\end{proof}

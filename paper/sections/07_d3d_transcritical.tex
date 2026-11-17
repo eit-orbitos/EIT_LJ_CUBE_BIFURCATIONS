@@ -1,0 +1,85 @@
+\section{The cubic coefficient and the $\Dthreed$ transcritical branches}\label{sec:d3d}
+
+\subsection{Exact trilinear structure}
+
+Write $\phi(r)=\psi(r^2)$ and evaluate $\psi^{(k)}$ at $\sigma=|r|^2\in\{1,2,3\}$. Of the $216$ values
+$D^3V[b_i,b_j,b_k]$ on the six basis vectors \eqref{eq:t2gbasis}, computed for a generic $\psi$ before any symmetry is
+used, exactly $48$ are nonzero, all with $\{i,j,k\}=\{1,2,3\}$, and they reduce to four coefficients:
+\begin{equation}\label{eq:tcoeffs}
+\begin{aligned}
+t_{uuu}&=-12\psi''(2)-12\psi''(3)-32\psi'''(3), & t_{uuv}&=-\sqrt2\bigl(10\psi''(3)+16\psi'''(3)\bigr),\\
+t_{uvv}&=-8\psi''(1)-8\psi''(3)-16\psi'''(3), & t_{vvv}&=-8\sqrt2\,\psi'''(3),
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eq:kappa}
+\kappa=t_{uuu}n_u^3+3t_{uuv}n_u^2n_v+3t_{uvv}n_un_v^2+t_{vvv}n_v^3 .
+\end{equation}
+An independent computation of the full third-derivative tensor in the $24$ raw coordinates reproduces these
+coefficients and gives, for symbolic $n$ and $\psi$, $D^3V[x,x,x]=6\kappa\,a_1a_2a_3$ for $x=\sum a_ke_k$: the cubic
+restriction to $E_c$ is exactly a multiple of $I_3$.
+
+\subsection{Factorisation and Lemma K}
+
+At the unit-edge equilibrium each coefficient is a difference form $t_m=qW_q[g_m(p)-g_m(q)]$ (\cref{app:closed}). Let
+$\hat f(p,q)=(f(p)-f(q))/(p-q)$ with $\hat f(q,q)=f'(q)$, an analytic function of $(p,q)$. Then
+$K=qW_q(p-q)\Mhat$ with $\Mhat=\hat M(p,q)$, the curve is $\Dt(q,\delta):=\det\Mhat(q+\delta,q)=0$ with $\delta=p-q>0$,
+and its closure adds the corner $(\qc,\qc)$, where $\Dt=\det M'(\qc)=0$ (Lemma~T2). The cubic coefficient factorises:
+\begin{equation}\label{eq:kappafact}
+\kappa=qW_q\,(p-q)\,\khat,\qquad \khat=\frac{\hat g_{uuu}+3\rho\,\hat g_{uuv}+3\rho^2\hat g_{uvv}+\rho^3\hat g_{vvv}}{(1+\rho^2)^{3/2}},\qquad
+\rho=-\frac{\Mhat_{12}}{\Mhat_{22}},
+\end{equation}
+for the unit kernel vector $n=(1,\rho)/\sqrt{1+\rho^2}$; indeed $\Mhat(1,\rho)^{\mathsf T}=(\det\Mhat/\Mhat_{22},0)^{\mathsf T}$
+exactly, so $(1,\rho)$ spans the kernel wherever $\Mhat_{22}\ne0$. The raw $\kappa$ vanishes at both ends of the curve
+through the factors $q$ and $p-q$; the carrier $\khat$ is analytic on the closed curve. The sign of $\kappa$ changes
+under $n\mapsto-n$; only $\kappa\ne0$ is gauge invariant.
+
+\begin{named}{Lemma K}[certified]\phantomsection\label{lem:K}
+On the closed physical $\Ttwog$ curve, i.e.\ $p=P_T(q)$ for $0\le q<\qc$ together with the corner $p=q=\qc$,
+\[
+\khat\ge 1311719/536870912=0.0024432670\ldots>0\qquad\text{and}\qquad \Mhat_{22}>0 .
+\]
+Hence $n_u\ne0$ on the whole curve, one chart covers it, and $\kappa(q)\ne0$ for every $0<q<\qc$; in the gauge
+$n_u>0$, $\kappa(q)>0$.
+\end{named}
+
+The certificate (\cref{sec:cert}, \cref{app:certs}) covers $q\in[0,101/50]$ by $222$ boxes with exact rational
+endpoints. On each box a parametric interval Newton step proves that $\Dt(q,\cdot)$ has exactly one zero in a recorded
+$\delta$-ball for every $q$ in the box, and the carrier is enclosed above a dyadic lower bound. The endpoint values are
+$\khat(0)=0.00287951258\ldots$ and $\khat(\qc)=0.00689178231\ldots$. Every box except the corner box has a positive
+$\delta$-ball, so its zero is $P_T(q)$ by Lemma~T3; on the corner box continuity and $\Dt(q,0)=\det M'(q)>0$ for $q<\qc$
+(Lemma~T2) identify the zero with $P_T(q)-q$ for $q<\qc$ and with the corner at $q=\qc$.
+
+\subsection{Proposition B1}
+
+\begin{named}{Proposition B1}[the $\Dthreed$ branches]\phantomsection\label{prop:B1}
+Fix $q\in(0,\qc)$, the gauge $n_u>0$, and $\kappa,\tau$ at $\mu=0$; then $\kappa>0$ (\lemK) and $\tau<0$
+(\cref{lem:tau}). In $\ystar+\Fix(\Dthreed)$ near $\ystar$, for small $|\mu|$, the equilibria of $V_p$ are exactly the cube
+and one branch
+\[
+x(\mu)=\ystar+s_*(\mu)(e_1+e_2+e_3)+w(\mu),\qquad s_*(\mu)=-\frac{\tau}{\kappa}\,\mu+O(\mu^2),
+\]
+with $w(\mu)\in\Span\{\ebr,f_1+f_2+f_3\}$. The branch exists for both signs of $\mu$ and $s_*(\mu)\ne0$ for $\mu\ne0$; it
+crosses the cube transversally, so the bifurcation is \emph{transcritical}. In this gauge $s_*>0$ for $p>P_T(q)$ and
+$s_*<0$ for $p<P_T(q)$. The same holds on each of the four $\Dthreed$ axes, which are conjugate under $\Oh$.
+\end{named}
+
+\begin{proof}
+$\Fix(\Dthreed)=\Span\{\ebr,\sum_k\uh_k,\sum_k\vh_k\}$ is three-dimensional and contains no rigid motion; by symmetric
+criticality its equilibria are those of $V$ restricted to it. At $\mu=0$ the Hessian there has kernel
+$\Span\{e_1+e_2+e_3\}$ ($\Fix(\Dthreed)$ meets $E_c$ only on the diagonal, and the other blocks are nonzero). The
+one-dimensional reduction gives, since $|a|^2=3s^2$ and $a_1a_2a_3=s^3$ on the axis,
+\[
+v(s,\mu)=v(0,\mu)+\tfrac32\lambda(\mu)s^2+\kappa(\mu)s^3+O(s^4),\qquad \partial_sv=3s\,G(s,\mu),\quad G=\lambda(\mu)+\kappa(\mu)s+O(s^2),
+\]
+with $\lambda(0)=0$, $\lambda'(0)=\tau$ (\cref{lem:tau}). $G(0,0)=0$, $G_s(0,0)=\kappa\ne0$ and $G_\mu(0,0)=\tau\ne0$; by the
+implicit function theorem the nontrivial zeros near $(0,0)$ form one curve $s=s_*(\mu)$ with $s_*'(0)=-\tau/\kappa\ne0$.
+The trivial solution $s=0$ is the cube.
+\end{proof}
+
+Both coefficients are needed: $\kappa\ne0$ for the implicit function theorem, and $\tau\ne0$ so that the branch leaves
+the cube on both sides. To first order the displacement $s(e_1+e_2+e_3)$ moves vertex $s$ by
+$-\frac{sn_u}{4}(J-I)s-\frac{sn_v\sqrt2}{4}(s_1s_2s_3)(1,1,1)$, $J$ the all-ones matrix: the cube is scaled by $1-sn_u$
+along the body diagonal $(1,1,1)$ and by $1+sn_u/2$ across it, and the two tetrahedra shift oppositely along that
+diagonal with the small weight $n_v$. For $p>P_T(q)$ the cube is compressed along one body diagonal, for $p<P_T(q)$
+elongated (\cref{fig:modes}). No stability statement is made in \propBone; the Morse index of these branches is not
+determined in this paper (a consistency check appears in \cref{rem:d3d}).

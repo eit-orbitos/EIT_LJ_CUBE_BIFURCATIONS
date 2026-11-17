@@ -1,0 +1,127 @@
+\section{The $\Atwou$ pitchfork}\label{sec:a2u}
+
+Fix $q\in(0,\rstar)$ and put $\mu=p-P_A(q)$. On the curve the slice kernel is $E_c=\Span\{\eA\}$: $\Atwou$ occurs once
+in \eqref{eq:gamma24}, $\eA$ is an exact Hessian eigenvector with eigenvalue $V_{aa}=qW_q[h_A(p)-h_A(q)]$ for every
+$p$, and no other block vanishes on $p=P_A(q)$ (Paper~2, Theorem~2).
+
+\subsection{Symmetry of the $\Atwou$ direction}\label{sec:a2u-sym}
+
+\begin{lemma}[exact symmetry facts]\label{lem:a0}
+\begin{enumerate}[label=(\alph*)]
+\item The stabiliser $\Sigma_A=\{R:D(R)\eA=\eA\}$ has $24$ elements ($E$, $8C_3$, $3C_2$, $6S_4$, $6\sigma_d$, no
+inversion), i.e.\ $\Sigma_A\cong\Td$, and $\Fix(\Td)=\Span\{\ebr,\eA\}$.
+\item Spatial inversion acts by $D(-I)\eA=-\eA$ and fixes $\ystar$.
+\item $b:=D^3V[\eA,\eA,\cdot\,]=V_{aab}\,\ebr$ exactly, for every pair potential, and $\ebr$ is a Hessian eigenvector with
+eigenvalue $V_{bb}=2qW_q(p-q)>0$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a), (b) are computed from the $48$ matrices. (c): $\Atwou\otimes\Atwou=\Aonegg$, so $b$ is $\Oh$-invariant and lies in
+the one-dimensional $\Fix(\Oh)=\Span\{\ebr\}$; the identity and the closed forms of $V_{aab}$, $V_{bb}$ are verified
+component by component in $\R^{24}$ (\cref{app:closed}).
+\end{proof}
+
+By (b) and the equivariance of the reduction, $\Vred(a,\mu)=\Vred(-a,\mu)$ on $E_c$: the reduced potential is even
+and every odd coefficient, in particular the cubic one, vanishes. By (c) the general Lyapunov--Schmidt formula for the
+quartic coefficient,
+\begin{equation}\label{eq:c4general}
+\Vred(a,\mu)=\Vred(0,\mu)+\tfrac12\lambda(\mu)a^2+\tfrac{c_4(\mu)}{24}a^4+O(a^6),\qquad
+c_4=D^4V[e,e,e,e]-3\langle b,H_\perp^{-1}b\rangle,
+\end{equation}
+collapses at $\mu=0$ to $c_4=V_{aaaa}-3V_{aab}^2/V_{bb}$.
+
+\subsection{The quartic coefficient and Lemma M}
+
+Each quantity in this formula is a difference $qW_q[g(p)-g(q)]$ of one-variable functions (\cref{app:closed}). A
+second, scale-eliminated expression is more convenient for the sign. Put $x=2^{-r/2}$, $y=3^{-r/2}$, $S=3x+y+3$ and
+\begin{equation}\label{eq:m}
+m(r)=\frac{S\,(3r^3x+81r+(3r+2)y+126)-3r(3rx-y-9)^2}{16\,S^2}.
+\end{equation}
+
+\begin{lemma}[scale-eliminated form]\label{lem:foliation}
+On the curve $p=P_A(q)$,
+\begin{equation}\label{eq:c4m}
+c_4(q)=\tfrac{16}{3}\,qW_q\,\bigl[m(P_A(q))-m(q)\bigr].
+\end{equation}
+\end{lemma}
+\begin{proof}
+Restrict to the $\Td$-symmetric shapes: two concentric regular tetrahedra of radii proportional to $e^{\mp u/2}$. The
+logarithm $f(u)=p\log U_q-q\log U_p$ of the scale-free shape function $\Phi_{p,q}$ is even in $u$, and its fourth
+Taylor coefficient is $f''''(0)=pq\,[m(q)-m(p)]$, with $m$ as in \eqref{eq:m} (the factor $r$ of the Taylor
+coefficients of $U_r$ cancels exactly, so $m$ is analytic at $r=0$). A general exact lemma compares the quartic
+coefficient of the full-energy reduction with that of the reduction along scaling orbits for an even function $F(a,b)$:
+their difference is a multiple of $F_{aa}$ and therefore vanishes on the curve. Together with $V_*=-K\Phi_{p,q}^{1/(p-q)}$
+(Paper~2, Proposition~2.1) and the reparametrisation between $u$ and $a$ this gives \eqref{eq:c4m}. The identity was
+also confirmed exactly against $c_4=V_{aaaa}-3V_{aab}^2/V_{bb}$ by a zero polynomial remainder modulo the cleared curve
+equation $h_A(p)=h_A(q)$, and numerically at $415$ curve points to relative $10^{-39}$.
+\end{proof}
+
+\begin{named}{Lemma M}[certified]\phantomsection\label{lem:M}
+$m'(r)\ge L_{\min}=161457/262144=0.61590957\ldots>0$ for every $r\in[0,16/5]$.
+\end{named}
+
+The proof is an Arb ball-arithmetic certificate \citep{Johansson2017}: $64$ boxes with exact rational endpoints $k/20$,
+a mean-value box test with an exactly derived $m''$, dyadic lower bounds, and an independent checker; it is described
+in \cref{sec:cert} and \cref{app:certs}. Near $r=0$ the expansion $m'(0)=\frac{18}{49}+\frac{12}{49}\log2+\frac{57}{784}\log3>0$
+and a separate certificate of $m''>0$ on $[0,1/8]$ give the bound independently of the main covering. A further
+certified inequality, $h_A(16/5)<-6/7$ and $h_A'(16/5)<0$, combined with Paper~2's Lemma~A ($h_A(0^+)=-6/7$), gives
+$0<q<\rstar<P_A(q)<16/5$ for all $0<q<\rstar$.
+
+\begin{named}{Corollary M}\phantomsection\label{cor:M}
+$c_4(q)>0$ for every $0<q<\rstar$; more precisely $c_4(q)\ge\frac{16}{3}L_{\min}\,qW_q\,(P_A(q)-q)>0$.
+\end{named}
+\begin{proof}
+Both $q$ and $P_A(q)$ lie in $[0,16/5]$ and $P_A(q)>q$. By the mean value theorem and \lemM,
+$m(P_A(q))-m(q)\ge L_{\min}(P_A(q)-q)$; insert into \eqref{eq:c4m}.
+\end{proof}
+
+\subsection{Theorem A}
+
+\begin{named}{Theorem A}[the $\Atwou$ pitchfork]\phantomsection\label{thm:A}
+Fix $q\in(0,\rstar)$. There are $\varepsilon>0$ and a neighbourhood $\mathcal N$ of $\ystar$ in $\mathcal S$ such that,
+for $|\mu|<\varepsilon$, the equilibria of $V_p$ in $\mathcal N$ are exactly
+\begin{enumerate}[label=(\arabic*)]
+\item the cube $\ystar$, for every such $p$; and
+\item for $\mu>0$ only, two further equilibria $x_\pm(p)=\ystar\pm a(p)\eA+w(p)$ with $a(p)>0$,
+$w(p)=\beta(p)\ebr$, $\beta(p)=O(a(p)^2)$, and
+\begin{equation}\label{eq:ampA}
+a(p)^2=\frac{6\,qW_q\,|h_A'(P_A(q))|}{c_4(q)}\,\mu+O(\mu^2),\qquad c_4(q)>0\ \text{(\corM)}.
+\end{equation}
+\end{enumerate}
+Each of $x_\pm$ consists of two concentric regular tetrahedra of unequal radii on inversion-related vertex-direction
+sets and has point group $\Td$. Spatial inversion exchanges the complete branch configurations $x_+$ and $x_-$; it does
+not exchange the unequal-radius shells within one fixed configuration. The bifurcation is a $\Z_2$-symmetric
+pitchfork, supercritical in the reduced-energy convention: for $0<\mu<\varepsilon$, $\Vred(\cdot,\mu)$ has a strict
+local maximum at $a=0$ and strict local minima at $a=\pm a(p)$.
+\end{named}
+
+\begin{proof}
+By \cref{sec:model} the equilibria near $\ystar$ in $\mathcal S$ are the critical points of the one-dimensional
+reduced potential on $E_c=\Span\{\eA\}$, which is analytic and even (\cref{lem:a0}(b)). Hence
+$\partial_a\Vred=a\,G(a^2,\mu)$ with $G$ analytic and $G(z,\mu)=\lambda(\mu)+\frac{c_4(\mu)}{6}z+O(z^2)$. Because $\eA$
+is an exact Hessian eigenvector for every $p$, $\lambda(\mu)=qW_q[h_A(P_A(q)+\mu)-h_A(q)]$ exactly, so $\lambda(0)=0$
+and $\lambda'(0)=qW_q\,h_A'(P_A(q))<0$ (Paper~2, Lemma~A: $h_A$ decreases strictly on $(\rstar,\infty)$). Thus
+$G(0,0)=0$, $G_\mu(0,0)=\lambda'(0)\ne0$ and $G_z(0,0)=c_4/6>0$. By the implicit function theorem the zeros of $G$ near
+$(0,0)$ form one analytic curve $\mu=\mu_*(z)$ with $\mu_*'(0)=-G_z/G_\mu=-c_4/(6\lambda'(0))>0$. Hence $a^2=z>0$ forces
+$\mu>0$, and for each small $\mu>0$ there is exactly one $z=a(p)^2$, given by \eqref{eq:ampA}; for $\mu\le0$ there is
+none. Next, $\partial_a^2\Vred=G+2a^2G_z$: at $a=0$ it equals $\lambda(\mu)<0$ for $\mu>0$, and on the branch, where
+$G=0$, it equals $\frac{c_4}{3}a(p)^2+O(\mu^2)=-2\lambda(\mu)+O(\mu^2)>0$.
+
+Equivariance of the reduction gives $D(R)x(a)=x(\sigma(R)a)$, so the solution $w$ lies in $\Fix(\Td)\cap\eA^\perp=
+\Span\{\ebr\}$, $D(-I)$ maps $x_+$ to $x_-$, and each $x_\pm$ is fixed exactly by $\Td$ within $\Oh$. Concretely, $x_\pm$
+consists of the even and the odd tetrahedron of the cube scaled about the centre by
+$\frac12+(\beta\pm a)/\sqrt{24}$ and $\frac12+(\beta\mp a)/\sqrt{24}$. Since $a\ne0$ the radii differ, so no symmetry of
+a fixed configuration exchanges the two shells, and the point group is the symmetry group $\Td$ of a regular tetrahedron,
+in agreement with the computed stabiliser. Spatial inversion preserves radii; it maps the vertex directions of one
+tetrahedron to those of the other, and it maps $x_+$ to $x_-$, not one shell of $x_+$ onto the other. The conditions
+$G_\mu\ne0$, $G_z\ne0$ are the recognition conditions of the $\Z_2$-symmetric pitchfork \citep{GolubitskySchaeffer1985};
+the argument uses only the implicit function theorem.
+\end{proof}
+
+\begin{remark}[conventions]\label{rem:supercritical}
+``Supercritical'' refers to the reduced-energy convention: the gradient flow $\dot a=-\partial_a\Vred=\nu a-\frac{c_4}{6}a^3+\dots$,
+$\nu=-\lambda(\mu)$, has the normal form $\dot x=\nu x-x^3$ when $c_4>0$, and the branch exists on the side where the
+cube has lost minimality along $\eA$; the branch points are minima of the one-dimensional reduced potential. The cube
+is already a saddle of $V_p$ in $\mathcal T^\perp$ (index at least $2$), so \thmA\ is not a stability statement in
+the full configuration space and claims no Morse index of $x_\pm$.
+\end{remark}

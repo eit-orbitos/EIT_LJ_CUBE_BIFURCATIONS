@@ -1,0 +1,51 @@
+\section{Discussion and limitations}\label{sec:discussion}
+
+\paragraph{What the results say.} At both transition curves of the cube the local branch structure is now determined
+(\cref{tab:summary}). The $\Atwou$ curve produces the $\Td$ ``two-tetrahedra'' configurations in a supercritical (reduced
+energy) pitchfork. The threefold $\Ttwog$ curve produces two kinds of axial branches: $\Dthreed$ branches through the cube on
+both sides of the curve (transcritical, because the cubic invariant has a nonzero coefficient), and $\Dtwoh$ pitchfork
+branches on the side $p>P_T(q)$, where the cube has six unstable directions. The $\Dtwoh$ branch points have exactly
+one unstable direction within the centre space, produced by the cubic invariant, and four in the full rigid-motion-reduced
+configuration space. This is an explicit instance of the generic instability of axial branches in the presence of
+quadratic equivariants \citep{IhrigGolubitsky1984}, obtained here by direct computation rather than from that theorem.
+
+\paragraph{Limitations.}
+\begin{itemize}
+\item All results are local: for each fixed $q$, near the transition point, with radii $\varepsilon,\mu_0,\mu_1,\mu_2$ that are
+not computed and not claimed to be uniform in $q$. Nothing is stated at $q=0$ or at the curve ends, where $c_4$ and
+$\kappa$ vanish through their factors.
+\item No statement is a stability statement in the full configuration space. ``Supercritical'' refers to the reduced
+energy along the branch axis; the Morse index of the $\Atwou$ and $\Dthreed$ branch points is not determined here
+(\cref{rem:d3d} is a consistency check only).
+\item Equilibria outside the fixed-point spaces of the axial isotropy groups, the global continuation of the branches,
+and possible secondary bifurcations are outside the scope of this paper.
+\item Geometric statements are proved to the orders stated (first order for the shear and translation components,
+second order for the $\Aonegg/\Eg$ correction). That $n_v\ne0$ along the whole curve is not certified.
+\item The proofs of \lemM, \lemK\ and \lemQ\ are computer-assisted. The audits that reproduced them were carried out by an
+AI system, not by human referees; they are evidence of reproducibility and internal consistency, not a substitute for
+peer review.
+\end{itemize}
+
+\begin{table}[t]
+\centering\small
+\caption{Summary of the local results. ``Axial reduced'' is the sign of the second derivative of the one-dimensional
+reduced potential along the branch axis at the branch points; ``centre'' and ``slice'' are the Morse indices on the
+centre space and on the slice transverse to rigid motions. ``Audited'' means independently audited (\cref{tab:audits}).}
+\label{tab:summary}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.45cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\toprule
+ & $\Atwou$ (\thmA) & $\Ttwog$, $\Dthreed$ axis (\propBone) & $\Ttwog$, $\Dtwoh$ axis (\propBtwo, \propBthree, \corBthree)\\
+\midrule
+curve & $p=P_A(q)$, $0<q<\rstar$ & $p=P_T(q)$, $0<q<\qc$ & $p=P_T(q)$, $0<q<\qc$\\
+kernel dim. & 1 & 3 & 3\\
+isotropy & $\Td$ & $\Dthreed$ & $\Dtwoh$ (exactly)\\
+leading invariant & $a^4$ (even; $c_4>0$, \corM) & $I_3=a_1a_2a_3$ ($\kappa\ne0$, \lemK) & $a^4$ on the axis (even; $c_4>0$, \lemQ)\\
+branch type & $\Z_2$ pitchfork & transcritical & $\Z_2$ pitchfork\\
+branch side & $p>P_A(q)$ only & both sides & $p>P_T(q)$ only\\
+axial reduced & $+$ (supercritical, reduced energy) & not part of \propBone\ (normal form: $+$ for $p>P_T$, $-$ for $p<P_T$; \cref{rem:d3d}) & $+$ (supercritical, reduced energy)\\
+centre index & $0$ (one-dimensional centre space; the axial curvature) & not proved & $1$, nullity $0$; inertia $(1,0,2)$\\
+slice index & not determined & not proved & $4$, nullity $0$; inertia $(4,0,14)$; $\R^{24}$: $(4,6,14)$\\
+status & proved (computer-assisted), audited & certified (computer-assisted), audited, erratum closed & proved (computer-assisted), audited\\
+\bottomrule
+\end{tabularx}
+\end{table}

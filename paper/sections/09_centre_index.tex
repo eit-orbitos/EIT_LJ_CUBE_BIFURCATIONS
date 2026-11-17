@@ -1,0 +1,147 @@
+\section{Centre-manifold Hessian and Morse index}\label{sec:index}
+
+\Cref{prop:B2} works inside $\Fix(\Sigma)$ and gives only the axial curvature. Here we determine the full Hessian of the
+reduced potential \eqref{eq:normalform} on the three-dimensional critical space $E_c$ at the $\Dtwoh$ branch points, and
+then the Morse index in the full configuration space.
+
+\subsection{The quartic part}
+
+\begin{lemma}[complete quartic after elimination]\label{lem:quartic}
+With $b(x)=D^3V[x,x,\cdot\,]|_W$ for $x=\sum a_ke_k$, the quartic part of $\Vred$ at $\mu=0$ is
+$V_4=\frac1{24}D^4V[x^4]-\frac18\langle b,H_{WW}^{-1}b\rangle$. It has exactly the form $\alpha I_2^2+\beta I_4$, with
+\[
+\alpha=\frac{Q_{\mathrm{mix}}}{8}-\frac{b_A^2}{8h_A}+\frac{b_E^2}{16h_E}-\frac{\kappa_f^2}{4k_{ff}},\qquad
+\beta=\frac{c_4}{24}-\alpha,
+\]
+where $Q_{\mathrm{mix}}=D^4V[e_1,e_1,e_2,e_2]$, $\kappa_f=D^3V[e_1,e_2,f_3]$ and $k_{ff}=\tr K>0$. In particular
+$\alpha+\beta=c_4/24>0$.
+\end{lemma}
+\begin{proof}
+The multi-dimensional Lyapunov--Schmidt formula is checked on a generic energy with all cubic and quartic monomials.
+The vector $b(x)$ has components only in $\Aonegg$, $\Eg$ and in the noncritical $\Ttwog$ copy (the $f_k$); all other isotypic
+components vanish exactly, so $H_{WW}^{-1}$ acts on $b$ through $h_A$, $h_E$ and $k_{ff}$ (Paper~2, Lemmas~S, T1). The
+result is computed exactly for a generic pair potential; on the axis $a=(s,0,0)$ it restricts to the quartic of
+\cref{sec:d2h}, which gives $\alpha+\beta=c_4/24$. A derivative-free numerical reduction along five directions at four
+curve points agrees with $\alpha I_2^2+\beta I_4$ to relative $10^{-18}$ or better (corroboration).
+\end{proof}
+
+On the axis the solution $w$ is $\Sigma$-fixed by uniqueness, so $\Vred(s,0,0,\mu)$ is the axial potential
+\eqref{eq:VredD2h} of \propBtwo, and its critical points $(\pm s_*,0,0)$ are the branch points $x_\pm$.
+
+\subsection{The Hessian on the axis}
+
+\begin{lemma}[Hessian structure]\label{lem:hessform}
+For any $G_T$-invariant $C^2$ function the Hessian at $a=(s,0,0)$ has the form
+\begin{equation}\label{eq:Hc}
+H_c=\begin{pmatrix}h_{11}&0&0\\0&d&e\\0&e&d\end{pmatrix},
+\end{equation}
+with $h_{11}$ and $d$ even in $s$ and $e$ odd in $s$. For the normal form \eqref{eq:normalform},
+$h_{11}=\lambda+12(\alpha+\beta)s^2+O(s^4)$, $d=\lambda+4\alpha s^2+O(s^4)$ and $e=\kappa s+O(s^3)$. The cubic invariant gives
+the only $O(s)$ term, and it is off the diagonal.
+\end{lemma}
+\begin{proof}
+The stabiliser of $(1,0,0)$ in $G_T$ has order $4$; its commutant forces \eqref{eq:Hc}, and the four axis-reversing
+elements give the parities. The expansion is computed exactly for a generic invariant polynomial through degree $6$
+with all coefficients symbolic. (Directly: $\partial_{a_2}\partial_{a_3}(\kappa a_1a_2a_3)=\kappa s$, while $\partial_{a_2}^2$ and
+$\partial_{a_3}^2$ of $I_3$ vanish on the axis.)
+\end{proof}
+
+On the branch, $\mu=\mu_*(s^2)$ with $\mu_*'(0)=-c_4/(6\tau)$ (\propBtwo), hence $\lambda=-\frac{c_4}{6}s^2+O(s^4)$, and
+\begin{equation}\label{eq:branchhess}
+h_{11}=\frac{c_4}{3}s^2+O(s^4)=-2\tau\mu+O(\mu^2),\qquad d=-4\beta s^2+O(s^4),\qquad e=\kappa s+O(s^3),
+\end{equation}
+\begin{equation}\label{eq:det}
+\det\begin{pmatrix}d&e\\e&d\end{pmatrix}=(d+e)(d-e)=-\kappa^2s^2+O(s^4),
+\end{equation}
+with $s=\pm s_*$. The transverse eigenvalues are $d\pm e$, on the eigenvectors $(0,1,\pm1)/\sqrt2$, exactly.
+
+\subsection{Transverse splitting with a remainder bound}
+
+\begin{lemma}[the $O(s^2)$ terms cannot overturn the $O(|s|)$ splitting]\label{lem:remainder}
+Along the branch write $d=s^2D(s)$ and $e=s\,(\kappa+s^2E(s))$ with $D,E$ analytic, and fix $0<r\le1$ inside their domain
+with $|D|\le C_D$, $|E|\le C_E$ on $|s|\le r$. If $\kappa\ne0$, then for $0<|s|<\min\bigl(r,|\kappa|/(C_D+C_E)\bigr)$
+the transverse eigenvalues $d+e$ and $d-e$ are nonzero and of opposite signs, whatever the signs of $\kappa$ and $s$.
+\end{lemma}
+\begin{proof}
+$(d+e)(d-e)=s^2\bigl[s^2D^2-(\kappa+s^2E)^2\bigr]$ exactly, and
+$|sD|\le C_D|s|<|\kappa|-C_E|s|\le|\kappa|-C_Es^2\le|\kappa+s^2E|$, so the bracket is negative.
+\end{proof}
+
+The identity and the chain of inequalities were also checked exactly on rational worst cases. The argument is analytic,
+given its inputs; no explicit radius is computed, and no interval certificate is used in this step.
+
+\subsection{Proposition B3}
+
+\begin{named}{Proposition B3}[centre-manifold index]\phantomsection\label{prop:B3}
+Fix $q\in(0,\qc)$ and let $x_\pm(\mu)$, $0<\mu<\mu_1(q)$, be the $\Dtwoh$ equilibria of \propBtwo. The reduced potential
+on $E_c$ has the form \eqref{eq:normalform} with $\lambda(0)=0$, $\lambda'(0)=\tau<0$, $\kappa(0)=\kappa\ne0$ (\lemK) and
+$\alpha+\beta=c_4/24>0$. At $x_\pm$ the reduced Hessian has the form \eqref{eq:Hc} with \eqref{eq:branchhess}, and for every
+sufficiently small $\mu>0$
+\[
+\In_{\mathrm{centre}}(x_\pm)=\In\bigl(D^2_a\Vred\bigr)=(1,0,2):
+\]
+centre Morse index $1$ and centre nullity $0$, independently of the gauge sign of $\kappa$ and of the choice $s\leftrightarrow-s$.
+All six $\Dtwoh$ branch points $\pm s_*e_k$ ($k=1,2,3$) are conjugate under $\Oh$ and have the same centre inertia.
+\end{named}
+
+\begin{proof}
+$h_{11}=\frac{c_4}{3}s^2+O(s^4)>0$ for small $s\ne0$ since $c_4>0$; this is the axial curvature of \propBtwo. By
+\cref{lem:remainder} the transverse block has inertia $(1,0,1)$. The matrix \eqref{eq:Hc} is block diagonal, so its
+inertia is $(1,0,2)$. At leading order the negative direction is $(0,1,-\operatorname{sign}(\kappa s))/\sqrt2$. For the
+conjugacy: $G_T$ maps $(1,0,0)$ onto exactly the six points $\pm\varepsilon_k$, the $\Oh$-orbit of $e_1$ in $\R^{24}$ is
+$\{\pm e_1,\pm e_2,\pm e_3\}$, and for an invariant function $\operatorname{Hess}F(Ta)=T\operatorname{Hess}F(a)T^{\mathsf T}$
+with $T$ orthogonal, so the six Hessians are congruent.
+\end{proof}
+
+The axial curvature alone would suggest index $0$; the negative direction comes from the splitting $\kappa s$ produced by the
+cubic invariant, which requires $\kappa\ne0$. If $\kappa$ vanished, the index would not be determined at this order.
+Symmetry-related copies are one index type and are not counted separately.
+
+\subsection{Corollary B3$'$: the full-slice Morse index}
+
+\begin{named}{Corollary B3$'$}[full-slice index]\phantomsection\label{cor:B3}
+For fixed $q\in(0,\qc)$ and $0<\mu<\mu_2(q)\le\mu_1(q)$, the Hessian of $V_p$ at $x_\pm(\mu)$ has
+\[
+\In_{\mathrm{slice}}=(4,0,14),\qquad \In_{\R^{24}}=(4,6,14),
+\]
+where the six zero eigenvalues in $\R^{24}$ are the rigid motions. The Morse index of the $\Dtwoh$ branch points is $4$:
+there are four negative directions in the rigid-motion-reduced configuration space. These equilibria are saddles, not
+stable equilibria.
+\end{named}
+
+\begin{proof}
+\emph{The complementary index is derived, not assumed.} At $(\ystar,P_T(q))$ the slice Hessian decomposes as in
+\cref{tab:blocks}. Removing the six rigid directions and the three critical directions leaves the $15$-dimensional
+complement $W$, on which the blocks are: $\Atwou$ ($1$, negative), $\Eu$ ($2$, negative), and $\Aonegg$, $\Eg$, the upper
+$\Ttwog$ copy, the internal $\Toneu$ and $\Ttwou$ ($1+2+3+3+3=12$, positive). Hence $\In(H_{WW})=(3,0,12)$ with $m_\perp=3$,
+constant along the whole physical curve. This agrees with Paper~2's index formula, which gives index $3$ and nullity $3$
+on the curve in both cases $q<\rstar$ and $\rstar\le q<\qc$ (for $q<\rstar$, $P_T(q)>P_A(q)$ by Lemma~T4). If any of these block
+signs were different, $m_\perp$ would change, and the index $4$ would not follow.
+
+\emph{Splitting.} At $x_\pm(\mu)$ the block $H_{WW}$ is a small perturbation of its value at the transition point, which is
+invertible with inertia $(3,0,12)$; for $0<\mu<\mu_2(q)$ its inertia is unchanged. At a critical point of the reduction
+$D^2\Vred=H_{cc}-H_{cW}H_{WW}^{-1}H_{Wc}$, so by \eqref{eq:haynsworth}
+\[
+\In_{\mathrm{slice}}=(3,0,12)+(1,0,2)=(4,0,14).
+\]
+Finally the rigid fields at $x_\pm$ lie in the kernel of the $\R^{24}$ Hessian, and $\mathcal T^\perp$ is a complement of
+that kernel near $\ystar$, which adds six zeros.
+\end{proof}
+
+\begin{remark}[consistency with the $\Dthreed$ branches]\label{rem:d3d}
+As a check of sign conventions only (not a result of this paper): on $a=t(1,1,1)$ the normal form gives
+$\operatorname{Hess}\Vred=\lambda I+\kappa t(J-I)+O(t^2)$ and, on the $\Dthreed$ branch, $\lambda=-\kappa t+O(t^2)$. The
+eigenvalues are $\kappa t$ (axial) and $-2\kappa t$ (double), with $\kappa t=-\tau\mu+O(\mu^2)$, so the centre index would be
+$2$ for $\mu>0$ and $1$ for $\mu<0$. The sum $\sum(-1)^{\mathrm{index}}$ over the cube, the four $\Dthreed$ points and, for
+$\mu>0$, the six $\Dtwoh$ points is $-1+4-6=-3$ for $\mu>0$ and $+1-4=-3$ for $\mu<0$, as local degree conservation
+requires. The conventions of \cref{sec:d3d} and \cref{sec:d2h} are therefore consistent.
+\end{remark}
+
+\paragraph{Numerical corroboration (not a proof dependency).} Independently of the normal form, the $\Dtwoh$ equilibria were
+located by Newton's method on the full $24$-dimensional gradient (60 digits) at $q=0.2,0.8,1.5,2.0$ and
+$\mu/P_T(q)=10^{-5},10^{-6},10^{-7}$, for both signs of $s$. At all $24$ equilibria the gradient is below $10^{-59}$, the
+$\R^{24}$ inertia is $(4,6,14)$, $H_{WW}$ has index $3$, and the Schur complement onto $E_c$ has inertia $(1,0,2)$ with the
+predicted pattern: $h_{11}\propto\mu$ and transverse eigenvalues $\pm|\kappa s|\propto\sqrt\mu$. The relative deviations
+from the leading-order formulas decrease by a factor $10$ per decade of $\mu$. (One acceptance threshold of this
+corroboration was widened after inspection at $q=2.0$, where $c_4$ is small; the decay rate was checked separately and is
+unaffected. Neither enters any proof.)
