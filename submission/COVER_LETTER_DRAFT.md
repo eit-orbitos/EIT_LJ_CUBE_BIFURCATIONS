@@ -1,8 +1,8 @@
-# Cover letter — post-submission working copy (local only; not for a new submission)
+# Cover letter — historical draft
 
-[DATE]
+This is a historical draft, not a copy of the cover letter sent to the journal and not a letter for a new submission.
 
-> Original letter date NOT_ESTABLISHED. This placeholder is retained intentionally. Reconciliation prepared 2026-11-22; that is not an asserted submission or letter date. The letter body below is retained as historical draft wording, not evidence that this exact letter was sent. The manuscript is already submitted; do not send this copy or initiate another submission.
+The manuscript has been submitted to the Journal of Mathematical Chemistry and is under editorial consideration. No journal acceptance, independent human peer review or journal publication is asserted.
 
 Editor
 Journal of Mathematical Chemistry
@@ -61,15 +61,6 @@ ORCID 0009-0009-8343-662X
 Mihail Mladenski
 EITNetworks LLC, Tobyhanna, Pennsylvania, USA
 
----
-Post-submission reconciliation notes (not part of the historical letter body):
-- Already submitted to Journal of Mathematical Chemistry; this is not a new-submission letter.
-- Author-provided Springer evidence records article type Research, not the earlier unconfirmed Original Paper choice.
-- The authors confirm no previous journal publication of this manuscript and report no concurrent submission elsewhere. No suggested reviewers are available; none are invented.
-- The mathematical research and direction were developed internally by the authors with AI-assisted symbolic, numerical and computational analysis.
-- Public research archiving is not journal publication. Acceptance, journal publication and independent human peer review are NOT CONFIRMED. With editor does not establish external peer review.
-- Scientific descriptions, author order, affiliations, funding and competing-interest wording in the letter body are preserved, not re-audited or strengthened by this task. The scientific assertions remain assertions of the original letter.
-- The approved declarations and approval record are included unchanged as reference evidence. No editor contact, upload replacement or public change is authorized.
 
 ## Full AI-use disclosure — verbatim reference copy
 
