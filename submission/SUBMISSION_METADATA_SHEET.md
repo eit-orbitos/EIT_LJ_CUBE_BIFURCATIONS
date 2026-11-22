@@ -1,10 +1,13 @@
-# Submission metadata sheet — post-submission working copy (local only)
+# Submission metadata sheet — historical public document
+
+This historical public document is not a journal submission record or a copy of a journal submission form.
+
+The manuscript has been submitted to the Journal of Mathematical Chemistry and is under editorial consideration.
 
 | field | value |
 |---|---|
 | Title | Symmetry-Breaking Bifurcations from the Cubic Equilibrium in Two-Term Inverse-Power Clusters |
-| Article type | Research — displayed in the author-provided Springer screenshot (private evidence reviewed on 2026-11-22); earlier preparation used Original Paper [AUTHOR CHECK], which is not the recorded selection |
-| Author 1 | Toni Mladenovski — EITNetworks LLC, Tobyhanna, Pennsylvania, USA — ORCID 0009-0009-8343-662X — info@eitnetworks.org (primary); tml30993@gmail.com (secondary, submission system only) |
+| Author 1 | Toni Mladenovski — EITNetworks LLC, Tobyhanna, Pennsylvania, USA — ORCID 0009-0009-8343-662X — info@eitnetworks.org |
 | Author 2 | Mihail Mladenski — EITNetworks LLC, Tobyhanna, Pennsylvania, USA — mmladenski077@gmail.com — ORCID: none (leave the field empty if the form permits) |
 | Corresponding author | Toni Mladenovski, info@eitnetworks.org |
 | Affiliation (both authors) | EITNetworks LLC, Tobyhanna, Pennsylvania, USA |
@@ -21,17 +24,12 @@
 | Source files | `EIT_LJ_Paper3_source_V1.0.0.zip` with `manuscript.tex` at the root; PDF `EIT_LJ_Paper3_manuscript_V1.0.0.pdf` |
 | Suggested reviewers | not prepared (author decision) |
 
-## Current reconciliation status — 2026-11-22
+## Public status and scope
 
-- Public research release: PUBLISHED; GitHub V1.0.0: PUBLISHED; Zenodo V1.0.0: PUBLISHED (2026-11-17).
-- Journal submission: ALREADY SUBMITTED, author-reported and corroborated by author-provided Springer screenshots; no second submission is authorized.
-- Journal acceptance: NOT CONFIRMED. Journal publication: NOT CONFIRMED. Human peer review: NOT CONFIRMED.
-- Springer stage shown: With editor. This does not establish external peer review or acceptance.
-- Springer submission version displayed: `v.1.0`; this is not proof of byte identity with public V1.0.0.
-- Uploaded filename displayed: `EIT_LJ_Paper3_source_JMC_FINAL.pdf`; actual Springer-downloaded bytes NOT_PROVIDED.
-- Exact submission date/time: NOT_ESTABLISHED; do not infer it from a notification date.
+- The manuscript has been submitted to the Journal of Mathematical Chemistry and is under editorial consideration.
+- The public research release is available through the GitHub V1.0.0 release and Zenodo version DOI linked above.
+- No journal acceptance, independent human peer review or journal publication is asserted. Public GitHub/Zenodo archiving is not peer-reviewed journal publication.
 - The authors report no previous journal publication of this manuscript and no concurrent submission to another journal. No suggested reviewers are available; none have been invented.
-- Public GitHub/Zenodo archiving is not peer-reviewed journal publication.
 - The authors developed the mathematical formulations and research direction internally, with AI-assisted symbolic, numerical and computational analysis. AI systems are tools, not authors or journal peer reviewers.
 
 ## Historical build-time information — superseded as current status
@@ -65,4 +63,4 @@ the release package.
 
 ## Authorization and verification limits
 
-This is a local documentation working copy, not a Springer form update or an instruction to submit. Author declarations remain governed by the unchanged `DECLARATIONS.md` and `AUTHOR_DECISION_V1.0.0.md` reference copies. Executable tests, Arb ball-arithmetic certificates, independent certificate checkers and computational audits by separate AI systems are distinct kinds of evidence; none establishes independent human peer review. This task did not rerun scientific computations or independently certify every mathematical claim. External changes require separate author approval.
+This is a historical public document, not a journal submission form update or an instruction to submit. Author declarations remain governed by the unchanged `DECLARATIONS.md` and `AUTHOR_DECISION_V1.0.0.md` reference copies. Executable tests, Arb ball-arithmetic certificates, independent certificate checkers and computational audits by separate AI systems are distinct kinds of evidence; none establishes independent human peer review. This task did not rerun scientific computations or independently certify every mathematical claim. External changes require separate author approval.
