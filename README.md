@@ -2,7 +2,20 @@
 
 **Symmetry-Breaking Bifurcations from the Cubic Equilibrium in Two-Term Inverse-Power Clusters**
 
-Status at build time (2026-11-16): **FINAL RELEASE PREPARED / V1.0.0 · PENDING RC2→V1.0.0 DELTA AUDIT**.
+## Current public status (updated 2026-11-22)
+
+- **Public research release:** GitHub release [`v1.0.0`](https://github.com/eit-orbitos/EIT_LJ_CUBE_BIFURCATIONS/releases/tag/v1.0.0)
+  (published 2026-11-17) and Zenodo version record DOI
+  [10.5281/zenodo.24298041](https://doi.org/10.5281/zenodo.24298041). The seven release assets on GitHub and Zenodo were
+  compared by SHA-256 and are byte-identical.
+- **Journal:** the manuscript has been submitted to the *Journal of Mathematical Chemistry* (Springer Nature) and is
+  under editorial consideration. It has **not** been accepted, peer reviewed or published by the journal.
+- Public archiving on GitHub/Zenodo is not peer-reviewed journal publication. Independent AI audits are not journal
+  peer review.
+- The `v1.0.0` tag, its release assets and the Zenodo record are unchanged by this README update. The status text
+  below ("Status at build time") is preserved as a historical record of the pre-release state.
+
+Historical — Status at build time (2026-11-16): **FINAL RELEASE PREPARED / V1.0.0 · PENDING RC2→V1.0.0 DELTA AUDIT**.
 FINAL BLIND RELEASE AUDIT of V1.0.0-rc2: **RELEASE-READY** (`audits/PAPER3_RC2_FINAL_BLIND_RELEASE_AUDIT.md`, SHA-256
 `37b0b4d68f4675b4546f7313aca6937c51cdf1ee11d1cc20b528918e636d7448`). Human approvals (author contributions, competing interests,
 copyright-holder wording): **CLOSED** by author decision (`AUTHOR_DECISION_V1.0.0.md`). PUBLIC RELEASE: NOT YET
@@ -60,7 +73,7 @@ artefacts are byte-identical with V0.4-dev.6 by design. The table above is the c
 
 - `paper/` — manuscript source (`manuscript.tex`), bibliography, sections, appendices, deterministic figure script and
   vector figures; `paper/tools/check_appendix_closed_forms.py` checks the appendix formulas against the code.
-- `submission/` — Journal of Mathematical Chemistry drafts (not submitted): cover letter, metadata sheet,
+- `submission/` — Journal of Mathematical Chemistry submission-preparation files (historical drafts; the manuscript was subsequently submitted to JMC, see "Current public status"): cover letter, metadata sheet,
   declarations, AI-use disclosure.
 - `docs/AUDIT_INDEX.md`, `docs/AUDIT_STATUS_MATRIX.{json,md}`, `docs/THEOREM_DEPENDENCY_SUMMARY.md`,
   `docs/AI_USE_LOG.md`, `docs/REPRODUCIBILITY.md`, `docs/REFERENCE_VERIFICATION.md`.
@@ -69,7 +82,7 @@ artefacts are byte-identical with V0.4-dev.6 by design. The table above is the c
   of RC2, verbatim), `docs/V1.0.0_PRESERVATION_CHECK.{md,json}`, `docs/V1.0.0_PRESERVATION_CONTROLS.json`,
   `docs/V1.0.0_TEXT_SCAN.{md,json}`, `docs/QA_RESULTS_V1.0.0.{md,json}`, `docs/GITHUB_RELEASE_V1.0.0.md` (prepared tag
   message, release description and asset list; nothing pushed).
-- Release metadata (prepared, not published): `CITATION.cff`, `.zenodo.json`, `LICENSE`, `LICENSE-DOCS`.
+- Release metadata (published with v1.0.0 / Zenodo DOI 10.5281/zenodo.24298041): `CITATION.cff`, `.zenodo.json`, `LICENSE`, `LICENSE-DOCS`.
 - Release tooling: `scripts/check_preservation_V1_0_0.py`, `scripts/preservation_controls_V1_0_0.py`,
   `scripts/check_release_text.py`, `scripts/scan_text_v1.py`; tests `tests/test_release_v1.py`.
 - Historical RC2 records, kept byte-identical with V1.0.0-rc2 and not current: `RELEASE_NOTES_RC2.md`,
@@ -359,7 +372,7 @@ directory or set `EIT_LJ_PAPER2_ARCHIVE`. Without the archive those cross-checks
                     CUBE_BIFURCATIONS_V04_DEV6_BLIND_B25_REVIEWER_REPORT.md (B2.5 audit, verbatim),
                     PAPER3_RC2_FINAL_BLIND_RELEASE_AUDIT.md (final blind release audit of V1.0.0-rc2, verbatim)
     paper/          manuscript.tex, macros.tex, references.bib, sections/, appendices/, figures/, tools/
-    submission/     JMC drafts: cover letter, metadata sheet, declarations, AI-use disclosure (not submitted)
+    submission/     JMC drafts: cover letter, metadata sheet, declarations, AI-use disclosure (historical drafts; see "Current public status")
     reference/      PAPER2_INPUTS.md
     CHANGELOG.md    version history
     RELEASE_NOTES_V1.0.0.md, AUTHOR_DECISION_V1.0.0.md, FINAL_V1_DELTA_AUDIT_INSTRUCTIONS.md, CITATION.cff,
